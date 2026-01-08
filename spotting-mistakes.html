@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotting AI Mistakes | AI 101 for Patients</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .long-form-text { line-height: 1.8; font-size: 1.15rem; color: #334155; max-width: 70ch; margin-bottom: 2rem; }
+    .long-form-text p { margin-bottom: 1.5rem; }
+    .long-form-text strong { color: #0f172a; font-weight: 700; }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
+    .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
+    .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more summary::-webkit-details-marker { display: none; }
+    .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
+    .learn-more[open] summary::before { content: "−"; }
+    .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
+    .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .takeaways ul { margin-bottom: 0; }
+    .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+    .example-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+    .example-box h4 { color: #dc2626; margin-top: 0; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-badge">AI 101</span>
+        <span class="nav-title">For Patients</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Modules</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <article class="content">
+
+      <header class="unit-header">
+        <span class="unit-label phase-1">SAFETY FIRST</span>
+        <h1 class="unit-title">Spotting AI Mistakes</h1>
+        <p class="unit-subtitle">
+          AI can sound confident even when completely wrong. Learn to recognize the warning signs.
+        </p>
+        <div class="unit-meta">
+          <span class="unit-meta-item">
+            <i data-lucide="clock"></i>
+            12 min read
+          </span>
+        </div>
+      </header>
+
+      <section class="long-form-text">
+        <h2>The Confidence Problem</h2>
+
+        <p>
+          Here's the most dangerous thing about AI: <strong>it sounds equally confident whether
+          it's right or wrong.</strong>
+        </p>
+
+        <p>
+          A doctor who isn't sure might say, "I think it could be X, but let me check" or
+          "We should run some tests to be sure." AI doesn't do that. It presents uncertain
+          guesses with the same authoritative tone as well-established facts.
+        </p>
+
+        <p>
+          This is called <strong>hallucination</strong>—when AI generates information that sounds
+          plausible and confident but is actually made up or incorrect.
+        </p>
+
+        <div class="example-box">
+          <h4>Example of AI Hallucination</h4>
+          <p><strong>You ask:</strong> "What's the recommended dosage of [medication] for adults?"</p>
+          <p><strong>AI responds:</strong> "The standard adult dosage is 500mg twice daily, as recommended in the 2024 American Medical Association guidelines."</p>
+          <p><strong>The problem:</strong> The dosage might be wrong. The "2024 AMA guidelines" might not exist. But it sounds completely authoritative.</p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Types of AI Mistakes</h2>
+
+        <h3>1. Made-Up Facts</h3>
+        <p>
+          AI can invent statistics, cite studies that don't exist, or claim endorsements from
+          organizations that never said any such thing. It's not lying—it's generating text
+          that sounds right based on patterns, without checking if it's true.
+        </p>
+
+        <h3>2. Outdated Information</h3>
+        <p>
+          AI has a "knowledge cutoff"—a date after which it doesn't know what happened.
+          Medical guidelines change. New treatments emerge. Old ones get discontinued.
+          The AI might give you information that was accurate two years ago but isn't anymore.
+        </p>
+
+        <h3>3. Mixing Up Similar Things</h3>
+        <p>
+          AI can confuse medications with similar names, blend information about different
+          conditions, or apply research about one population to a different one. These
+          mix-ups can look subtle but be medically significant.
+        </p>
+
+        <h3>4. Overconfident Generalization</h3>
+        <p>
+          AI might take something that's generally true and present it as universally true,
+          ignoring important exceptions. "This medication is safe" might ignore that it's
+          not safe for people with certain conditions—like yours.
+        </p>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
+          <p style="margin-bottom: 0;">
+            <strong>Research Finding:</strong> Studies show that AI chatbots can produce medically
+            inaccurate information 10-30% of the time depending on the topic. The errors often
+            sound just as confident as the correct information.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Red Flags to Watch For</h2>
+
+        <p>Be extra skeptical when AI:</p>
+
+        <ul>
+          <li><strong>Cites specific numbers or statistics</strong> — These are often made up</li>
+          <li><strong>References specific studies or guidelines</strong> — Check if they actually exist</li>
+          <li><strong>Gives very specific medical advice</strong> — "Take exactly this dose at this time"</li>
+          <li><strong>Makes claims about YOUR specific situation</strong> — AI doesn't actually know you</li>
+          <li><strong>Sounds too certain</strong> — Medicine often involves uncertainty; beware of absolutes</li>
+          <li><strong>Contradicts what your doctor told you</strong> — Your doctor knows your case; AI doesn't</li>
+        </ul>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            A good rule: The more specific the AI's medical claim, the more skeptical you should be.
+            "Diabetes affects blood sugar" is likely accurate. "Your blood sugar should be exactly
+            120 mg/dL before meals" is much riskier to trust.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>How to Verify AI Information</h2>
+
+        <h3>Step 1: Check Your Skepticism</h3>
+        <p>
+          Before acting on any medical information from AI, pause and ask: "How confident
+          am I that this is correct? What would happen if it's wrong?"
+        </p>
+
+        <h3>Step 2: Look for Sources</h3>
+        <p>
+          Some AI tools cite sources. If they do, check if those sources actually exist and
+          actually say what the AI claims. Google the study name. Look up the guideline.
+          Often, you'll find the source doesn't exist or says something different.
+        </p>
+
+        <h3>Step 3: Cross-Reference</h3>
+        <p>
+          Check important claims against reputable sources:
+        </p>
+        <ul>
+          <li><strong>MedlinePlus</strong> (medlineplus.gov) — NIH's patient-friendly health information</li>
+          <li><strong>CDC</strong> (cdc.gov) — For disease prevention and health guidelines</li>
+          <li><strong>Mayo Clinic</strong> (mayoclinic.org) — Reliable condition and treatment information</li>
+          <li><strong>Your doctor or pharmacist</strong> — For anything you're unsure about</li>
+        </ul>
+
+        <h3>Step 4: When in Doubt, Ask Your Doctor</h3>
+        <p>
+          If the information matters—especially if you're considering acting on it—bring it
+          to your healthcare provider. "I read this online, is it accurate for my situation?"
+        </p>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            Ask ChatGPT a health question, then ask it to cite its sources. Look up one of those
+            sources. Does it exist? Does it say what ChatGPT claimed? This exercise builds your
+            verification muscles.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Building Healthy Skepticism</h2>
+
+        <p>
+          The goal isn't to distrust everything AI says—that would make it useless. The goal
+          is <strong>calibrated trust</strong>: knowing when to trust and when to verify.
+        </p>
+
+        <p>Higher trust, less verification needed:</p>
+        <ul>
+          <li>General explanations of medical concepts</li>
+          <li>Definitions of terms</li>
+          <li>How the body works in general</li>
+        </ul>
+
+        <p>Lower trust, always verify:</p>
+        <ul>
+          <li>Specific dosages or treatment protocols</li>
+          <li>Claims about your personal health situation</li>
+          <li>Advice that contradicts your healthcare team</li>
+          <li>Anything you might act on</li>
+        </ul>
+
+        <details class="learn-more">
+          <summary>Learn More: Why does AI hallucinate?</summary>
+          <div class="learn-more-content">
+            <p>
+              AI language models work by predicting the most likely next word in a sequence.
+              They don't "know" facts the way humans do—they generate text that follows
+              patterns in their training data.
+            </p>
+            <p>
+              When asked something they don't have good training data for, they still produce
+              confident-sounding text—because that's what they're designed to do. The result
+              is plausible-sounding but potentially false information.
+            </p>
+            <p>
+              This is a fundamental limitation of how these systems work, not a bug that will
+              be easily fixed. Even as AI improves, verification remains essential.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="takeaways">
+        <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
+        <ul>
+          <li>AI sounds equally confident whether right or wrong—this is dangerous</li>
+          <li>AI "hallucinates"—inventing facts, studies, and statistics that don't exist</li>
+          <li>Be extra skeptical of specific numbers, cited studies, and personalized advice</li>
+          <li>Always verify important medical information from trusted sources</li>
+          <li>The more specific the claim, the more skeptical you should be</li>
+          <li>When in doubt, ask your doctor—AI can't replace that conversation</li>
+        </ul>
+      </div>
+
+      <nav class="page-nav">
+        <a href="privacy-health-data.html" class="page-nav-link prev">
+          <span class="page-nav-arrow"><i data-lucide="arrow-left"></i></span>
+          <div>
+            <span class="page-nav-label">Previous</span>
+            <span class="page-nav-title">Your Privacy and Health Data</span>
+          </div>
+        </a>
+        <a href="when-to-call-doctor.html" class="page-nav-link next">
+          <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
+          <div>
+            <span class="page-nav-label">Next</span>
+            <span class="page-nav-title">When to Trust AI vs. Call Your Doctor</span>
+          </div>
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AI 101 for Patients</strong> · Your Guide to Using AI with Your Health</div>
+      <div>v1.0 · 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

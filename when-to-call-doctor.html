@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When to Trust AI vs. Call Your Doctor | AI 101 for Patients</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .long-form-text { line-height: 1.8; font-size: 1.15rem; color: #334155; max-width: 70ch; margin-bottom: 2rem; }
+    .long-form-text p { margin-bottom: 1.5rem; }
+    .long-form-text strong { color: #0f172a; font-weight: 700; }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
+    .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
+    .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more summary::-webkit-details-marker { display: none; }
+    .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
+    .learn-more[open] summary::before { content: "−"; }
+    .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
+    .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .takeaways ul { margin-bottom: 0; }
+    .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+    .emergency-box { background: #fef2f2; border: 2px solid #dc2626; border-radius: 12px; padding: 2rem; margin: 2rem 0; }
+    .emergency-box h3 { color: #dc2626; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; }
+    .stoplight { display: grid; gap: 1.5rem; margin: 2rem 0; }
+    .stoplight-item { padding: 1.5rem; border-radius: 12px; }
+    .stoplight-red { background: #fef2f2; border-left: 4px solid #dc2626; }
+    .stoplight-yellow { background: #fefce8; border-left: 4px solid #ca8a04; }
+    .stoplight-green { background: #f0fdf4; border-left: 4px solid #16a34a; }
+    .stoplight-item h4 { margin-top: 0; margin-bottom: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-badge">AI 101</span>
+        <span class="nav-title">For Patients</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Modules</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <article class="content">
+
+      <header class="unit-header">
+        <span class="unit-label phase-1">SAFETY FIRST</span>
+        <h1 class="unit-title">When to Trust AI vs. Call Your Doctor</h1>
+        <p class="unit-subtitle">
+          Red flags that need human care. When AI helps, when it doesn't, and when to pick up the phone.
+        </p>
+        <div class="unit-meta">
+          <span class="unit-meta-item">
+            <i data-lucide="clock"></i>
+            10 min read
+          </span>
+        </div>
+      </header>
+
+      <div class="emergency-box">
+        <h3><i data-lucide="alert-triangle"></i> Never Use AI for Emergencies</h3>
+        <p><strong>Call 911 or go to the ER immediately if you have:</strong></p>
+        <ul style="margin-bottom: 0;">
+          <li>Chest pain or pressure</li>
+          <li>Difficulty breathing</li>
+          <li>Sudden severe headache</li>
+          <li>Signs of stroke (face drooping, arm weakness, speech difficulty)</li>
+          <li>Severe allergic reaction</li>
+          <li>Uncontrolled bleeding</li>
+          <li>Loss of consciousness</li>
+          <li>Thoughts of harming yourself or others</li>
+        </ul>
+        <p style="margin-top: 1rem; margin-bottom: 0;"><strong>AI cannot assess emergencies. Don't waste time typing—call for help.</strong></p>
+      </div>
+
+      <section class="long-form-text">
+        <h2>The Stoplight Framework</h2>
+
+        <p>
+          Not everything is an emergency, but not everything can wait for your next appointment
+          either. Here's a simple framework for knowing when AI is appropriate—and when it's not.
+        </p>
+
+        <div class="stoplight">
+          <div class="stoplight-item stoplight-red">
+            <h4 style="color: #dc2626;">🔴 RED — Stop. Call Now.</h4>
+            <p style="margin-bottom: 0.5rem;"><strong>Don't use AI. Contact a healthcare provider immediately.</strong></p>
+            <ul style="margin-bottom: 0;">
+              <li>Any symptom that feels like an emergency to you</li>
+              <li>Sudden changes in condition</li>
+              <li>Symptoms that are getting rapidly worse</li>
+              <li>High fever with other concerning symptoms</li>
+              <li>Mental health crisis</li>
+              <li>New symptoms after starting a medication</li>
+              <li>Your gut says "something is really wrong"</li>
+            </ul>
+          </div>
+
+          <div class="stoplight-item stoplight-yellow">
+            <h4 style="color: #ca8a04;">🟡 YELLOW — Proceed with Caution</h4>
+            <p style="margin-bottom: 0.5rem;"><strong>AI might help you prepare, but talk to your doctor soon.</strong></p>
+            <ul style="margin-bottom: 0;">
+              <li>Persistent symptoms that aren't improving</li>
+              <li>Questions about your specific diagnosis or treatment</li>
+              <li>Concerns about medication side effects</li>
+              <li>New health issues you haven't discussed with a provider</li>
+              <li>Anything that's worrying you enough to search online</li>
+            </ul>
+          </div>
+
+          <div class="stoplight-item stoplight-green">
+            <h4 style="color: #16a34a;">🟢 GREEN — AI Can Help Here</h4>
+            <p style="margin-bottom: 0.5rem;"><strong>Good situations to use AI as a resource.</strong></p>
+            <ul style="margin-bottom: 0;">
+              <li>Understanding medical terms and concepts</li>
+              <li>Preparing questions for an upcoming appointment</li>
+              <li>Learning about a condition you've already been diagnosed with</li>
+              <li>Understanding your lab results (with follow-up from your doctor)</li>
+              <li>General health and wellness questions</li>
+              <li>Organizing your thoughts about symptoms before calling</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Trust Your Gut</h2>
+
+        <p>
+          If something feels wrong, it probably deserves attention from a real person.
+          AI can't see you. It can't hear the worry in your voice. It can't notice
+          that you look pale or are breathing fast.
+        </p>
+
+        <p>
+          Your instincts matter. If you're anxious enough to be searching symptoms
+          at 2 AM, that anxiety itself is information. Don't let AI reassure you
+          out of seeking care you might need.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            "I'd rather look silly for going in and it's nothing, than stay home and it's something."
+            This is a good philosophy. AI can't make this judgment call for you.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>When AI and Your Doctor Disagree</h2>
+
+        <p>
+          What if AI tells you something different from what your doctor said?
+          <strong>Trust your doctor.</strong>
+        </p>
+
+        <p>Here's why:</p>
+        <ul>
+          <li>Your doctor has examined you. AI hasn't.</li>
+          <li>Your doctor knows your full history. AI knows what you've told it.</li>
+          <li>Your doctor can order tests and adjust treatment. AI can only talk.</li>
+          <li>Your doctor is accountable for your care. AI is not.</li>
+        </ul>
+
+        <p>
+          That said, if AI raises a question that concerns you, <strong>bring it up with your doctor</strong>.
+          "I read that some people with my condition also need X. Is that something I should ask about?"
+          A good doctor will welcome your questions.
+        </p>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            Never stop taking a medication or change your treatment because AI suggested it.
+            Always talk to your prescribing provider first. AI doesn't know why your doctor
+            made the choices they made for your specific situation.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Using AI to Support (Not Replace) Care</h2>
+
+        <p>
+          The best use of AI is to make your conversations with your healthcare team better:
+        </p>
+
+        <ul>
+          <li><strong>Before appointments:</strong> Use AI to generate questions, understand your condition, organize your concerns</li>
+          <li><strong>After appointments:</strong> Use AI to clarify things you didn't understand, research terms the doctor used</li>
+          <li><strong>Between appointments:</strong> Use AI for general learning about your health, not for diagnosing new problems</li>
+        </ul>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            After your next doctor's appointment, try asking ChatGPT: "My doctor said I have
+            [condition]. Can you explain what that means in simple terms?" Then bring any
+            follow-up questions to your next visit.
+          </p>
+        </div>
+
+        <details class="learn-more">
+          <summary>Learn More: The "second opinion" trap</summary>
+          <div class="learn-more-content">
+            <p>
+              Some people use AI as a "second opinion" on their doctor's advice. This can be
+              problematic for several reasons:
+            </p>
+            <p>
+              AI doesn't have the context your doctor has. It doesn't know why certain choices
+              were made for you specifically. It might suggest an alternative that sounds
+              reasonable in general but isn't right for your situation.
+            </p>
+            <p>
+              If you genuinely want a second opinion, get one from another doctor who can
+              actually examine you and review your full records—not from a chatbot.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Quick Decision Guide</h2>
+
+        <p><strong>Ask yourself these questions:</strong></p>
+
+        <ol>
+          <li><strong>Is this urgent?</strong> If yes → Call your doctor or go to urgent care/ER</li>
+          <li><strong>Am I thinking about changing my treatment?</strong> If yes → Talk to your doctor first</li>
+          <li><strong>Is this about MY specific health situation?</strong> If yes → Your doctor knows you better than AI</li>
+          <li><strong>Am I just trying to understand something better?</strong> If yes → AI can help, but verify important facts</li>
+        </ol>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            When in doubt, call. Most doctor's offices have nurse lines. Many have patient
+            portals where you can message questions. These are real humans who can help
+            you decide if something needs attention now or can wait.
+          </p>
+        </div>
+      </section>
+
+      <div class="takeaways">
+        <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
+        <ul>
+          <li>Never use AI for emergencies—call 911 or go to the ER</li>
+          <li>Use the stoplight framework: Red (call now), Yellow (talk to doctor soon), Green (AI can help)</li>
+          <li>Trust your gut—if something feels wrong, seek real medical attention</li>
+          <li>When AI and your doctor disagree, trust your doctor</li>
+          <li>Use AI to support your healthcare conversations, not replace them</li>
+          <li>Never change medications based on AI advice without talking to your provider</li>
+        </ul>
+      </div>
+
+      <nav class="page-nav">
+        <a href="spotting-mistakes.html" class="page-nav-link prev">
+          <span class="page-nav-arrow"><i data-lucide="arrow-left"></i></span>
+          <div>
+            <span class="page-nav-label">Previous</span>
+            <span class="page-nav-title">Spotting AI Mistakes</span>
+          </div>
+        </a>
+        <a href="ai-tools.html" class="page-nav-link next">
+          <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
+          <div>
+            <span class="page-nav-label">Next</span>
+            <span class="page-nav-title">AI Tools You Should Know</span>
+          </div>
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AI 101 for Patients</strong> · Your Guide to Using AI with Your Health</div>
+      <div>v1.0 · 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

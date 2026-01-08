@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding AI Responses | AI 101 for Patients</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .long-form-text { line-height: 1.8; font-size: 1.15rem; color: #334155; max-width: 70ch; margin-bottom: 2rem; }
+    .long-form-text p { margin-bottom: 1.5rem; }
+    .long-form-text strong { color: #0f172a; font-weight: 700; }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
+    .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
+    .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more summary::-webkit-details-marker { display: none; }
+    .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
+    .learn-more[open] summary::before { content: "-"; }
+    .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
+    .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .takeaways ul { margin-bottom: 0; }
+    .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+    .trust-scale { display: flex; margin: 2rem 0; border-radius: 12px; overflow: hidden; }
+    .trust-level { flex: 1; padding: 1.5rem 1rem; text-align: center; }
+    .trust-level h4 { margin: 0 0 0.5rem 0; font-size: 0.9rem; }
+    .trust-level p { margin: 0; font-size: 0.85rem; }
+    .trust-high { background: #dcfce7; color: #166534; }
+    .trust-medium { background: #fef9c3; color: #854d0e; }
+    .trust-low { background: #fee2e2; color: #991b1b; }
+    .red-flag-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+    .red-flag-box h4 { color: #dc2626; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; }
+    .verification-step { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; margin: 1rem 0; display: flex; gap: 1rem; align-items: flex-start; }
+    .verification-step .step-icon { background: #eff6ff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .verification-step .step-icon i { color: #3b82f6; width: 20px; height: 20px; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-badge">AI 101</span>
+        <span class="nav-title">For Patients</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Modules</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <article class="content">
+
+      <header class="unit-header">
+        <span class="unit-label phase-2">PRACTICAL SKILLS</span>
+        <h1 class="unit-title">Understanding AI Responses</h1>
+        <p class="unit-subtitle">
+          How to tell what's reliable, what to question, and when AI might be wrong.
+        </p>
+        <div class="unit-meta">
+          <span class="unit-meta-item">
+            <i data-lucide="clock"></i>
+            12 min read
+          </span>
+        </div>
+      </header>
+
+      <section class="long-form-text">
+        <h2>AI Sounds Confident Even When It's Wrong</h2>
+
+        <p>
+          Here's the challenge with AI: it always sounds sure of itself. Whether it's
+          telling you something well-established or making something up entirely, the
+          tone is the same. There's no hesitation, no "um," no change in voice that
+          signals uncertainty.
+        </p>
+
+        <p>
+          This means you can't rely on how confident AI sounds to judge whether it's
+          right. You need to develop your own sense of what to trust and what to verify.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            AI is like a very confident friend who has read a lot but isn't always
+            right. Just because they say something with certainty doesn't mean you
+            should skip your own judgment.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>The Trust Scale: What to Trust More vs. Less</h2>
+
+        <p>
+          Not all AI responses deserve the same level of trust. Here's a general guide:
+        </p>
+
+        <div class="trust-scale">
+          <div class="trust-level trust-high">
+            <h4>Higher Trust</h4>
+            <p>General explanations, definitions, well-known facts</p>
+          </div>
+          <div class="trust-level trust-medium">
+            <h4>Medium Trust</h4>
+            <p>Statistics, guidelines, specific recommendations</p>
+          </div>
+          <div class="trust-level trust-low">
+            <h4>Lower Trust</h4>
+            <p>Diagnoses, citations, cutting-edge research claims</p>
+          </div>
+        </div>
+
+        <h3>What AI Generally Gets Right</h3>
+        <ul>
+          <li><strong>Basic explanations:</strong> What is blood pressure? How do antibiotics work? AI is usually accurate with fundamental medical concepts.</li>
+          <li><strong>General descriptions:</strong> Common symptoms of flu, what to expect after a procedure, general lifestyle advice.</li>
+          <li><strong>Organizing information:</strong> Summarizing what you've shared, creating lists, structuring your thoughts.</li>
+        </ul>
+
+        <h3>What AI Often Gets Wrong</h3>
+        <ul>
+          <li><strong>Specific citations:</strong> AI frequently makes up journal articles, studies, or statistics that don't exist.</li>
+          <li><strong>Current guidelines:</strong> Medical guidelines change. AI's training data has a cutoff, and recommendations may be outdated.</li>
+          <li><strong>Your specific situation:</strong> AI doesn't know the nuances of your case the way your doctor does.</li>
+          <li><strong>Drug interactions:</strong> AI might miss important interactions or overstate minor ones.</li>
+          <li><strong>Rare conditions:</strong> Less common conditions have less training data, leading to more errors.</li>
+        </ul>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
+          <p style="margin-bottom: 0;">
+            <strong>Research Finding:</strong> Studies show AI chatbots frequently "hallucinate"
+            medical citations - inventing journal articles and studies that don't exist. One
+            study found over 40% of AI-generated medical citations were fabricated.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Red Flags to Watch For</h2>
+
+        <p>
+          Certain patterns in AI responses should trigger extra skepticism:
+        </p>
+
+        <div class="red-flag-box">
+          <h4><i data-lucide="alert-triangle"></i> Red Flags in AI Responses</h4>
+          <ul style="margin-bottom: 0;">
+            <li><strong>Very specific numbers without sources:</strong> "Studies show 73.2% of patients..." - Where did that come from?</li>
+            <li><strong>Definitive statements about your condition:</strong> "You definitely have..." - AI can't diagnose you.</li>
+            <li><strong>Medication dosage recommendations:</strong> AI should not be telling you how much medicine to take.</li>
+            <li><strong>Claims that contradict your doctor:</strong> Your doctor knows you; AI doesn't.</li>
+            <li><strong>Advice to delay seeking care:</strong> When in doubt, talk to a healthcare provider.</li>
+            <li><strong>Outdated information:</strong> Medical guidance changes; AI's training has a cutoff date.</li>
+          </ul>
+        </div>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            If AI tells you something that contradicts what your doctor said, don't assume
+            AI is right and your doctor is wrong. Bring it up with your doctor: "I read
+            something online that said X. Can you help me understand the difference?"
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>How to Check AI's Sources</h2>
+
+        <p>
+          Some AI tools (like Perplexity) provide sources. Others (like ChatGPT) may
+          cite sources when asked. Here's how to verify what AI tells you:
+        </p>
+
+        <div class="verification-step">
+          <div class="step-icon"><i data-lucide="search"></i></div>
+          <div>
+            <strong>Ask for sources</strong>
+            <p style="margin: 0.5rem 0 0 0; color: #64748b;">
+              "What sources are you basing this on?" or "Can you cite specific research?"
+              If AI provides citations, verify they actually exist.
+            </p>
+          </div>
+        </div>
+
+        <div class="verification-step">
+          <div class="step-icon"><i data-lucide="globe"></i></div>
+          <div>
+            <strong>Check reputable medical sites</strong>
+            <p style="margin: 0.5rem 0 0 0; color: #64748b;">
+              Look up key claims on sites like Mayo Clinic, Cleveland Clinic, CDC, or NIH.
+              These have medically reviewed content.
+            </p>
+          </div>
+        </div>
+
+        <div class="verification-step">
+          <div class="step-icon"><i data-lucide="calendar"></i></div>
+          <div>
+            <strong>Check for currency</strong>
+            <p style="margin: 0.5rem 0 0 0; color: #64748b;">
+              When was the information last updated? Medical guidelines change. AI might
+              have outdated recommendations.
+            </p>
+          </div>
+        </div>
+
+        <div class="verification-step">
+          <div class="step-icon"><i data-lucide="user"></i></div>
+          <div>
+            <strong>Ask your healthcare team</strong>
+            <p style="margin: 0.5rem 0 0 0; color: #64748b;">
+              For anything important, verify with your doctor, pharmacist, or nurse.
+              They know your specific situation.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            After AI gives you health information, ask: "What's your confidence level on
+            this, and what should I verify with a healthcare professional?" This prompts
+            AI to acknowledge its limitations.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Healthy Skepticism Without Paranoia</h2>
+
+        <p>
+          The goal isn't to distrust everything AI says. That would make it useless.
+          The goal is calibrated trust: believing the right things to the right degree.
+        </p>
+
+        <h3>Good Skepticism Looks Like:</h3>
+        <ul>
+          <li>Treating AI explanations as a starting point, not final word</li>
+          <li>Verifying specific claims before acting on them</li>
+          <li>Asking follow-up questions when something seems unclear or surprising</li>
+          <li>Discussing AI-provided information with your healthcare team</li>
+        </ul>
+
+        <h3>Bad Skepticism Looks Like:</h3>
+        <ul>
+          <li>Ignoring everything AI says because "it might be wrong"</li>
+          <li>Using AI's potential for error to avoid learning about your health</li>
+          <li>Dismissing your doctor's advice because AI said something different</li>
+        </ul>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            Think of AI like Wikipedia: a great starting point for understanding something,
+            but not the final authority. Use it to learn the basics and generate questions,
+            then verify important details through more authoritative sources.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>When AI Conflicts With Your Doctor</h2>
+
+        <p>
+          This will happen. You'll ask AI about something, and it will say something
+          different from what your doctor told you. What do you do?
+        </p>
+
+        <h3>Step 1: Don't panic or assume either is wrong</h3>
+        <p>
+          Medicine is complex. There are often multiple valid approaches to the same
+          problem. What's right for one patient may not be right for another.
+        </p>
+
+        <h3>Step 2: Consider the context</h3>
+        <p>
+          Your doctor knows things AI doesn't: your full history, your exam findings,
+          how you've responded to treatments before, and your personal preferences.
+          AI is giving general information; your doctor is giving personalized care.
+        </p>
+
+        <h3>Step 3: Ask your doctor about the discrepancy</h3>
+        <p>
+          Good doctors welcome questions. Try: "I was reading about [topic] and saw
+          that some sources recommend [X]. Can you help me understand why you're
+          recommending [Y] for my situation?"
+        </p>
+
+        <h3>Step 4: Trust the relationship</h3>
+        <p>
+          If you generally trust your doctor, lean toward their judgment. If you
+          have ongoing concerns, consider getting a second opinion from another
+          human clinician, not from AI.
+        </p>
+
+        <details class="learn-more">
+          <summary>Learn More: Why doctors and AI might say different things</summary>
+          <div class="learn-more-content">
+            <p>
+              There are many legitimate reasons for differences:
+            </p>
+            <p>
+              <strong>Personalization:</strong> Your doctor is tailoring recommendations
+              to you. AI is giving general information that applies to average patients.
+            </p>
+            <p>
+              <strong>Guideline variation:</strong> Different medical organizations sometimes
+              have different guidelines. Your doctor follows the ones that make most sense
+              for your situation.
+            </p>
+            <p>
+              <strong>Time lag:</strong> AI's training data has a cutoff. Guidelines may
+              have changed since then.
+            </p>
+            <p>
+              <strong>AI error:</strong> AI might simply be wrong. It happens.
+            </p>
+            <p>
+              The right response is usually to discuss the discrepancy with your doctor,
+              not to assume one is correct and the other wrong.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="takeaways">
+        <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
+        <ul>
+          <li>AI sounds confident whether it's right or wrong - don't trust based on tone alone</li>
+          <li>Trust basic explanations more than specific statistics, citations, or diagnoses</li>
+          <li>Watch for red flags: made-up citations, definitive diagnoses, medication doses</li>
+          <li>Verify important claims through reputable medical sites and your healthcare team</li>
+          <li>When AI conflicts with your doctor, discuss it openly rather than choosing one blindly</li>
+          <li>Healthy skepticism means treating AI as a starting point, not the final word</li>
+        </ul>
+      </div>
+
+      <nav class="page-nav">
+        <a href="talking-to-ai.html" class="page-nav-link prev">
+          <span class="page-nav-arrow"><i data-lucide="arrow-left"></i></span>
+          <div>
+            <span class="page-nav-label">Previous</span>
+            <span class="page-nav-title">How to Talk to AI About Your Health</span>
+          </div>
+        </a>
+        <a href="doctor-appointments.html" class="page-nav-link next">
+          <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
+          <div>
+            <span class="page-nav-label">Next</span>
+            <span class="page-nav-title">Preparing for Doctor Appointments</span>
+          </div>
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AI 101 for Patients</strong> · Your Guide to Using AI with Your Health</div>
+      <div>v1.0 · 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Here | AI 101 for Patients</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .long-form-text { line-height: 1.8; font-size: 1.15rem; color: #334155; max-width: 70ch; margin-bottom: 2rem; }
+    .long-form-text p { margin-bottom: 1.5rem; }
+    .long-form-text strong { color: #0f172a; font-weight: 700; }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
+
+    /* Callout boxes for patients */
+    .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+
+    /* Learn More expandable */
+    .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
+    .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more summary::-webkit-details-marker { display: none; }
+    .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
+    .learn-more[open] summary::before { content: "−"; }
+    .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
+
+    /* Key takeaways */
+    .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .takeaways ul { margin-bottom: 0; }
+    .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-badge">AI 101</span>
+        <span class="nav-title">For Patients</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Modules</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <article class="content">
+
+      <header class="unit-header">
+        <span class="unit-label intro">GETTING STARTED</span>
+        <h1 class="unit-title">Start Here</h1>
+        <p class="unit-subtitle">
+          Why AI literacy matters now, and how to get the most from this guide.
+        </p>
+        <div class="unit-meta">
+          <span class="unit-meta-item">
+            <i data-lucide="clock"></i>
+            10 min read
+          </span>
+        </div>
+      </header>
+
+      <section class="long-form-text">
+        <h2>Something Big Just Happened</h2>
+
+        <p>
+          In January 2026, OpenAI launched <strong>ChatGPT Health</strong>—a new feature that lets
+          you connect your medical records directly to ChatGPT. With a few clicks, the AI can now
+          see your lab results, medications, diagnoses, and health history.
+        </p>
+
+        <p>
+          This isn't science fiction. It's available now. And over 40 million people already ask
+          ChatGPT health questions every single day.
+        </p>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
+          <p style="margin-bottom: 0;">
+            <strong>January 2026:</strong> OpenAI launches ChatGPT Health, allowing users to connect
+            medical records from over 2.2 million healthcare providers. The feature works with
+            Apple Health, Peloton, MyFitnessPal, and other wellness apps.
+          </p>
+        </div>
+
+        <p>
+          This is powerful. And a little scary. AI can help you understand your health in ways
+          that weren't possible before. But it can also make mistakes, misunderstand your situation,
+          or give you advice that sounds confident but is completely wrong.
+        </p>
+
+        <p>
+          <strong>That's why this guide exists.</strong>
+        </p>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>What You'll Learn</h2>
+
+        <p>
+          This guide teaches you how to use AI tools for your health—safely and effectively.
+          No technical background needed. No medical degree required.
+        </p>
+
+        <p>We cover three main areas:</p>
+
+        <h3>1. Safety First</h3>
+        <p>
+          Before you dive into using AI with your health information, you need to understand
+          the risks. What can go wrong? How do you protect your privacy? When should you
+          absolutely NOT trust what AI tells you?
+        </p>
+
+        <h3>2. Practical Skills</h3>
+        <p>
+          Once you know the guardrails, you'll learn how to actually use these tools. How to
+          ask better questions. How to evaluate AI responses. How to prepare for doctor
+          appointments using AI as a helper.
+        </p>
+
+        <h3>3. Going Deeper (Optional)</h3>
+        <p>
+          For the curious: how does AI actually work? Why does it make the mistakes it makes?
+          What's coming next in healthcare AI?
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            AI is a tool, not a doctor. The goal of this guide isn't to replace your healthcare
+            team—it's to help you become a better-informed patient who uses AI as one resource
+            among many.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>How to Use This Guide</h2>
+
+        <p>
+          Each module takes about <strong>10-15 minutes</strong> to read. You can work through
+          them in order, or jump to what's most relevant to you.
+        </p>
+
+        <p>
+          <strong>Our recommendation:</strong> Start with the "Safety First" modules before
+          diving into practical skills. Understanding the risks upfront will help you use
+          AI more confidently.
+        </p>
+
+        <h3>What You'll See in Each Module</h3>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            <strong>Pearls</strong> are practical tips and key takeaways you can use right away.
+          </p>
+        </div>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
+          <p style="margin-bottom: 0;">
+            <strong>In the News</strong> boxes highlight recent developments that affect how you
+            should think about AI and health.
+          </p>
+        </div>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            <strong>Try This</strong> boxes give you hands-on activities to practice what you're learning.
+          </p>
+        </div>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            <strong>Warnings</strong> highlight safety-critical information you shouldn't skip.
+          </p>
+        </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Want to go deeper?</summary>
+          <div class="learn-more-content">
+            <p>
+              Throughout the guide, you'll find expandable "Learn More" sections like this one.
+              They're optional—the main content gives you everything you need. But if you're
+              curious about the details, click to expand.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Who This Guide Is For</h2>
+
+        <p>This guide is for you if:</p>
+        <ul>
+          <li>You've used or want to use AI tools like ChatGPT for health questions</li>
+          <li>You're managing a chronic condition and want AI to help you stay informed</li>
+          <li>You're a caregiver helping a family member navigate healthcare</li>
+          <li>You're curious about ChatGPT Health and want to know if it's safe</li>
+          <li>You want to be a more informed, empowered patient</li>
+        </ul>
+
+        <h3>What This Guide Is NOT</h3>
+        <p>
+          This is not medical advice. AI tools are not a replacement for your doctor, nurse
+          practitioner, or other healthcare providers. This guide helps you use AI as one
+          tool among many—while knowing its limits and when to seek real medical care.
+        </p>
+      </section>
+
+      <div class="takeaways">
+        <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
+        <ul>
+          <li>AI can now connect to your medical records—this changes everything</li>
+          <li>40+ million people already ask ChatGPT health questions daily</li>
+          <li>This guide teaches you to use AI safely AND effectively</li>
+          <li>Start with safety, then build practical skills</li>
+          <li>AI is a tool, not a doctor—it's here to help you, not replace your care team</li>
+        </ul>
+      </div>
+
+      <nav class="page-nav">
+        <a href="index.html" class="page-nav-link prev">
+          <span class="page-nav-arrow"><i data-lucide="arrow-left"></i></span>
+          <div>
+            <span class="page-nav-label">Back to</span>
+            <span class="page-nav-title">All Modules</span>
+          </div>
+        </a>
+        <a href="what-ai-can-do.html" class="page-nav-link next">
+          <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
+          <div>
+            <span class="page-nav-label">Next</span>
+            <span class="page-nav-title">What AI Can and Can't Do</span>
+          </div>
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AI 101 for Patients</strong> · Your Guide to Using AI with Your Health</div>
+      <div>v1.0 · 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

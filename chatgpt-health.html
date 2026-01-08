@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT Health Deep Dive | AI 101 for Patients</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .long-form-text { line-height: 1.8; font-size: 1.15rem; color: #334155; max-width: 70ch; margin-bottom: 2rem; }
+    .long-form-text p { margin-bottom: 1.5rem; }
+    .long-form-text strong { color: #0f172a; font-weight: 700; }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
+    .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
+    .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more summary::-webkit-details-marker { display: none; }
+    .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
+    .learn-more[open] summary::before { content: "-"; }
+    .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
+    .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .takeaways ul { margin-bottom: 0; }
+    .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+    .step-box { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+    .step-box h4 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .step-number { background: #3b82f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .data-card { background: #f8fafc; border-radius: 8px; padding: 1rem; text-align: center; }
+    .data-card strong { display: block; font-size: 1.5rem; color: #3b82f6; margin-bottom: 0.25rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-badge">AI 101</span>
+        <span class="nav-title">For Patients</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Modules</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <article class="content">
+
+      <header class="unit-header">
+        <span class="unit-label phase-2">PRACTICAL SKILLS</span>
+        <h1 class="unit-title">ChatGPT Health Deep Dive</h1>
+        <p class="unit-subtitle">
+          How to connect your records, control your privacy, and use ChatGPT Health safely.
+        </p>
+        <div class="unit-meta">
+          <span class="unit-meta-item">
+            <i data-lucide="clock"></i>
+            15 min read
+          </span>
+        </div>
+      </header>
+
+      <section class="long-form-text">
+        <h2>What Is ChatGPT Health?</h2>
+
+        <p>
+          In January 2026, OpenAI launched <strong>ChatGPT Health</strong>. This feature lets you
+          connect your medical records directly to ChatGPT. Once connected, you can ask
+          questions about your own health data and get personalized responses.
+        </p>
+
+        <p>
+          This is a big deal. Instead of typing out your entire medical history, ChatGPT can now
+          see your actual lab results, medications, diagnoses, and more. It can answer questions
+          like "Are any of my medications interacting badly?" or "How has my cholesterol changed
+          over the past year?"
+        </p>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
+          <p style="margin-bottom: 0;">
+            <strong>January 2026:</strong> ChatGPT Health launches with access to records from
+            over 2.2 million healthcare providers through b.well, plus integration with more
+            than 320 health plans. OpenAI states that health data is not used to train AI models.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>How It Works: The b.well Connection</h2>
+
+        <p>
+          ChatGPT Health connects to your medical records through a company called <strong>b.well</strong>.
+          This is a health data platform that already works with thousands of healthcare systems.
+          When you connect, b.well pulls your records and makes them available to ChatGPT.
+        </p>
+
+        <div class="data-grid">
+          <div class="data-card">
+            <strong>2.2M+</strong>
+            <span>Healthcare Providers</span>
+          </div>
+          <div class="data-card">
+            <strong>320+</strong>
+            <span>Health Plans</span>
+          </div>
+          <div class="data-card">
+            <strong>12,000+</strong>
+            <span>Pharmacies</span>
+          </div>
+        </div>
+
+        <h3>What Records Can ChatGPT Access?</h3>
+        <p>Once connected, ChatGPT can see:</p>
+        <ul>
+          <li><strong>Lab results</strong> - Blood work, imaging reports, test results</li>
+          <li><strong>Medications</strong> - Current and past prescriptions</li>
+          <li><strong>Diagnoses</strong> - Conditions in your medical record</li>
+          <li><strong>Procedures</strong> - Surgeries, treatments you've had</li>
+          <li><strong>Immunizations</strong> - Vaccine records</li>
+          <li><strong>Allergies</strong> - Documented allergies and reactions</li>
+        </ul>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            ChatGPT can only see records that are in digital form and shared through the b.well
+            network. Older paper records, records from providers not in the network, or information
+            your doctor hasn't entered into the system won't be visible.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Step-by-Step: Connecting Your Records</h2>
+
+        <p>Here's how to set up ChatGPT Health:</p>
+
+        <div class="step-box">
+          <h4><span class="step-number">1</span> Open ChatGPT Settings</h4>
+          <p style="margin-bottom: 0;">
+            In the ChatGPT app or website, go to <strong>Settings > Personalization > Health</strong>.
+            You'll see the option to "Connect health data."
+          </p>
+        </div>
+
+        <div class="step-box">
+          <h4><span class="step-number">2</span> Sign In to b.well</h4>
+          <p style="margin-bottom: 0;">
+            You'll be redirected to b.well to create an account or sign in. This is where
+            you'll verify your identity and authorize access to your records.
+          </p>
+        </div>
+
+        <div class="step-box">
+          <h4><span class="step-number">3</span> Find Your Healthcare Providers</h4>
+          <p style="margin-bottom: 0;">
+            Search for your doctors, hospitals, and clinics. You can also connect through your
+            health insurance plan. Select each provider you want to connect.
+          </p>
+        </div>
+
+        <div class="step-box">
+          <h4><span class="step-number">4</span> Authorize Access</h4>
+          <p style="margin-bottom: 0;">
+            For each provider, you'll need to authorize b.well to access your records. This
+            usually involves logging into your patient portal or verifying your identity.
+          </p>
+        </div>
+
+        <div class="step-box">
+          <h4><span class="step-number">5</span> Wait for Sync</h4>
+          <p style="margin-bottom: 0;">
+            Records can take anywhere from a few minutes to 24 hours to fully sync, depending
+            on your providers. You'll get a notification when your data is ready.
+          </p>
+        </div>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            Before connecting, make a list of all your healthcare providers from the past few years.
+            Having this ready will make the setup process much smoother.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Privacy Settings You Should Know</h2>
+
+        <p>
+          Connecting your health records to AI raises real privacy questions. Here's what
+          you can control and what you should know:
+        </p>
+
+        <h3>What OpenAI Says About Your Data</h3>
+        <ul>
+          <li><strong>Not used for training:</strong> OpenAI states health data is not used to train AI models</li>
+          <li><strong>Encrypted:</strong> Data is encrypted in transit and at rest</li>
+          <li><strong>You control access:</strong> You can disconnect at any time</li>
+          <li><strong>HIPAA considerations:</strong> b.well is HIPAA-compliant; ChatGPT itself is not a "covered entity"</li>
+        </ul>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            Once you share health information in a conversation with ChatGPT, that conversation
+            is stored. Even if you disconnect your health records, information you've already
+            discussed may remain in your chat history. Be thoughtful about what you share.
+          </p>
+        </div>
+
+        <h3>Privacy Controls Available</h3>
+        <ul>
+          <li><strong>Disconnect anytime:</strong> Go to Settings > Personalization > Health to disconnect</li>
+          <li><strong>Delete conversations:</strong> Remove specific chats that contain health info</li>
+          <li><strong>Chat history off:</strong> You can disable chat history entirely (conversations won't be saved)</li>
+          <li><strong>Temporary chat:</strong> Use temporary chat mode for sensitive questions</li>
+        </ul>
+
+        <details class="learn-more">
+          <summary>Learn More: Understanding HIPAA and AI</summary>
+          <div class="learn-more-content">
+            <p>
+              HIPAA (the Health Insurance Portability and Accountability Act) protects your
+              health information when it's held by healthcare providers and insurance companies.
+              However, when you voluntarily share your data with a consumer app like ChatGPT,
+              different rules apply.
+            </p>
+            <p>
+              b.well is HIPAA-compliant, meaning they follow strict rules about protecting your
+              data when they retrieve it from healthcare providers. But once you authorize
+              sharing with ChatGPT, you're the one making the choice to share.
+            </p>
+            <p>
+              This isn't necessarily bad, but it means you should be informed about what you're
+              agreeing to. Read the privacy policies and understand your rights.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Beyond Medical Records: Other Health Data</h2>
+
+        <p>
+          ChatGPT Health can also connect to wellness apps and devices, giving it access
+          to data beyond your official medical records:
+        </p>
+
+        <h3>Supported Connections</h3>
+        <ul>
+          <li><strong>Apple Health:</strong> Steps, heart rate, sleep, workouts, and more from your iPhone or Apple Watch</li>
+          <li><strong>Peloton:</strong> Workout history, heart rate during exercise, activity trends</li>
+          <li><strong>MyFitnessPal:</strong> Nutrition tracking, calorie intake, meal logging</li>
+          <li><strong>Other fitness apps:</strong> The list of supported apps continues to grow</li>
+        </ul>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            Connecting wellness data can be useful for questions like "Based on my recent sleep
+            patterns and activity, what might explain why I'm feeling tired?" But remember,
+            the same privacy considerations apply. More connected data means more information
+            about you in one place.
+          </p>
+        </div>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            If you use Apple Health, try connecting it to ChatGPT and asking: "Looking at my
+            sleep and activity data from the past month, do you notice any patterns?" This
+            can be a good way to spot trends you might have missed.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>What to Ask ChatGPT Health</h2>
+
+        <p>Once your records are connected, here are some useful ways to use it:</p>
+
+        <h3>Understanding Your Data</h3>
+        <ul>
+          <li>"Explain my most recent blood test results in simple terms."</li>
+          <li>"What does my A1C level mean, and is mine in a healthy range?"</li>
+          <li>"Summarize my health visits from the past year."</li>
+        </ul>
+
+        <h3>Tracking Changes</h3>
+        <ul>
+          <li>"How has my cholesterol changed over the past three years?"</li>
+          <li>"Show me the trend in my blood pressure readings."</li>
+          <li>"Are there any lab values that have been consistently outside normal range?"</li>
+        </ul>
+
+        <h3>Preparing for Appointments</h3>
+        <ul>
+          <li>"Based on my records, what questions should I ask my doctor at my next visit?"</li>
+          <li>"Create a summary of my current medications and conditions for a new doctor."</li>
+          <li>"What preventive screenings might I be due for based on my age and history?"</li>
+        </ul>
+
+        <h3>Understanding Medications</h3>
+        <ul>
+          <li>"Are any of my current medications known to interact with each other?"</li>
+          <li>"Explain what each of my medications is for."</li>
+          <li>"What are the common side effects of my medications?"</li>
+        </ul>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            Never change your medications based on ChatGPT's responses. If you have concerns
+            about drug interactions or side effects, bring them up with your doctor or pharmacist.
+            AI can help you identify questions to ask, not give you medical orders.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>What ChatGPT Health Cannot Do</h2>
+
+        <p>
+          Even with your records connected, ChatGPT has important limitations:
+        </p>
+
+        <ul>
+          <li><strong>Cannot diagnose:</strong> It can discuss what your data might suggest, but cannot tell you what condition you have</li>
+          <li><strong>Cannot prescribe:</strong> It cannot tell you what medications to take or change your treatment</li>
+          <li><strong>Cannot see everything:</strong> Records not in the b.well network won't appear</li>
+          <li><strong>Cannot know context:</strong> It doesn't know what you were feeling when tests were done or the full picture your doctor sees</li>
+          <li><strong>Can make mistakes:</strong> It might misinterpret data or give incorrect information</li>
+        </ul>
+
+        <details class="learn-more">
+          <summary>Learn More: Why AI can't replace your doctor's interpretation</summary>
+          <div class="learn-more-content">
+            <p>
+              When your doctor looks at your lab results, they see them in context. They know
+              you were dehydrated that day. They remember you mentioned stress at work. They
+              can examine you and notice things that aren't in any database.
+            </p>
+            <p>
+              AI sees numbers and text. It can pattern-match against what it's learned, but it
+              lacks the human judgment that comes from actually knowing you as a person.
+            </p>
+            <p>
+              This is why ChatGPT Health is best used as a research assistant that helps you
+              understand and prepare, not as a replacement for the clinical relationship
+              with your healthcare team.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="takeaways">
+        <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
+        <ul>
+          <li>ChatGPT Health connects to your medical records through b.well, covering 2.2M+ providers</li>
+          <li>You control what's connected and can disconnect anytime</li>
+          <li>Health data is not used to train AI models, according to OpenAI</li>
+          <li>You can also connect Apple Health, Peloton, MyFitnessPal, and other wellness apps</li>
+          <li>Use it to understand your data and prepare questions, not to diagnose or treat yourself</li>
+          <li>Be thoughtful about privacy: information you discuss stays in your chat history</li>
+        </ul>
+      </div>
+
+      <nav class="page-nav">
+        <a href="ai-tools.html" class="page-nav-link prev">
+          <span class="page-nav-arrow"><i data-lucide="arrow-left"></i></span>
+          <div>
+            <span class="page-nav-label">Previous</span>
+            <span class="page-nav-title">AI Tools You Should Know</span>
+          </div>
+        </a>
+        <a href="talking-to-ai.html" class="page-nav-link next">
+          <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
+          <div>
+            <span class="page-nav-label">Next</span>
+            <span class="page-nav-title">How to Talk to AI About Your Health</span>
+          </div>
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AI 101 for Patients</strong> · Your Guide to Using AI with Your Health</div>
+      <div>v1.0 · 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

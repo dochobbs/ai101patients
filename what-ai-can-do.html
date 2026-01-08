@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What AI Can and Can't Do | AI 101 for Patients</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .long-form-text { line-height: 1.8; font-size: 1.15rem; color: #334155; max-width: 70ch; margin-bottom: 2rem; }
+    .long-form-text p { margin-bottom: 1.5rem; }
+    .long-form-text strong { color: #0f172a; font-weight: 700; }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
+    .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
+    .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more summary::-webkit-details-marker { display: none; }
+    .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
+    .learn-more[open] summary::before { content: "−"; }
+    .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
+    .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .takeaways ul { margin-bottom: 0; }
+    .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+    @media (max-width: 600px) { .comparison-grid { grid-template-columns: 1fr; } }
+    .comparison-card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+    .comparison-card.good { border-top: 4px solid #16a34a; }
+    .comparison-card.bad { border-top: 4px solid #dc2626; }
+    .comparison-card h4 { margin-top: 0; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-badge">AI 101</span>
+        <span class="nav-title">For Patients</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Modules</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <article class="content">
+
+      <header class="unit-header">
+        <span class="unit-label phase-1">SAFETY FIRST</span>
+        <h1 class="unit-title">What AI Can and Can't Do</h1>
+        <p class="unit-subtitle">
+          Setting realistic expectations. AI is powerful—but it's not a doctor.
+        </p>
+        <div class="unit-meta">
+          <span class="unit-meta-item">
+            <i data-lucide="clock"></i>
+            12 min read
+          </span>
+        </div>
+      </header>
+
+      <section class="long-form-text">
+        <h2>AI Is Not a Doctor</h2>
+
+        <p>
+          Let's get the most important thing out of the way first: <strong>AI is not a doctor</strong>.
+          It doesn't examine you. It can't run tests. It doesn't know you as a person. And it has
+          no medical license to lose if it gives you bad advice.
+        </p>
+
+        <p>
+          This isn't a criticism of AI—it's just a fact about what these tools are. Understanding
+          this helps you use them appropriately.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            Think of AI as a very knowledgeable research assistant who has read millions of medical
+            articles—but has never seen a patient, can't do a physical exam, and sometimes
+            confidently says things that are completely wrong.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>What AI Does Well</h2>
+
+        <p>AI tools like ChatGPT excel at certain things:</p>
+
+        <h3>Explaining Medical Concepts</h3>
+        <p>
+          AI is excellent at taking complex medical jargon and explaining it in plain language.
+          Got a lab result you don't understand? AI can often explain what it means in terms
+          you can actually follow.
+        </p>
+
+        <h3>Summarizing Information</h3>
+        <p>
+          If you have a long document—like discharge instructions or a research article—AI
+          can help you pull out the key points. It's like having a very fast reader who can
+          give you the highlights.
+        </p>
+
+        <h3>Generating Questions</h3>
+        <p>
+          Not sure what to ask your doctor? AI can help you come up with relevant questions
+          based on your situation. This can make your appointments more productive.
+        </p>
+
+        <h3>Organizing Your Thoughts</h3>
+        <p>
+          AI can help you structure your symptoms, timeline, and concerns into a clear
+          summary before you see your healthcare provider.
+        </p>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            Next time you have a doctor's appointment, try asking ChatGPT: "I'm seeing my doctor
+            about [your concern]. What questions should I consider asking?" You might discover
+            angles you hadn't thought of.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>What AI Does Poorly</h2>
+
+        <p>AI tools have real limitations you need to know about:</p>
+
+        <h3>Diagnosing Your Condition</h3>
+        <p>
+          AI cannot diagnose you. It might suggest possibilities based on symptoms you describe,
+          but it can't examine you, consider your full history, or order tests. Any "diagnosis"
+          from AI is really just a guess—sometimes an educated one, sometimes not.
+        </p>
+
+        <h3>Knowing When Something Is Urgent</h3>
+        <p>
+          AI often can't tell the difference between "this can wait until Monday" and "go to
+          the ER now." It might miss subtle warning signs that a trained clinician would catch.
+        </p>
+
+        <h3>Understanding YOUR Specific Situation</h3>
+        <p>
+          Even with your medical records connected, AI doesn't truly understand you as a whole
+          person. It doesn't know your values, your fears, your life circumstances, or the
+          nuances of your health history the way your doctor does.
+        </p>
+
+        <h3>Being Right All the Time</h3>
+        <p>
+          AI "hallucinates"—it sometimes makes up facts, cites studies that don't exist, or
+          gives advice that sounds authoritative but is completely wrong. We'll cover this
+          more in the "Spotting AI Mistakes" module.
+        </p>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            Never use AI to decide whether to go to the emergency room. Chest pain, difficulty
+            breathing, sudden severe symptoms—these need real medical evaluation, not a chatbot.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Good Uses vs. Risky Uses</h2>
+
+        <div class="comparison-grid">
+          <div class="comparison-card good">
+            <h4 style="color: #16a34a;">✓ Good Uses for AI</h4>
+            <ul>
+              <li>Understanding what a medical term means</li>
+              <li>Learning about a condition after diagnosis</li>
+              <li>Preparing questions for your doctor</li>
+              <li>Organizing your symptoms timeline</li>
+              <li>Understanding medication instructions</li>
+              <li>Comparing treatment options (for research)</li>
+            </ul>
+          </div>
+          <div class="comparison-card bad">
+            <h4 style="color: #dc2626;">✗ Risky Uses for AI</h4>
+            <ul>
+              <li>Diagnosing yourself with a condition</li>
+              <li>Deciding if symptoms are an emergency</li>
+              <li>Changing medications without your doctor</li>
+              <li>Replacing professional mental health care</li>
+              <li>Making major health decisions alone</li>
+              <li>Ignoring your doctor's advice because AI said something different</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            A good rule of thumb: Use AI to <em>prepare</em> for conversations with your healthcare
+            team, not to <em>replace</em> those conversations.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>AI Is Getting Better—But It's Not There Yet</h2>
+
+        <p>
+          AI tools are improving rapidly. What couldn't be done a year ago might be possible
+          today. But "getting better" doesn't mean "ready to replace your doctor."
+        </p>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
+          <p style="margin-bottom: 0;">
+            <strong>Research Update:</strong> Studies show that AI combined with doctors often
+            performs better than either alone. The key word is "combined"—AI works best as a
+            tool that supports human medical judgment, not replaces it.
+          </p>
+        </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Why AI sounds so confident</summary>
+          <div class="learn-more-content">
+            <p>
+              AI language models are designed to produce fluent, confident-sounding text. This is
+              a feature, not a bug—it makes them useful for many tasks. But it also means they
+              sound equally confident whether they're right or wrong.
+            </p>
+            <p>
+              Unlike a doctor who might say "I'm not sure, let me look that up," AI often
+              presents uncertain information with the same confident tone as well-established
+              facts. This is why verification is so important.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="takeaways">
+        <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
+        <ul>
+          <li>AI is not a doctor—it can't examine you, diagnose you, or take responsibility for your care</li>
+          <li>AI excels at explaining concepts, summarizing information, and helping you prepare questions</li>
+          <li>AI struggles with diagnosis, urgency assessment, and understanding your unique situation</li>
+          <li>Use AI to prepare for healthcare conversations, not replace them</li>
+          <li>AI sounds confident even when it's wrong—always verify important information</li>
+        </ul>
+      </div>
+
+      <nav class="page-nav">
+        <a href="start-here.html" class="page-nav-link prev">
+          <span class="page-nav-arrow"><i data-lucide="arrow-left"></i></span>
+          <div>
+            <span class="page-nav-label">Previous</span>
+            <span class="page-nav-title">Start Here</span>
+          </div>
+        </a>
+        <a href="privacy-health-data.html" class="page-nav-link next">
+          <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
+          <div>
+            <span class="page-nav-label">Next</span>
+            <span class="page-nav-title">Your Privacy and Health Data</span>
+          </div>
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AI 101 for Patients</strong> · Your Guide to Using AI with Your Health</div>
+      <div>v1.0 · 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

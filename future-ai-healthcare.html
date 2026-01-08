@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Future of AI in Healthcare | AI 101 for Patients</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .long-form-text { line-height: 1.8; font-size: 1.15rem; color: #334155; max-width: 70ch; margin-bottom: 2rem; }
+    .long-form-text p { margin-bottom: 1.5rem; }
+    .long-form-text strong { color: #0f172a; font-weight: 700; }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
+    .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
+    .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more summary::-webkit-details-marker { display: none; }
+    .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
+    .learn-more[open] summary::before { content: "-"; }
+    .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
+    .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .takeaways ul { margin-bottom: 0; }
+    .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+    .future-card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+    .future-card h4 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .future-card .timeline { font-size: 0.85rem; color: #6366f1; font-weight: 600; margin-bottom: 0.5rem; }
+    .timeline-section { border-left: 3px solid #e2e8f0; padding-left: 1.5rem; margin: 2rem 0; }
+    .timeline-section h3 { position: relative; }
+    .timeline-section h3::before { content: ""; position: absolute; left: -1.75rem; top: 0.5rem; width: 12px; height: 12px; background: #3b82f6; border-radius: 50%; }
+    .stay-informed { background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+    .stay-informed h4 { margin-top: 0; color: #1e293b; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-badge">AI 101</span>
+        <span class="nav-title">For Patients</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Modules</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <article class="content">
+
+      <header class="unit-header">
+        <span class="unit-label phase-3">GOING DEEPER</span>
+        <h1 class="unit-title">The Future of AI in Healthcare</h1>
+        <p class="unit-subtitle">
+          What's coming next, how AI is being used by your doctors, and how to stay informed.
+        </p>
+        <div class="unit-meta">
+          <span class="unit-meta-item">
+            <i data-lucide="clock"></i>
+            12 min read
+          </span>
+          <span class="unit-meta-item" style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">
+            Optional/Advanced
+          </span>
+        </div>
+      </header>
+
+      <section class="long-form-text">
+        <h2>AI Is Already Changing Healthcare</h2>
+
+        <p>
+          The AI tools you've learned about in this guide are just the beginning. AI
+          is increasingly being used across healthcare - in hospitals, clinics, labs,
+          and pharmacies. Some of this is visible to patients; much of it happens
+          behind the scenes.
+        </p>
+
+        <p>
+          Understanding what's coming helps you be a more informed patient and better
+          advocate for yourself as these technologies become part of your care.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            AI in healthcare isn't just about chatbots. It includes tools that help
+            doctors read images, predict health risks, personalize treatments, and
+            make healthcare more efficient. As a patient, you'll increasingly encounter
+            AI-assisted care.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>AI in Your Doctor's Office Today</h2>
+
+        <p>
+          Here's how AI is already being used in clinical settings:
+        </p>
+
+        <div class="future-card">
+          <div class="timeline">Already widespread</div>
+          <h4><i data-lucide="file-image"></i> Medical Imaging Analysis</h4>
+          <p style="margin-bottom: 0;">
+            AI helps radiologists read X-rays, CT scans, MRIs, and other images. It can
+            flag potential issues, measure changes over time, and help ensure nothing
+            is missed. Your doctor still makes the final call, but AI assists.
+          </p>
+        </div>
+
+        <div class="future-card">
+          <div class="timeline">Growing rapidly</div>
+          <h4><i data-lucide="file-text"></i> Clinical Documentation</h4>
+          <p style="margin-bottom: 0;">
+            AI can now transcribe doctor-patient conversations and draft clinical notes.
+            This lets your doctor focus on you instead of typing during your appointment.
+            You may notice your doctor using these tools.
+          </p>
+        </div>
+
+        <div class="future-card">
+          <div class="timeline">Emerging</div>
+          <h4><i data-lucide="bell"></i> Clinical Decision Support</h4>
+          <p style="margin-bottom: 0;">
+            AI systems alert doctors to potential drug interactions, remind them about
+            preventive care you're due for, and suggest diagnoses to consider based on
+            your symptoms. These work quietly in the background.
+          </p>
+        </div>
+
+        <div class="future-card">
+          <div class="timeline">Expanding</div>
+          <h4><i data-lucide="message-square"></i> Patient Communication</h4>
+          <p style="margin-bottom: 0;">
+            AI chatbots handle appointment scheduling, answer common questions, and
+            triage messages to your doctor's office. That first response you get might
+            be AI-assisted before a human reviews it.
+          </p>
+        </div>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
+          <p style="margin-bottom: 0;">
+            <strong>January 2026:</strong> Several major health systems now use AI to
+            help draft responses to patient portal messages, with physicians reviewing
+            before sending. This helps address the overwhelming volume of messages
+            doctors receive while maintaining accuracy.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>What's Coming Next</h2>
+
+        <div class="timeline-section">
+          <h3>Near Future (1-3 years)</h3>
+          <ul>
+            <li><strong>More personalized AI:</strong> Health AI will increasingly use your specific data to give you more relevant information</li>
+            <li><strong>Better wearable integration:</strong> Your smartwatch and health devices will connect more seamlessly with AI tools</li>
+            <li><strong>Improved accuracy:</strong> AI will get better at knowing what it doesn't know and when to defer to humans</li>
+            <li><strong>Multimodal AI:</strong> AI that can analyze images, text, and voice together for more complete understanding</li>
+          </ul>
+        </div>
+
+        <div class="timeline-section">
+          <h3>Medium Term (3-5 years)</h3>
+          <ul>
+            <li><strong>AI health coaches:</strong> Personalized AI that helps you manage chronic conditions with ongoing support</li>
+            <li><strong>Predictive health:</strong> AI that can warn you about health risks before symptoms appear</li>
+            <li><strong>Drug discovery impact:</strong> Medications discovered or optimized by AI reaching patients</li>
+            <li><strong>Mental health AI:</strong> More sophisticated AI support for mental health, used alongside human therapists</li>
+          </ul>
+        </div>
+
+        <div class="timeline-section">
+          <h3>Longer Term (5+ years)</h3>
+          <ul>
+            <li><strong>AI-assisted diagnostics:</strong> AI that can help diagnose conditions with doctor-level accuracy</li>
+            <li><strong>Personalized medicine:</strong> Treatment plans tailored to your genetics, lifestyle, and health history</li>
+            <li><strong>Continuous monitoring:</strong> AI that watches your health data and alerts you and your doctor to concerns</li>
+            <li><strong>Global health access:</strong> AI bringing medical expertise to underserved areas</li>
+          </ul>
+        </div>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            Predictions about technology are notoriously unreliable. Some of these advances
+            might come faster than expected; others might take longer or not happen as
+            envisioned. What's certain is that AI in healthcare will continue evolving.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Questions to Ask About AI in Your Care</h2>
+
+        <p>
+          As AI becomes more common in healthcare, it's reasonable to ask about it.
+          Here are questions you might consider:
+        </p>
+
+        <ul>
+          <li>"Was AI used in analyzing my test results or images?"</li>
+          <li>"Is my doctor using AI to help with clinical decisions about my care?"</li>
+          <li>"If AI helped draft this message or recommendation, has a human reviewed it?"</li>
+          <li>"What happens if I want a fully human review of something AI was involved in?"</li>
+          <li>"How is my health data being used with AI systems?"</li>
+        </ul>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            You have the right to understand how your care is being delivered. Healthcare
+            providers are increasingly being asked to be transparent about AI use. Don't
+            be afraid to ask questions.
+          </p>
+        </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Your rights regarding AI in healthcare</summary>
+          <div class="learn-more-content">
+            <p>
+              Regulations about AI in healthcare are still evolving. Currently:
+            </p>
+            <p>
+              <strong>FDA oversight:</strong> AI tools used for diagnosis or treatment
+              recommendations typically require FDA clearance, which involves demonstrating
+              safety and effectiveness.
+            </p>
+            <p>
+              <strong>Transparency requirements:</strong> Some states and healthcare systems
+              are beginning to require disclosure when AI is used in patient care.
+            </p>
+            <p>
+              <strong>Human oversight:</strong> Most AI tools in clinical use are designed
+              to assist humans, not replace them. A doctor should be involved in significant
+              decisions about your care.
+            </p>
+            <p>
+              <strong>Privacy protections:</strong> HIPAA and other regulations still apply
+              to your health data, even when AI is involved.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Staying Informed</h2>
+
+        <p>
+          AI in healthcare is moving fast. Staying informed helps you be a better
+          advocate for yourself. Here's how:
+        </p>
+
+        <div class="stay-informed">
+          <h4>Ways to Stay Updated</h4>
+          <ul style="margin-bottom: 0;">
+            <li><strong>Follow reputable health news:</strong> Sources like STAT News, NPR Health, and major medical centers' blogs cover AI developments accessibly</li>
+            <li><strong>Ask your healthcare providers:</strong> They're often aware of AI tools being adopted in their practice</li>
+            <li><strong>Check patient advocacy groups:</strong> Organizations focused on your conditions often track relevant technology developments</li>
+            <li><strong>Be skeptical of hype:</strong> Both overly enthusiastic and overly fearful coverage of AI tends to miss nuance</li>
+          </ul>
+        </div>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            At your next doctor's appointment, ask: "Is your practice using any AI tools
+            that affect my care? I'd like to understand how technology is being used in
+            my treatment." Most providers will appreciate your engagement.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>The Human Element Remains Essential</h2>
+
+        <p>
+          Throughout all these changes, one thing remains constant: healthcare is
+          fundamentally about humans caring for humans. AI is a powerful tool, but
+          it works best when it supports human connection, not replaces it.
+        </p>
+
+        <p>
+          The relationship with your healthcare providers - the trust, the understanding,
+          the shared decision-making - remains at the center of good care. AI can
+          help make that relationship more informed and more efficient, but it
+          can't replace it.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            Think of AI as you would any other medical technology - like an MRI or blood
+            test. It provides information that helps doctors and patients make better
+            decisions. The decision-making, the caring, the healing - those remain human.
+          </p>
+        </div>
+
+        <h3>What This Guide Has Taught You</h3>
+        <p>
+          You've learned how to use AI safely for health questions. You understand
+          its capabilities and limitations. You know how to ask good questions, evaluate
+          responses, and integrate AI with your healthcare team. These skills will
+          serve you well as AI continues to evolve.
+        </p>
+
+        <p>
+          The most important thing isn't mastering any particular tool - it's developing
+          good judgment about how to use AI in your health journey while keeping your
+          human healthcare team at the center of your care.
+        </p>
+      </section>
+
+      <div class="takeaways">
+        <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
+        <ul>
+          <li>AI is already being used in healthcare for imaging, documentation, and clinical support</li>
+          <li>More personalized, accurate, and integrated AI tools are coming in the next few years</li>
+          <li>You have the right to ask about AI use in your care and how your data is being used</li>
+          <li>Stay informed through reputable health news sources and conversations with your providers</li>
+          <li>AI is a powerful tool, but human connection remains at the heart of good healthcare</li>
+          <li>The skills you've learned in this guide will serve you well as AI continues to evolve</li>
+        </ul>
+      </div>
+
+      <nav class="page-nav">
+        <a href="ai-bias.html" class="page-nav-link prev">
+          <span class="page-nav-arrow"><i data-lucide="arrow-left"></i></span>
+          <div>
+            <span class="page-nav-label">Previous</span>
+            <span class="page-nav-title">AI Bias and Your Health</span>
+          </div>
+        </a>
+        <a href="index.html" class="page-nav-link next">
+          <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
+          <div>
+            <span class="page-nav-label">Back to</span>
+            <span class="page-nav-title">All Modules</span>
+          </div>
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AI 101 for Patients</strong> · Your Guide to Using AI with Your Health</div>
+      <div>v1.0 · 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

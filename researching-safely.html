@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Researching Your Health Safely | AI 101 for Patients</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .long-form-text { line-height: 1.8; font-size: 1.15rem; color: #334155; max-width: 70ch; margin-bottom: 2rem; }
+    .long-form-text p { margin-bottom: 1.5rem; }
+    .long-form-text strong { color: #0f172a; font-weight: 700; }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
+    .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
+    .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more summary::-webkit-details-marker { display: none; }
+    .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
+    .learn-more[open] summary::before { content: "-"; }
+    .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
+    .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .takeaways ul { margin-bottom: 0; }
+    .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+    .stop-sign { background: #fef2f2; border: 2px solid #fecaca; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+    .stop-sign h4 { color: #dc2626; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; }
+    .research-tip { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; margin: 1rem 0; }
+    .research-tip h4 { margin-top: 0; margin-bottom: 0.5rem; color: #1e293b; font-size: 1rem; }
+    .research-tip p { margin: 0; color: #64748b; font-size: 0.95rem; }
+    .spiral-signs { display: grid; gap: 1rem; margin: 1.5rem 0; }
+    .spiral-sign { display: flex; gap: 1rem; align-items: flex-start; background: #fef2f2; padding: 1rem; border-radius: 8px; }
+    .spiral-sign i { color: #dc2626; flex-shrink: 0; margin-top: 2px; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-badge">AI 101</span>
+        <span class="nav-title">For Patients</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Modules</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <article class="content">
+
+      <header class="unit-header">
+        <span class="unit-label phase-2">PRACTICAL SKILLS</span>
+        <h1 class="unit-title">Researching Your Health Safely</h1>
+        <p class="unit-subtitle">
+          How to look things up without falling into a spiral of worry. When to stop and call your doctor instead.
+        </p>
+        <div class="unit-meta">
+          <span class="unit-meta-item">
+            <i data-lucide="clock"></i>
+            12 min read
+          </span>
+        </div>
+      </header>
+
+      <section class="long-form-text">
+        <h2>The Research Trap</h2>
+
+        <p>
+          You notice a new symptom. You ask AI about it. It mentions a few possibilities,
+          including something serious. Now you're worried. You ask more questions. You
+          start looking up the serious thing. Suddenly it's 2 AM and you're convinced
+          you have a rare disease.
+        </p>
+
+        <p>
+          Sound familiar? Health research can quickly spiral from helpful information-gathering
+          into anxiety-inducing rabbit holes. AI makes this easier than ever, because
+          you can keep asking questions indefinitely, each one potentially leading to
+          more scary possibilities.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            There's a name for this: cyberchondria - health anxiety triggered by online
+            health searching. AI doesn't cause this, but it can make it worse if you're
+            not aware of the pattern.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Healthy Research vs. Harmful Spiraling</h2>
+
+        <p>
+          Not all health research is bad. In fact, being informed about your health is
+          generally a good thing. The difference is in how you do it.
+        </p>
+
+        <h3>Healthy Research Looks Like:</h3>
+        <ul>
+          <li>Learning about a condition you've already been diagnosed with</li>
+          <li>Understanding what to expect from a treatment or procedure</li>
+          <li>Preparing questions for your doctor</li>
+          <li>Looking up how to manage symptoms your doctor has explained</li>
+          <li>Setting a time limit and sticking to it</li>
+        </ul>
+
+        <h3>Harmful Spiraling Looks Like:</h3>
+        <ul>
+          <li>Self-diagnosing based on symptoms</li>
+          <li>Researching for hours without reaching any conclusion</li>
+          <li>Jumping to rare, serious conditions based on common symptoms</li>
+          <li>Feeling more anxious after researching than before</li>
+          <li>Avoiding the doctor because you're afraid of what they'll find</li>
+        </ul>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
+          <p style="margin-bottom: 0;">
+            <strong>Research Finding:</strong> Studies show that health information seeking
+            online is associated with both positive outcomes (better health knowledge) and
+            negative outcomes (increased anxiety) depending on how it's done. The key is
+            approach, not avoidance.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Signs You Should Stop Researching</h2>
+
+        <p>
+          Learn to recognize when research has stopped helping and started hurting:
+        </p>
+
+        <div class="spiral-signs">
+          <div class="spiral-sign">
+            <i data-lucide="alert-circle"></i>
+            <div><strong>You're more anxious than when you started.</strong> Research should reduce uncertainty, not increase fear.</div>
+          </div>
+          <div class="spiral-sign">
+            <i data-lucide="alert-circle"></i>
+            <div><strong>You keep asking the same question in different ways.</strong> You're looking for a specific answer, not information.</div>
+          </div>
+          <div class="spiral-sign">
+            <i data-lucide="alert-circle"></i>
+            <div><strong>You've been at it for more than 20-30 minutes.</strong> If you don't have clarity by now, more searching won't help.</div>
+          </div>
+          <div class="spiral-sign">
+            <i data-lucide="alert-circle"></i>
+            <div><strong>You're focused on worst-case scenarios.</strong> You've latched onto the scary possibility and can't let go.</div>
+          </div>
+          <div class="spiral-sign">
+            <i data-lucide="alert-circle"></i>
+            <div><strong>You're reading instead of acting.</strong> You know you should call the doctor but keep researching instead.</div>
+          </div>
+        </div>
+
+        <div class="stop-sign">
+          <h4><i data-lucide="octagon"></i> When to Stop and Call Instead</h4>
+          <p style="margin-bottom: 0.5rem;">Stop researching and contact a healthcare provider when:</p>
+          <ul style="margin-bottom: 0;">
+            <li>You have symptoms that worry you significantly</li>
+            <li>Symptoms are severe, sudden, or getting worse</li>
+            <li>You've been researching for a while without reassurance</li>
+            <li>Your gut tells you something is wrong</li>
+            <li>AI or search results suggest you should seek care</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Research Strategies That Work</h2>
+
+        <p>Here are evidence-based approaches to researching your health without spiraling:</p>
+
+        <div class="research-tip">
+          <h4>Set a time limit before you start</h4>
+          <p>Decide you'll spend 15-20 minutes maximum. When time's up, you either have your answer or you need to talk to a doctor.</p>
+        </div>
+
+        <div class="research-tip">
+          <h4>Start with what you know, not what you fear</h4>
+          <p>Research your actual diagnosis or situation, not every possible thing your symptoms could mean.</p>
+        </div>
+
+        <div class="research-tip">
+          <h4>Ask AI for perspective, not diagnosis</h4>
+          <p>Instead of "Do I have X?" try "I'm worried about X because of [symptom]. Is this a reasonable concern to bring to my doctor, or is this common and usually harmless?"</p>
+        </div>
+
+        <div class="research-tip">
+          <h4>Focus on what you can do</h4>
+          <p>Ask: "What should I do about this symptom while I wait to see my doctor?" rather than endless "what could it be" questions.</p>
+        </div>
+
+        <div class="research-tip">
+          <h4>Write down your conclusion and stop</h4>
+          <p>At the end of your research session, write one sentence: what you learned and what you'll do next. Then close the browser.</p>
+        </div>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            Next time you want to research a symptom, set a 15-minute timer. At the end, write
+            down: (1) the most likely explanation, (2) whether you need to see a doctor, and
+            (3) one action you'll take. Then stop.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Researching Medications Safely</h2>
+
+        <p>
+          Medication research is one of the most useful applications of AI for patients.
+          But it comes with its own pitfalls.
+        </p>
+
+        <h3>Good Medication Questions:</h3>
+        <ul>
+          <li>"What is [medication] used for?" - Understanding what your doctor prescribed</li>
+          <li>"What are the common side effects of [medication]?" - Knowing what to expect</li>
+          <li>"How should I take [medication]?" - Timing, food, etc.</li>
+          <li>"What should I tell my doctor if I experience [symptom]?" - When to report back</li>
+        </ul>
+
+        <h3>Risky Medication Questions:</h3>
+        <ul>
+          <li>"Should I take [medication]?" - That's your doctor's decision with you</li>
+          <li>"What dose of [medication] should I take?" - Never adjust doses based on AI</li>
+          <li>"Can I stop taking [medication]?" - Always discuss with your prescriber first</li>
+          <li>"Is [medication] interacting with [other medication]?" - Ask your pharmacist for accurate info</li>
+        </ul>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            If AI tells you about a potential drug interaction, don't panic and don't stop
+            your medication. Contact your pharmacist or doctor. They prescribed these
+            medications knowing your full picture - AI doesn't have that context.
+          </p>
+        </div>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            Pharmacists are medication experts and are usually more accessible than doctors.
+            If you have questions about your medications, call your pharmacy. They can often
+            answer questions in minutes that would take days to get answered through your doctor.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Looking Up Conditions Without Spiraling</h2>
+
+        <p>
+          When you're diagnosed with something or hear a term you don't understand, it's
+          natural to want to learn more. Here's how to do it safely:
+        </p>
+
+        <h3>Start with understanding, not prognosis</h3>
+        <p>
+          Ask AI to explain what the condition is and how it affects the body before
+          asking about outcomes or statistics. Understanding comes before worry.
+        </p>
+
+        <h3>Ask for balanced information</h3>
+        <p>
+          Try: "Tell me about [condition] in a balanced way. What's the typical experience
+          for someone with this condition? Include both challenges and what treatments
+          can help."
+        </p>
+
+        <h3>Avoid comparison traps</h3>
+        <p>
+          Everyone's situation is different. Statistics describe populations, not individuals.
+          Your outcome will depend on many factors specific to you.
+        </p>
+
+        <details class="learn-more">
+          <summary>Learn More: Understanding health statistics</summary>
+          <div class="learn-more-content">
+            <p>
+              When AI gives you statistics ("5-year survival rate," "most patients experience...")
+              it's important to understand what these numbers mean:
+            </p>
+            <p>
+              <strong>Survival rates</strong> are based on data from the past. Treatments
+              improve. Current numbers may be better than what AI knows.
+            </p>
+            <p>
+              <strong>Averages</strong> include everyone with the condition, regardless of
+              age, overall health, or how early it was caught. Your situation may be different.
+            </p>
+            <p>
+              <strong>Risk percentages</strong> don't tell you what will happen to you.
+              A 20% risk means 80% of people don't experience that outcome.
+            </p>
+            <p>
+              If statistics are causing anxiety, ask your doctor to explain what they mean
+              for your specific situation.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>When Research Is Helping vs. Hurting</h2>
+
+        <p>
+          Ask yourself these questions periodically during your research:
+        </p>
+
+        <ul>
+          <li><strong>Am I learning or worrying?</strong> Learning adds to your understanding. Worrying just adds to your fear.</li>
+          <li><strong>Can I take action on this information?</strong> If not, why am I looking it up?</li>
+          <li><strong>Would my doctor find this helpful?</strong> Good research leads to good questions. Bad research leads to panic.</li>
+          <li><strong>How do I feel?</strong> If you feel worse than when you started, stop.</li>
+        </ul>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            The goal of health research is to become an informed partner in your care, not
+            to become your own doctor. Use AI to help you ask better questions and understand
+            answers, not to replace professional evaluation.
+          </p>
+        </div>
+      </section>
+
+      <div class="takeaways">
+        <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
+        <ul>
+          <li>Set time limits for health research - 15-20 minutes maximum</li>
+          <li>If you're more anxious after researching than before, stop</li>
+          <li>Focus on understanding your actual situation, not every possible diagnosis</li>
+          <li>Use AI for perspective and preparation, not self-diagnosis</li>
+          <li>For medication questions, your pharmacist is often the best resource</li>
+          <li>When in doubt, call your doctor rather than researching more</li>
+          <li>Good research leads to good questions; bad research leads to panic</li>
+        </ul>
+      </div>
+
+      <nav class="page-nav">
+        <a href="doctor-appointments.html" class="page-nav-link prev">
+          <span class="page-nav-arrow"><i data-lucide="arrow-left"></i></span>
+          <div>
+            <span class="page-nav-label">Previous</span>
+            <span class="page-nav-title">Preparing for Doctor Appointments</span>
+          </div>
+        </a>
+        <a href="how-ai-thinks.html" class="page-nav-link next">
+          <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
+          <div>
+            <span class="page-nav-label">Next</span>
+            <span class="page-nav-title">How AI "Thinks"</span>
+          </div>
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AI 101 for Patients</strong> · Your Guide to Using AI with Your Health</div>
+      <div>v1.0 · 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

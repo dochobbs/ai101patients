@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Privacy and Health Data | AI 101 for Patients</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .long-form-text { line-height: 1.8; font-size: 1.15rem; color: #334155; max-width: 70ch; margin-bottom: 2rem; }
+    .long-form-text p { margin-bottom: 1.5rem; }
+    .long-form-text strong { color: #0f172a; font-weight: 700; }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
+    .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
+    .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more summary::-webkit-details-marker { display: none; }
+    .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
+    .learn-more[open] summary::before { content: "−"; }
+    .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
+    .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .takeaways ul { margin-bottom: 0; }
+    .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
+    .comparison-table th, .comparison-table td { padding: 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+    .comparison-table th { background: #f8fafc; font-weight: 700; color: #1e293b; }
+    .comparison-table td { color: #475569; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-badge">AI 101</span>
+        <span class="nav-title">For Patients</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Modules</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <article class="content">
+
+      <header class="unit-header">
+        <span class="unit-label phase-1">SAFETY FIRST</span>
+        <h1 class="unit-title">Your Privacy and Health Data</h1>
+        <p class="unit-subtitle">
+          What happens to your health information when you share it with AI—and the protections that exist (and don't).
+        </p>
+        <div class="unit-meta">
+          <span class="unit-meta-item">
+            <i data-lucide="clock"></i>
+            15 min read
+          </span>
+        </div>
+      </header>
+
+      <section class="long-form-text">
+        <h2>The Privacy Gap You Need to Know About</h2>
+
+        <p>
+          Here's something that surprises many people: <strong>When you share your health information
+          with AI tools like ChatGPT, it's not protected by HIPAA.</strong>
+        </p>
+
+        <p>
+          HIPAA (the Health Insurance Portability and Accountability Act) is the law that protects
+          your medical records at your doctor's office, hospital, or insurance company. It limits
+          who can see your data and what they can do with it.
+        </p>
+
+        <p>
+          But HIPAA only applies to "covered entities"—healthcare providers, health plans, and
+          their business partners. <strong>AI companies like OpenAI are not covered entities.</strong>
+        </p>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            When you type your health information into ChatGPT or connect your medical records
+            to ChatGPT Health, that data is no longer protected by HIPAA. The AI company's
+            privacy policy—not federal law—determines what happens to it.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>What OpenAI Says About Your Health Data</h2>
+
+        <p>
+          To be fair, OpenAI has made specific promises about ChatGPT Health:
+        </p>
+
+        <ul>
+          <li><strong>Separate storage:</strong> Your health conversations are kept in a dedicated space, isolated from your other ChatGPT chats</li>
+          <li><strong>Not used for training:</strong> OpenAI says health data won't be used to train their AI models</li>
+          <li><strong>Encryption:</strong> Data is encrypted both when stored and when transmitted</li>
+          <li><strong>You control what's shared:</strong> You decide which records to connect and can disconnect anytime</li>
+        </ul>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
+          <p style="margin-bottom: 0;">
+            <strong>January 2026:</strong> OpenAI partners with b.well to connect medical records.
+            The integration uses "consumer-mediated access"—meaning you explicitly authorize
+            what's shared. You can revoke access at any time.
+          </p>
+        </div>
+
+        <p>
+          These are good practices. But here's the catch: <strong>these are company policies,
+          not legal requirements.</strong> They could change. And if something goes wrong,
+          your legal protections are limited compared to what you'd have under HIPAA.
+        </p>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>HIPAA vs. AI: The Difference</h2>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Protection</th>
+              <th>At Your Doctor's Office (HIPAA)</th>
+              <th>With ChatGPT Health</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Legal protection</td>
+              <td>Federal law requires privacy</td>
+              <td>Company policy only</td>
+            </tr>
+            <tr>
+              <td>Who enforces it</td>
+              <td>U.S. government (HHS)</td>
+              <td>No government oversight</td>
+            </tr>
+            <tr>
+              <td>If there's a breach</td>
+              <td>Must notify you by law</td>
+              <td>Depends on company policy</td>
+            </tr>
+            <tr>
+              <td>Can sue for damages</td>
+              <td>Yes, in some cases</td>
+              <td>Very limited</td>
+            </tr>
+            <tr>
+              <td>Can policies change</td>
+              <td>Requires new legislation</td>
+              <td>Company can update anytime</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            This doesn't mean you shouldn't use ChatGPT Health—it means you should use it
+            with open eyes. Understand what you're trading (some privacy protection) for
+            what you're getting (AI assistance with your health).
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Making Informed Choices</h2>
+
+        <p>
+          Privacy isn't all-or-nothing. Here are ways to use AI for health while managing your exposure:
+        </p>
+
+        <h3>Option 1: Don't Connect Your Records</h3>
+        <p>
+          You can use ChatGPT for health questions without connecting your medical records.
+          Just type in your questions. This limits what the AI knows but also limits your privacy exposure.
+        </p>
+
+        <h3>Option 2: Connect Records Selectively</h3>
+        <p>
+          ChatGPT Health lets you choose what to share. You might connect recent lab results
+          but not your full medical history. You control the scope.
+        </p>
+
+        <h3>Option 3: Full Integration with Eyes Open</h3>
+        <p>
+          If you decide the benefits outweigh the privacy trade-offs, connect everything—but
+          understand what you're agreeing to. Read the privacy policy. Know you can disconnect later.
+        </p>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            Before connecting any health data, find and read the privacy policy for the AI tool
+            you're using. Look specifically for: What data is collected? How long is it stored?
+            Is it used for training? Can you delete it?
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Questions to Ask Yourself</h2>
+
+        <p>Before sharing health information with any AI tool, consider:</p>
+
+        <ol>
+          <li><strong>What's the benefit?</strong> What will I gain from sharing this specific information?</li>
+          <li><strong>What's the risk?</strong> What could go wrong if this data were exposed or misused?</li>
+          <li><strong>Is it necessary?</strong> Could I get similar help without sharing this particular data?</li>
+          <li><strong>Do I trust this company?</strong> Does their track record give me confidence?</li>
+          <li><strong>Can I undo it?</strong> If I change my mind, can I delete my data and disconnect?</li>
+        </ol>
+
+        <details class="learn-more">
+          <summary>Learn More: What about other AI tools?</summary>
+          <div class="learn-more-content">
+            <p>
+              The same principles apply to other AI chatbots—Claude, Gemini, Copilot, and others.
+              None of them are covered by HIPAA. Each has its own privacy policy with different terms.
+            </p>
+            <p>
+              Some tools are more privacy-focused than others. Some let you opt out of training.
+              Some delete your data automatically after a period. Always check before sharing
+              sensitive health information.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>The Bottom Line</h2>
+
+        <p>
+          AI tools can be genuinely helpful for your health. But the privacy landscape is different
+          from what you're used to with your doctor's office.
+        </p>
+
+        <p>
+          This doesn't mean "don't use AI for health"—it means "use it thoughtfully." Understand
+          the trade-offs. Make informed choices. And remember: you're always in control of what
+          you share.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            Your health data is valuable—to you, and potentially to others. Treat sharing it
+            with AI the same way you'd treat sharing it with anyone else: thoughtfully,
+            with clear eyes about the benefits and risks.
+          </p>
+        </div>
+      </section>
+
+      <div class="takeaways">
+        <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
+        <ul>
+          <li>HIPAA doesn't apply to AI companies—your legal protections are limited</li>
+          <li>OpenAI promises to keep health data separate and not use it for training</li>
+          <li>These are company policies, not legal requirements—they could change</li>
+          <li>You control what you share—you don't have to connect everything</li>
+          <li>Read privacy policies before sharing sensitive health information</li>
+          <li>The question isn't "should I use AI" but "what am I comfortable sharing?"</li>
+        </ul>
+      </div>
+
+      <nav class="page-nav">
+        <a href="what-ai-can-do.html" class="page-nav-link prev">
+          <span class="page-nav-arrow"><i data-lucide="arrow-left"></i></span>
+          <div>
+            <span class="page-nav-label">Previous</span>
+            <span class="page-nav-title">What AI Can and Can't Do</span>
+          </div>
+        </a>
+        <a href="spotting-mistakes.html" class="page-nav-link next">
+          <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
+          <div>
+            <span class="page-nav-label">Next</span>
+            <span class="page-nav-title">Spotting AI Mistakes</span>
+          </div>
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AI 101 for Patients</strong> · Your Guide to Using AI with Your Health</div>
+      <div>v1.0 · 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

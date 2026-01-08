@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How AI "Thinks" | AI 101 for Patients</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .long-form-text { line-height: 1.8; font-size: 1.15rem; color: #334155; max-width: 70ch; margin-bottom: 2rem; }
+    .long-form-text p { margin-bottom: 1.5rem; }
+    .long-form-text strong { color: #0f172a; font-weight: 700; }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
+    .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
+    .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more summary::-webkit-details-marker { display: none; }
+    .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
+    .learn-more[open] summary::before { content: "-"; }
+    .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
+    .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .takeaways ul { margin-bottom: 0; }
+    .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+    .concept-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+    .concept-box h4 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .analogy-box { background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+    .analogy-box h4 { margin-top: 0; color: #1e293b; }
+    .comparison-row { display: flex; gap: 2rem; margin: 2rem 0; flex-wrap: wrap; }
+    .comparison-item { flex: 1; min-width: 250px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+    .comparison-item h4 { margin-top: 0; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-badge">AI 101</span>
+        <span class="nav-title">For Patients</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Modules</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <article class="content">
+
+      <header class="unit-header">
+        <span class="unit-label phase-3">GOING DEEPER</span>
+        <h1 class="unit-title">How AI "Thinks"</h1>
+        <p class="unit-subtitle">
+          A simple explanation of what's happening inside ChatGPT and other AI tools. Why AI sounds confident when wrong.
+        </p>
+        <div class="unit-meta">
+          <span class="unit-meta-item">
+            <i data-lucide="clock"></i>
+            15 min read
+          </span>
+          <span class="unit-meta-item" style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">
+            Optional/Advanced
+          </span>
+        </div>
+      </header>
+
+      <section class="long-form-text">
+        <h2>AI Doesn't Actually "Think"</h2>
+
+        <p>
+          Let's start with an important clarification: AI chatbots don't think the way
+          humans do. They don't understand language the way you understand it. They
+          don't have beliefs, desires, or experiences. When we talk about how AI "thinks,"
+          we're using a convenient metaphor.
+        </p>
+
+        <p>
+          Understanding what AI actually does - instead of thinking of it as a digital
+          person - helps you use it more effectively and avoid common misconceptions.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            AI is a very sophisticated pattern-matching and prediction system. It's
+            incredibly good at what it does, but what it does is fundamentally different
+            from human thinking.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>The Simple Version: Predicting the Next Word</h2>
+
+        <p>
+          At its core, AI like ChatGPT works by predicting what word should come next
+          in a sentence. It does this incredibly well, billions of times per second,
+          to generate whole responses.
+        </p>
+
+        <div class="analogy-box">
+          <h4>An Analogy: The World's Best Autocomplete</h4>
+          <p style="margin-bottom: 0;">
+            You know how your phone suggests the next word when you're typing a text?
+            AI is like an extremely advanced version of that. It's been trained on vast
+            amounts of text and has learned what words and ideas typically follow others.
+            When you ask it a question, it's predicting what a good response would look
+            like based on all the text it's seen.
+          </p>
+        </div>
+
+        <p>
+          Here's a simple example. If I write "The capital of France is..." you'd probably
+          predict "Paris" comes next. AI does this same kind of prediction, but for every
+          single word in a response, using patterns learned from reading billions of
+          pages of text.
+        </p>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            Ask ChatGPT the same question twice. You'll often get slightly different answers
+            each time because it's generating new predictions, not looking up a stored answer.
+            This is called "non-deterministic" behavior.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Training: How AI Learned What It Knows</h2>
+
+        <p>
+          AI chatbots are "trained" by showing them enormous amounts of text from the
+          internet, books, articles, and other sources. Through this training, they learn
+          patterns: how sentences are structured, what topics relate to each other, what
+          kinds of responses follow what kinds of questions.
+        </p>
+
+        <div class="concept-box">
+          <h4><i data-lucide="database"></i> Training Data</h4>
+          <p style="margin-bottom: 0;">
+            ChatGPT was trained on hundreds of billions of words from websites, books,
+            scientific papers, forums, and more. It includes medical textbooks and research
+            papers, but also random blog posts and outdated information. The AI doesn't
+            know which is which - it just learned patterns from all of it.
+          </p>
+        </div>
+
+        <h3>The Cutoff Problem</h3>
+        <p>
+          AI training happened at a specific point in time. Everything after that cutoff
+          date isn't included. This means:
+        </p>
+        <ul>
+          <li>AI might not know about recent medical breakthroughs</li>
+          <li>Guidelines may have changed since training</li>
+          <li>New medications or treatments might not be included</li>
+          <li>Recent studies won't be reflected in its knowledge</li>
+        </ul>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
+          <p style="margin-bottom: 0;">
+            <strong>Important:</strong> Different AI tools have different cutoff dates.
+            Some can now search the web for current information, but their base knowledge
+            still comes from training. Always ask AI when its information is from if
+            currency matters.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Why AI Sounds Confident When Wrong</h2>
+
+        <p>
+          This is one of the most important things to understand about AI. It sounds
+          equally confident whether it's telling you something well-established or
+          making something up entirely. Here's why:
+        </p>
+
+        <div class="concept-box">
+          <h4><i data-lucide="alert-triangle"></i> No Internal "Uncertainty Meter"</h4>
+          <p style="margin-bottom: 0;">
+            AI doesn't experience uncertainty the way humans do. When you're unsure about
+            something, you might hesitate, say "um," or qualify your statement. AI generates
+            text word by word, predicting what should come next. There's no mechanism that
+            makes it pause and say "Actually, I'm not sure about this."
+          </p>
+        </div>
+
+        <p>
+          AI is trained to produce fluent, confident-sounding text. That's what good
+          text usually looks like. So even when it's wrong, the output has the same
+          confident tone.
+        </p>
+
+        <h3>Hallucinations: When AI Makes Things Up</h3>
+        <p>
+          Sometimes AI generates information that is completely false but sounds completely
+          real. These are called "hallucinations." Common examples include:
+        </p>
+        <ul>
+          <li><strong>Fake citations:</strong> AI invents journal articles, complete with authors and publication details that don't exist</li>
+          <li><strong>Made-up statistics:</strong> Percentages and numbers that sound precise but have no basis</li>
+          <li><strong>Confident misinformation:</strong> Stating false facts with no hedging or uncertainty</li>
+        </ul>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            Hallucinations are not AI "lying" - AI has no concept of truth or deception.
+            It's generating what statistically looks like it should come next, regardless
+            of whether it's factually correct.
+          </p>
+        </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Why hallucinations happen</summary>
+          <div class="learn-more-content">
+            <p>
+              Hallucinations happen because AI is optimizing for text that looks plausible,
+              not text that is verifiable. When you ask for a citation, the AI generates
+              something that looks like a citation because that's what citations look like.
+              It doesn't check whether it's real.
+            </p>
+            <p>
+              This is getting better with newer models, but it remains a fundamental
+              challenge. AI doesn't have a "fact database" it's checking against - it's
+              predicting patterns.
+            </p>
+            <p>
+              For medical information, this means you should be especially careful with
+              specific claims, statistics, and citations. The more specific a claim, the
+              more likely AI may have generated it rather than recalled it from training.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>How AI Is Different From a Doctor</h2>
+
+        <p>
+          Understanding how AI works helps you see why it can't replace medical professionals:
+        </p>
+
+        <div class="comparison-row">
+          <div class="comparison-item">
+            <h4>AI Chatbot</h4>
+            <ul>
+              <li>Predicts text based on patterns</li>
+              <li>No understanding of your body</li>
+              <li>Can't perform examinations</li>
+              <li>No accountability for advice</li>
+              <li>Equally confident right or wrong</li>
+              <li>Static knowledge (training cutoff)</li>
+            </ul>
+          </div>
+          <div class="comparison-item">
+            <h4>Human Doctor</h4>
+            <ul>
+              <li>Reasons through clinical experience</li>
+              <li>Can examine you physically</li>
+              <li>Integrates multiple information sources</li>
+              <li>Professional and legal accountability</li>
+              <li>Can express appropriate uncertainty</li>
+              <li>Continuously learns and updates</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            A doctor's expertise isn't just knowledge - it's the ability to integrate
+            that knowledge with examination findings, your history, and clinical judgment.
+            AI can help with the knowledge part, but the rest requires a human.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>What AI Does Well vs. Poorly (Now You Know Why)</h2>
+
+        <p>
+          Understanding how AI works explains its strengths and weaknesses:
+        </p>
+
+        <h3>AI excels at tasks where patterns help</h3>
+        <ul>
+          <li><strong>Explaining concepts:</strong> It has seen many explanations and can generate good ones</li>
+          <li><strong>Summarizing information:</strong> Pattern recognition helps distill key points</li>
+          <li><strong>Generating questions:</strong> It knows what kinds of questions people ask about topics</li>
+          <li><strong>Translating medical jargon:</strong> It has seen terms explained many times</li>
+        </ul>
+
+        <h3>AI struggles where patterns aren't enough</h3>
+        <ul>
+          <li><strong>Diagnosing:</strong> Requires integrating information AI can't access (your body)</li>
+          <li><strong>Knowing current information:</strong> Limited by training data</li>
+          <li><strong>Knowing what it doesn't know:</strong> No reliable uncertainty signal</li>
+          <li><strong>Verifying facts:</strong> It generates plausible text, not verified facts</li>
+        </ul>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            Ask AI: "What are you uncertain about in your previous response?" This can sometimes
+            surface areas where AI is less reliable. It won't always work, but it's a useful
+            prompt to have in your toolkit.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>The Bottom Line for Health Questions</h2>
+
+        <p>
+          Knowing how AI works leads to some practical takeaways for using it with health questions:
+        </p>
+
+        <ol>
+          <li><strong>Don't trust confidence.</strong> AI sounds confident because that's how it generates text, not because it's sure.</li>
+          <li><strong>Verify specifics.</strong> General explanations are often reliable; specific facts, statistics, and citations should be checked.</li>
+          <li><strong>AI augments, doesn't replace.</strong> Use AI for what it's good at (explaining, summarizing, preparing) and humans for what they're good at (examining, diagnosing, treating).</li>
+          <li><strong>Ask about sources.</strong> Even if AI can't always verify its sources, asking makes it more careful.</li>
+          <li><strong>Check dates.</strong> For anything time-sensitive, verify AI's information against current sources.</li>
+        </ol>
+
+        <details class="learn-more">
+          <summary>Learn More: The future of AI reliability</summary>
+          <div class="learn-more-content">
+            <p>
+              AI companies are actively working on making AI more reliable and better at
+              knowing what it doesn't know. Techniques include:
+            </p>
+            <p>
+              <strong>Retrieval-augmented generation (RAG):</strong> AI that looks up information
+              from trusted sources rather than relying only on training.
+            </p>
+            <p>
+              <strong>Calibrated uncertainty:</strong> Training AI to express appropriate
+              confidence levels based on how sure it actually should be.
+            </p>
+            <p>
+              <strong>Citation verification:</strong> Systems that check whether cited
+              sources actually exist and support the claims made.
+            </p>
+            <p>
+              These improvements are happening, but they're not perfect yet. For now,
+              healthy skepticism remains important.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="takeaways">
+        <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
+        <ul>
+          <li>AI predicts text based on patterns, not by "thinking" like humans do</li>
+          <li>AI was trained on vast text data with a cutoff date - it may be outdated</li>
+          <li>AI sounds confident whether right or wrong because that's how fluent text sounds</li>
+          <li>"Hallucinations" happen when AI generates plausible-sounding but false information</li>
+          <li>AI excels at pattern-based tasks (explaining, summarizing) but struggles with verification</li>
+          <li>Use AI for what it's good at; use humans for examination, diagnosis, and treatment</li>
+        </ul>
+      </div>
+
+      <nav class="page-nav">
+        <a href="researching-safely.html" class="page-nav-link prev">
+          <span class="page-nav-arrow"><i data-lucide="arrow-left"></i></span>
+          <div>
+            <span class="page-nav-label">Previous</span>
+            <span class="page-nav-title">Researching Your Health Safely</span>
+          </div>
+        </a>
+        <a href="ai-bias.html" class="page-nav-link next">
+          <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
+          <div>
+            <span class="page-nav-label">Next</span>
+            <span class="page-nav-title">AI Bias and Your Health</span>
+          </div>
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AI 101 for Patients</strong> · Your Guide to Using AI with Your Health</div>
+      <div>v1.0 · 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

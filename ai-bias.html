@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Bias and Your Health | AI 101 for Patients</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .long-form-text { line-height: 1.8; font-size: 1.15rem; color: #334155; max-width: 70ch; margin-bottom: 2rem; }
+    .long-form-text p { margin-bottom: 1.5rem; }
+    .long-form-text strong { color: #0f172a; font-weight: 700; }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
+    .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
+    .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more summary::-webkit-details-marker { display: none; }
+    .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
+    .learn-more[open] summary::before { content: "-"; }
+    .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
+    .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .takeaways ul { margin-bottom: 0; }
+    .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+    .example-scenario { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+    .example-scenario h4 { margin-top: 0; color: #475569; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+    .example-scenario p { margin-bottom: 0.75rem; }
+    .example-scenario p:last-child { margin-bottom: 0; }
+    .bias-type { background: #f8fafc; border-left: 4px solid #6366f1; padding: 1.25rem; margin: 1.5rem 0; border-radius: 0 12px 12px 0; }
+    .bias-type h4 { margin-top: 0; color: #4f46e5; margin-bottom: 0.5rem; }
+    .equity-box { background: linear-gradient(135deg, #fef3c7 0%, #fee2e2 100%); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+    .equity-box h4 { margin-top: 0; color: #92400e; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-badge">AI 101</span>
+        <span class="nav-title">For Patients</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Modules</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <article class="content">
+
+      <header class="unit-header">
+        <span class="unit-label phase-3">GOING DEEPER</span>
+        <h1 class="unit-title">AI Bias and Your Health</h1>
+        <p class="unit-subtitle">
+          Why AI might give different answers to different people, and what this means for health equity.
+        </p>
+        <div class="unit-meta">
+          <span class="unit-meta-item">
+            <i data-lucide="clock"></i>
+            12 min read
+          </span>
+          <span class="unit-meta-item" style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">
+            Optional/Advanced
+          </span>
+        </div>
+      </header>
+
+      <section class="long-form-text">
+        <h2>AI Learns From Imperfect Data</h2>
+
+        <p>
+          As we discussed in the previous module, AI learns by training on vast amounts
+          of text from the internet, books, and other sources. Here's the problem: that
+          data reflects the biases, gaps, and inequities of the real world.
+        </p>
+
+        <p>
+          If most medical research historically focused on certain populations, AI
+          learned from that. If certain communities are underrepresented in health
+          literature, AI knows less about them. These aren't AI's "choices" - they're
+          patterns inherited from its training data.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            Bias in AI usually isn't intentional discrimination. It's patterns learned
+            from data that already contained gaps and biases. Understanding this helps
+            you use AI more critically.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Types of Bias That Affect Health AI</h2>
+
+        <div class="bias-type">
+          <h4>Training Data Gaps</h4>
+          <p style="margin-bottom: 0;">
+            If certain groups are underrepresented in medical research and literature,
+            AI has less data to learn from about those groups. Historically, medical
+            research has often focused on white, male populations. AI trained on this
+            data may be less accurate for other groups.
+          </p>
+        </div>
+
+        <div class="bias-type">
+          <h4>Language and Cultural Assumptions</h4>
+          <p style="margin-bottom: 0;">
+            AI trained primarily on English text from Western sources may not understand
+            how health is discussed in other languages or cultures. Symptoms might be
+            described differently, or health concerns might be framed differently.
+          </p>
+        </div>
+
+        <div class="bias-type">
+          <h4>Historical Discrimination Patterns</h4>
+          <p style="margin-bottom: 0;">
+            If AI learns from text that reflects historical discrimination in healthcare,
+            it might reproduce those patterns. For example, pain has historically been
+            undertreated in certain populations - AI might reflect those biased patterns.
+          </p>
+        </div>
+
+        <div class="bias-type">
+          <h4>Socioeconomic Assumptions</h4>
+          <p style="margin-bottom: 0;">
+            AI might assume access to healthcare, medications, or lifestyle options that
+            aren't available to everyone. Its recommendations might not account for
+            real-world barriers to care.
+          </p>
+        </div>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
+          <p style="margin-bottom: 0;">
+            <strong>Research Finding:</strong> Studies have found that AI systems used
+            in healthcare can perpetuate existing disparities. One widely reported study
+            found that an algorithm used to predict healthcare needs systematically
+            underestimated the needs of Black patients.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>How Bias Might Show Up in Your AI Conversations</h2>
+
+        <p>
+          Here are some concrete ways bias might affect the answers you get:
+        </p>
+
+        <div class="example-scenario">
+          <h4>Example: Symptom Descriptions</h4>
+          <p>
+            AI might describe how a condition appears "typically" based on how it was
+            described in training data. But conditions can present differently in different
+            skin tones, body types, or age groups. The "typical" description might not
+            match your experience.
+          </p>
+          <p style="color: #16a34a;">
+            <strong>What to do:</strong> Ask specifically how symptoms might appear for
+            someone with your characteristics. "How might this appear in darker skin tones?"
+            or "Does this present differently in women?"
+          </p>
+        </div>
+
+        <div class="example-scenario">
+          <h4>Example: Treatment Recommendations</h4>
+          <p>
+            AI might suggest treatments that assume certain access or circumstances. It
+            might recommend brand-name medications when generics exist, assume you have
+            insurance, or suggest specialists without considering availability.
+          </p>
+          <p style="color: #16a34a;">
+            <strong>What to do:</strong> Specify your situation. "What options exist if
+            I don't have insurance?" or "What if I can't afford brand-name medications?"
+          </p>
+        </div>
+
+        <div class="example-scenario">
+          <h4>Example: Risk Assessments</h4>
+          <p>
+            AI might overstate or understate risks based on who was studied in research.
+            If a condition was primarily studied in one population, the risk factors and
+            statistics might not apply accurately to others.
+          </p>
+          <p style="color: #16a34a;">
+            <strong>What to do:</strong> Ask about limitations. "Is this risk information
+            based on studies that included people like me?" or "How might these risks
+            differ for my demographic?"
+          </p>
+        </div>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            When AI gives you health information, try asking: "What assumptions are you
+            making in this answer? Is this information equally applicable to all populations,
+            or might it be different for some groups?"
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Health Equity Concerns</h2>
+
+        <p>
+          AI bias in healthcare isn't just a technical problem - it's a health equity
+          issue. If AI provides better information to some groups than others, it could
+          widen existing health disparities.
+        </p>
+
+        <div class="equity-box">
+          <h4>Why This Matters</h4>
+          <p style="margin-bottom: 0;">
+            AI tools are increasingly being used in healthcare - not just by patients,
+            but by providers too. If these tools contain biases, they could affect
+            diagnostic accuracy, treatment recommendations, and resource allocation.
+            Being aware of this helps you be a better advocate for yourself.
+          </p>
+        </div>
+
+        <h3>Groups That May Be Affected</h3>
+        <ul>
+          <li><strong>Racial and ethnic minorities:</strong> Underrepresented in much medical research</li>
+          <li><strong>Women:</strong> Many conditions historically studied primarily in men</li>
+          <li><strong>Older adults:</strong> Often excluded from clinical trials</li>
+          <li><strong>LGBTQ+ individuals:</strong> Limited representation in medical literature</li>
+          <li><strong>People with disabilities:</strong> Health needs may not be well-represented</li>
+          <li><strong>Rural populations:</strong> Access-related assumptions may not fit</li>
+          <li><strong>Non-English speakers:</strong> Less training data in other languages</li>
+        </ul>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            If you belong to a group that has historically faced discrimination in healthcare,
+            be especially cautious with AI health information. The same biases that have
+            affected your care might be reflected in AI's responses.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>What You Can Do</h2>
+
+        <p>
+          Knowing about AI bias doesn't mean you can't use AI - it means you can use
+          it more thoughtfully. Here are strategies:
+        </p>
+
+        <h3>Be Specific About Who You Are</h3>
+        <p>
+          Don't let AI assume. Include relevant details about your age, sex, race, and
+          other factors that might affect health information. Ask how recommendations
+          might differ for someone like you.
+        </p>
+
+        <h3>Ask About Limitations</h3>
+        <p>
+          "Is this information based on research that included people like me?"
+          "Are there known differences in how this condition affects different populations?"
+          These questions prompt AI to surface limitations it might otherwise gloss over.
+        </p>
+
+        <h3>Seek Multiple Perspectives</h3>
+        <p>
+          Don't rely solely on AI. Cross-reference with sources specific to your community.
+          Patient advocacy groups, community health organizations, and providers who
+          serve diverse populations may have more relevant information.
+        </p>
+
+        <h3>Advocate With Your Healthcare Team</h3>
+        <p>
+          If you notice AI providing information that doesn't seem to fit your experience,
+          discuss it with your doctor. They can help you understand whether there are
+          real differences in how something applies to you.
+        </p>
+
+        <details class="learn-more">
+          <summary>Learn More: What AI companies are doing about bias</summary>
+          <div class="learn-more-content">
+            <p>
+              AI companies are aware of bias issues and working on them, though progress
+              varies. Approaches include:
+            </p>
+            <p>
+              <strong>Diverse training data:</strong> Efforts to include more varied sources
+              in training, though historical gaps in research can't be fully compensated for.
+            </p>
+            <p>
+              <strong>Bias testing:</strong> Evaluating AI systems for differential performance
+              across groups before release.
+            </p>
+            <p>
+              <strong>Transparency:</strong> Some companies are becoming more open about
+              limitations and potential biases.
+            </p>
+            <p>
+              <strong>Human oversight:</strong> Building systems that keep humans in the
+              loop for high-stakes decisions.
+            </p>
+            <p>
+              These efforts help, but bias in AI remains an ongoing challenge. Your awareness
+              is an important additional safeguard.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Bias Works Both Ways</h2>
+
+        <p>
+          It's worth noting that bias can also mean AI overcorrects or makes assumptions
+          in trying to avoid stereotypes. The goal isn't to find perfectly unbiased AI -
+          that doesn't exist - but to use AI critically, knowing its limitations.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            The best approach is to think of AI as one input among many. Get information
+            from AI, but also from your healthcare team, patient communities, and trusted
+            health organizations. Multiple perspectives help overcome any single source's
+            biases.
+          </p>
+        </div>
+      </section>
+
+      <div class="takeaways">
+        <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
+        <ul>
+          <li>AI learns biases from its training data, which reflects historical gaps in medical research</li>
+          <li>Some populations may receive less accurate or relevant information from AI</li>
+          <li>Be specific about who you are when asking health questions - don't let AI assume</li>
+          <li>Ask AI about limitations and whether information applies to people like you</li>
+          <li>Seek multiple perspectives beyond AI, especially from sources serving your community</li>
+          <li>Advocate with your healthcare team if AI information doesn't match your experience</li>
+        </ul>
+      </div>
+
+      <nav class="page-nav">
+        <a href="how-ai-thinks.html" class="page-nav-link prev">
+          <span class="page-nav-arrow"><i data-lucide="arrow-left"></i></span>
+          <div>
+            <span class="page-nav-label">Previous</span>
+            <span class="page-nav-title">How AI "Thinks"</span>
+          </div>
+        </a>
+        <a href="future-ai-healthcare.html" class="page-nav-link next">
+          <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
+          <div>
+            <span class="page-nav-label">Next</span>
+            <span class="page-nav-title">The Future of AI in Healthcare</span>
+          </div>
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AI 101 for Patients</strong> · Your Guide to Using AI with Your Health</div>
+      <div>v1.0 · 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

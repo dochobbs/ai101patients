@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Talk to AI About Your Health | AI 101 for Patients</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .long-form-text { line-height: 1.8; font-size: 1.15rem; color: #334155; max-width: 70ch; margin-bottom: 2rem; }
+    .long-form-text p { margin-bottom: 1.5rem; }
+    .long-form-text strong { color: #0f172a; font-weight: 700; }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
+    .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
+    .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more summary::-webkit-details-marker { display: none; }
+    .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
+    .learn-more[open] summary::before { content: "-"; }
+    .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
+    .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .takeaways ul { margin-bottom: 0; }
+    .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+    .example-box { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+    .example-box h4 { margin-top: 0; margin-bottom: 1rem; color: #64748b; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .example-bad { background: #fef2f2; border-color: #fecaca; }
+    .example-bad h4 { color: #dc2626; }
+    .example-good { background: #f0fdf4; border-color: #bbf7d0; }
+    .example-good h4 { color: #16a34a; }
+    .prompt-text { font-family: monospace; background: #f8fafc; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-size: 0.95rem; line-height: 1.6; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-badge">AI 101</span>
+        <span class="nav-title">For Patients</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Modules</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <article class="content">
+
+      <header class="unit-header">
+        <span class="unit-label phase-2">PRACTICAL SKILLS</span>
+        <h1 class="unit-title">How to Talk to AI About Your Health</h1>
+        <p class="unit-subtitle">
+          Simple techniques to get better, more useful answers from AI chatbots.
+        </p>
+        <div class="unit-meta">
+          <span class="unit-meta-item">
+            <i data-lucide="clock"></i>
+            12 min read
+          </span>
+        </div>
+      </header>
+
+      <section class="long-form-text">
+        <h2>Why How You Ask Matters</h2>
+
+        <p>
+          AI chatbots respond differently depending on how you ask your question. A vague
+          question gets a vague answer. A specific, well-structured question gets something
+          much more useful.
+        </p>
+
+        <p>
+          This isn't about learning special tricks or secret commands. It's about the same
+          skills you use when talking to anyone: being clear, giving context, and asking
+          for what you actually need.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            Think of AI like a very knowledgeable friend who just met you. They want to help,
+            but they only know what you tell them. The more context you provide, the better
+            help they can give.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>The Four Keys to Better Questions</h2>
+
+        <h3>1. Be Specific</h3>
+        <p>
+          Vague questions lead to generic answers. The more specific you are, the more
+          tailored and useful the response will be.
+        </p>
+
+        <div class="example-box example-bad">
+          <h4>Instead of this:</h4>
+          <div class="prompt-text">What causes headaches?</div>
+        </div>
+
+        <div class="example-box example-good">
+          <h4>Try this:</h4>
+          <div class="prompt-text">I get headaches that start behind my right eye, usually in the afternoon, about 3-4 times a week. They've been happening for the past month. What might be causing this pattern?</div>
+        </div>
+
+        <p>
+          The second question will get you information specific to your situation rather
+          than a generic list of headache causes.
+        </p>
+
+        <h3>2. Provide Context</h3>
+        <p>
+          AI doesn't know your medical history unless you tell it. Including relevant
+          background helps get more accurate, personalized responses.
+        </p>
+
+        <div class="example-box example-good">
+          <h4>Adding helpful context:</h4>
+          <div class="prompt-text">I'm a 45-year-old woman with type 2 diabetes. I take metformin. My doctor wants to add a new medication called Jardiance. Can you explain what Jardiance does and how it might work together with metformin?</div>
+        </div>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            If you've connected ChatGPT Health to your medical records, you can say things
+            like "Based on my health records, what questions should I ask about..." The AI
+            will use your actual data to give more personalized suggestions.
+          </p>
+        </div>
+
+        <h3>3. Ask for the Format You Need</h3>
+        <p>
+          You can ask AI to present information in different ways: simple language,
+          bullet points, comparison tables, or step-by-step explanations.
+        </p>
+
+        <div class="example-box example-good">
+          <h4>Specifying format:</h4>
+          <div class="prompt-text">Explain the difference between Type 1 and Type 2 diabetes. Use simple language that someone without a medical background could understand. Include a comparison table.</div>
+        </div>
+
+        <div class="example-box example-good">
+          <h4>Another format example:</h4>
+          <div class="prompt-text">Give me a bullet-point list of questions I should ask my cardiologist about my high blood pressure. Keep it to the 5 most important questions.</div>
+        </div>
+
+        <h3>4. Tell It Your Goal</h3>
+        <p>
+          Explain why you're asking. This helps the AI focus on what's actually useful to you.
+        </p>
+
+        <div class="example-box example-good">
+          <h4>Including your goal:</h4>
+          <div class="prompt-text">I was just diagnosed with hypothyroidism and I'm feeling overwhelmed. I want to understand the basics before my follow-up appointment next week. Can you explain what hypothyroidism means for my daily life in a way that won't scare me?</div>
+        </div>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            Take a health question you've been curious about. Before asking it, add: (1) relevant
+            personal context, (2) your format preference, and (3) why you're asking. Notice how
+            the answer changes compared to a simple question.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Example Prompts That Work Well</h2>
+
+        <p>Here are some proven prompt patterns for common health situations:</p>
+
+        <h3>Understanding a New Diagnosis</h3>
+        <div class="example-box example-good">
+          <h4>Prompt template:</h4>
+          <div class="prompt-text">I was just diagnosed with [condition]. I'm feeling [emotional state]. Can you:
+1. Explain what this condition means in simple terms
+2. Tell me what I might expect in the short term
+3. Suggest 3-5 questions I should ask my doctor
+
+Please use reassuring language and avoid medical jargon.</div>
+        </div>
+
+        <h3>Understanding a Lab Result</h3>
+        <div class="example-box example-good">
+          <h4>Prompt template:</h4>
+          <div class="prompt-text">My [lab test] came back at [value]. The normal range is [range]. Can you explain:
+1. What this test measures
+2. What my result might indicate
+3. What questions I should ask my doctor about this result
+
+I'm a [age]-year-old [male/female] with [any relevant conditions].</div>
+        </div>
+
+        <h3>Comparing Treatment Options</h3>
+        <div class="example-box example-good">
+          <h4>Prompt template:</h4>
+          <div class="prompt-text">My doctor gave me a choice between [option A] and [option B] for [condition]. Can you help me understand:
+1. How each option works
+2. The main pros and cons of each
+3. What questions I should ask to help me decide
+
+Format this as a comparison table if possible.</div>
+        </div>
+
+        <h3>Preparing for an Appointment</h3>
+        <div class="example-box example-good">
+          <h4>Prompt template:</h4>
+          <div class="prompt-text">I have an appointment with my [type of doctor] in [timeframe] about [concern]. My relevant history: [brief background].
+
+Help me:
+1. Organize my symptoms and concerns clearly
+2. Create a list of important questions to ask
+3. Identify any information I should bring or prepare</div>
+        </div>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
+          <p style="margin-bottom: 0;">
+            <strong>Research Finding:</strong> Studies show that patients who prepare questions
+            before appointments report higher satisfaction and better understanding of their
+            care plan. AI can be a helpful tool for this preparation.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Following Up and Going Deeper</h2>
+
+        <p>
+          A conversation with AI is just that: a conversation. You don't have to get
+          everything right in the first message. You can follow up, clarify, and dig deeper.
+        </p>
+
+        <h3>Useful Follow-up Phrases</h3>
+        <ul>
+          <li>"Can you explain that in simpler terms?"</li>
+          <li>"What do you mean by [specific term]?"</li>
+          <li>"Can you give me a specific example?"</li>
+          <li>"What would this look like in everyday life?"</li>
+          <li>"Is there anything you're uncertain about in your answer?"</li>
+          <li>"What are the most important things I should remember from this?"</li>
+        </ul>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            Don't be afraid to ask AI to be more cautious: "You sounded very confident. How
+            sure are you about this information, and what should I verify with my doctor?"
+            This can help surface uncertainty that AI might otherwise gloss over.
+          </p>
+        </div>
+
+        <h3>When the Answer Doesn't Help</h3>
+        <p>If you get an unhelpful response, try:</p>
+        <ul>
+          <li>Rephrasing your question with more detail</li>
+          <li>Breaking a complex question into smaller parts</li>
+          <li>Explicitly asking for a different approach: "That was too technical. Can you explain it like I'm explaining to a family member?"</li>
+          <li>Starting a new conversation with fresh context</li>
+        </ul>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            After getting an answer, ask: "What's the most important thing I should take away
+            from this, and what's the first thing I should verify with a healthcare professional?"
+            This helps you prioritize and reminds you to verify.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>What Not to Do</h2>
+
+        <p>
+          Some approaches will consistently give you worse results:
+        </p>
+
+        <ul>
+          <li><strong>Don't ask yes/no questions about diagnoses:</strong> "Do I have cancer?" will get a generic response. "What could cause these symptoms?" starts a more useful conversation.</li>
+          <li><strong>Don't expect mind-reading:</strong> AI doesn't know details you haven't shared. If context matters, include it.</li>
+          <li><strong>Don't ignore uncertainty:</strong> If AI says "might," "could," or "possibly," those words matter.</li>
+          <li><strong>Don't use AI for emergencies:</strong> Chest pain, difficulty breathing, or severe symptoms need 911, not a chatbot.</li>
+          <li><strong>Don't skip verification:</strong> Always verify important information with your healthcare team.</li>
+        </ul>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            Never tell AI to "ignore previous instructions" or try to "jailbreak" it for
+            medical advice. Safety guardrails exist for good reasons. If AI won't give you
+            specific medical advice, that's a feature, not a bug.
+          </p>
+        </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Why AI has safety guardrails</summary>
+          <div class="learn-more-content">
+            <p>
+              AI companies build in safety features that prevent AI from giving direct medical
+              diagnoses or treatment recommendations. You might find this frustrating if you
+              want a straight answer, but there are good reasons for it.
+            </p>
+            <p>
+              AI can sound confident while being wrong. It doesn't know your full situation.
+              It can't examine you or order tests. If it gave direct medical advice and that
+              advice was wrong, people could be seriously harmed.
+            </p>
+            <p>
+              The guardrails are designed to keep AI in its lane: helping you understand
+              information and prepare questions, not replacing professional medical judgment.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="takeaways">
+        <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
+        <ul>
+          <li>Be specific: include symptoms, timing, and relevant personal details</li>
+          <li>Provide context: age, conditions, medications, and why you're asking</li>
+          <li>Request the format you need: simple language, bullet points, or tables</li>
+          <li>Follow up to clarify or go deeper - it's a conversation, not a search</li>
+          <li>Ask AI about its uncertainty: "How confident are you about this?"</li>
+          <li>Always verify important health information with your healthcare team</li>
+        </ul>
+      </div>
+
+      <nav class="page-nav">
+        <a href="chatgpt-health.html" class="page-nav-link prev">
+          <span class="page-nav-arrow"><i data-lucide="arrow-left"></i></span>
+          <div>
+            <span class="page-nav-label">Previous</span>
+            <span class="page-nav-title">ChatGPT Health Deep Dive</span>
+          </div>
+        </a>
+        <a href="understanding-responses.html" class="page-nav-link next">
+          <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
+          <div>
+            <span class="page-nav-label">Next</span>
+            <span class="page-nav-title">Understanding AI Responses</span>
+          </div>
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AI 101 for Patients</strong> · Your Guide to Using AI with Your Health</div>
+      <div>v1.0 · 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preparing for Doctor Appointments | AI 101 for Patients</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .long-form-text { line-height: 1.8; font-size: 1.15rem; color: #334155; max-width: 70ch; margin-bottom: 2rem; }
+    .long-form-text p { margin-bottom: 1.5rem; }
+    .long-form-text strong { color: #0f172a; font-weight: 700; }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
+    .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
+    .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .learn-more summary::-webkit-details-marker { display: none; }
+    .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
+    .learn-more[open] summary::before { content: "-"; }
+    .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
+    .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .takeaways ul { margin-bottom: 0; }
+    .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+    .prompt-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+    .prompt-box h4 { margin-top: 0; color: #475569; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .prompt-text { font-family: monospace; background: white; padding: 1rem; border-radius: 8px; margin: 0; font-size: 0.95rem; line-height: 1.6; white-space: pre-wrap; border: 1px solid #e2e8f0; }
+    .checklist-box { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+    .checklist-box h4 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .checklist-box ul { margin-bottom: 0; }
+    .checklist-box li { margin-bottom: 0.5rem; }
+    .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+    @media (max-width: 700px) { .two-column { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-badge">AI 101</span>
+        <span class="nav-title">For Patients</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Modules</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <article class="content">
+
+      <header class="unit-header">
+        <span class="unit-label phase-2">PRACTICAL SKILLS</span>
+        <h1 class="unit-title">Preparing for Doctor Appointments</h1>
+        <p class="unit-subtitle">
+          Use AI to organize your thoughts, prepare questions, and make the most of limited time with your doctor.
+        </p>
+        <div class="unit-meta">
+          <span class="unit-meta-item">
+            <i data-lucide="clock"></i>
+            12 min read
+          </span>
+        </div>
+      </header>
+
+      <section class="long-form-text">
+        <h2>Why Preparation Matters</h2>
+
+        <p>
+          Doctor appointments are short. The average primary care visit is about 15-20 minutes,
+          and that includes time for the doctor to review your chart, examine you, and document
+          the visit. Your actual conversation time might be 8-10 minutes.
+        </p>
+
+        <p>
+          If you walk in unprepared, it's easy to forget important symptoms, ramble about
+          things that aren't priorities, or leave without asking your most important questions.
+          AI can help you prepare so you make the most of every minute.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            Research shows that patients who prepare questions before appointments report
+            higher satisfaction and better understanding of their care plan. AI makes this
+            preparation faster and more thorough.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Step 1: Organize Your Symptoms</h2>
+
+        <p>
+          Before your appointment, use AI to help you create a clear, organized summary
+          of what's been going on. This saves time and helps your doctor understand your
+          situation quickly.
+        </p>
+
+        <div class="prompt-box">
+          <h4>Prompt to try:</h4>
+          <div class="prompt-text">I have an appointment with my doctor about [main concern]. Help me organize the following symptoms into a clear summary:
+
+[List your symptoms, when they started, how often they happen, what makes them better or worse, etc.]
+
+Please format this as a brief summary I can hand to my doctor or read quickly at the start of my appointment.</div>
+        </div>
+
+        <h3>What to Include</h3>
+        <ul>
+          <li><strong>Timeline:</strong> When did this start? Has it changed over time?</li>
+          <li><strong>Frequency:</strong> How often does it happen? Constant? Occasional?</li>
+          <li><strong>Severity:</strong> On a 1-10 scale, how bad is it at worst? On average?</li>
+          <li><strong>Triggers:</strong> Does anything make it worse? Better?</li>
+          <li><strong>Impact:</strong> How is this affecting your daily life?</li>
+          <li><strong>What you've tried:</strong> Any treatments, medications, or home remedies?</li>
+        </ul>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            Before your next appointment, spend 5 minutes describing your symptoms to AI in
+            your own words. Then ask it to organize what you said into a clear, one-paragraph
+            summary. Bring that summary to your appointment.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Step 2: Prepare Your Questions</h2>
+
+        <p>
+          You always have questions for your doctor. But under the pressure of a short
+          appointment, it's easy to forget them or not know how to phrase them. AI can
+          help you prepare a prioritized list.
+        </p>
+
+        <div class="prompt-box">
+          <h4>Prompt to try:</h4>
+          <div class="prompt-text">I'm seeing my [type of doctor] about [reason for visit].
+
+My background: [brief relevant history - age, conditions, medications]
+
+Help me create a list of 5-7 questions I should consider asking. Focus on:
+- Understanding my condition or symptoms
+- Treatment options and what to expect
+- Warning signs I should watch for
+- Lifestyle changes that might help
+
+Put the most important questions first.</div>
+        </div>
+
+        <h3>Types of Questions Worth Asking</h3>
+        <ul>
+          <li><strong>Understanding:</strong> "Can you explain what this means in simple terms?"</li>
+          <li><strong>Options:</strong> "What are my treatment options, and what do you recommend?"</li>
+          <li><strong>Next steps:</strong> "What should I do next? When should I follow up?"</li>
+          <li><strong>Warning signs:</strong> "What symptoms should make me call you or go to the ER?"</li>
+          <li><strong>Lifestyle:</strong> "Are there lifestyle changes that would help with this?"</li>
+          <li><strong>Medications:</strong> "What side effects should I watch for? How long should I take this?"</li>
+        </ul>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            Bring your question list on paper or your phone. If you run out of time, ask your
+            doctor: "I have a few more questions - should I schedule another appointment, or
+            can I send them through the patient portal?"
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Step 3: Understand Before You Go</h2>
+
+        <p>
+          If you're seeing a specialist or discussing a specific condition, AI can help
+          you understand the basics before your appointment. This lets you have a more
+          informed conversation.
+        </p>
+
+        <div class="prompt-box">
+          <h4>Prompt to try:</h4>
+          <div class="prompt-text">I'm seeing a [specialist type] for the first time because [reason].
+
+Please give me a brief overview of:
+1. What this type of doctor specializes in
+2. What I should expect during the visit
+3. Basic terms related to [condition] I might hear
+4. What information or records I should bring
+
+Keep it simple and focused on what will help me prepare.</div>
+        </div>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
+          <p style="margin-bottom: 0;">
+            <strong>Research Finding:</strong> Studies show that patients who understand their
+            conditions better are more likely to follow treatment plans and have better health
+            outcomes. Preparation isn't just about efficiency - it leads to better care.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>What to Bring vs. What to Verify</h2>
+
+        <p>
+          AI can help you prepare materials to bring to your appointment. But some things
+          AI produces should be verified rather than handed directly to your doctor.
+        </p>
+
+        <div class="two-column">
+          <div class="checklist-box">
+            <h4 style="color: #16a34a;"><i data-lucide="check"></i> Good to Bring</h4>
+            <ul>
+              <li>Your symptom summary (organized by AI)</li>
+              <li>Your question list (generated with AI help)</li>
+              <li>Timeline of when symptoms started</li>
+              <li>List of current medications and supplements</li>
+              <li>Notes on what you've already tried</li>
+              <li>Your goals for the visit</li>
+            </ul>
+          </div>
+          <div class="checklist-box">
+            <h4 style="color: #dc2626;"><i data-lucide="alert-circle"></i> Verify First</h4>
+            <ul>
+              <li>Any "diagnosis" AI suggested - bring as a question</li>
+              <li>Statistics or research AI cited - may be made up</li>
+              <li>Treatment recommendations - let your doctor decide</li>
+              <li>Drug interaction warnings - pharmacist should verify</li>
+              <li>Claims that contradict previous medical advice</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            Don't tell your doctor "AI diagnosed me with X." Instead say: "I was reading
+            about my symptoms and X came up. Is that something we should consider?" This
+            respects your doctor's expertise while still raising the topic.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>During and After the Appointment</h2>
+
+        <h3>During Your Appointment</h3>
+        <ul>
+          <li>Lead with your main concern: "The most important thing I want to discuss today is..."</li>
+          <li>Use your prepared summary to explain symptoms clearly and efficiently</li>
+          <li>Take notes, or ask if you can record the conversation</li>
+          <li>Ask for clarification: "Can you explain that in simpler terms?"</li>
+          <li>Before you leave, confirm: "So the next steps are..." to make sure you understand</li>
+        </ul>
+
+        <h3>After Your Appointment</h3>
+        <p>
+          AI can help you make sense of what happened during your appointment:
+        </p>
+
+        <div class="prompt-box">
+          <h4>Prompt to try:</h4>
+          <div class="prompt-text">I just had a doctor appointment about [reason]. Here's what my doctor told me:
+
+[Summarize what you remember - diagnosis, treatment plan, follow-up instructions]
+
+Can you help me:
+1. Understand any medical terms they used
+2. Organize the next steps I need to take
+3. Identify anything I should ask about if I'm unclear</div>
+        </div>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            After your next appointment, write down everything you remember within an hour.
+            Then ask AI to help you organize it. If there are gaps or confusion, use your
+            patient portal to send a follow-up question to your doctor's office.
+          </p>
+        </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Using AI with your patient portal messages</summary>
+          <div class="learn-more-content">
+            <p>
+              Many patients now use their patient portal to send messages to their healthcare
+              team. AI can help you write clearer, more effective messages.
+            </p>
+            <p>
+              Try: "Help me write a clear, concise message to my doctor about [concern]. Include
+              relevant background and specific questions."
+            </p>
+            <p>
+              This helps you communicate effectively without writing an essay or forgetting
+              important details. Keep messages focused - your doctor reads many messages a day.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Special Situations</h2>
+
+        <h3>Preparing for a Second Opinion</h3>
+        <div class="prompt-box">
+          <h4>Prompt to try:</h4>
+          <div class="prompt-text">I'm getting a second opinion about [condition/diagnosis/recommended treatment].
+
+My current situation: [brief background]
+My current doctor recommends: [current recommendation]
+My concerns are: [your concerns]
+
+Help me prepare questions to ask the new doctor. I want to understand if there are alternative approaches without undermining my current doctor.</div>
+        </div>
+
+        <h3>Advocating for Yourself or a Family Member</h3>
+        <div class="prompt-box">
+          <h4>Prompt to try:</h4>
+          <div class="prompt-text">I'm accompanying [relationship] to a doctor appointment about [concern]. They have [relevant history].
+
+I'm worried the doctor might dismiss their concerns because [reason - e.g., previous experience, communication challenges].
+
+Help me prepare:
+1. How to clearly present their symptoms
+2. Questions to ensure thorough evaluation
+3. Phrases to advocate for them respectfully but firmly</div>
+        </div>
+      </section>
+
+      <div class="takeaways">
+        <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
+        <ul>
+          <li>Use AI to organize your symptoms into a clear, concise summary before appointments</li>
+          <li>Prepare a prioritized list of questions - you may only have time for a few</li>
+          <li>Research your condition basics so you can have an informed conversation</li>
+          <li>Bring AI-organized materials, but verify AI-generated claims before presenting them as fact</li>
+          <li>After appointments, use AI to help understand and organize what you learned</li>
+          <li>Lead with your main concern - don't save the most important thing for last</li>
+        </ul>
+      </div>
+
+      <nav class="page-nav">
+        <a href="understanding-responses.html" class="page-nav-link prev">
+          <span class="page-nav-arrow"><i data-lucide="arrow-left"></i></span>
+          <div>
+            <span class="page-nav-label">Previous</span>
+            <span class="page-nav-title">Understanding AI Responses</span>
+          </div>
+        </a>
+        <a href="researching-safely.html" class="page-nav-link next">
+          <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
+          <div>
+            <span class="page-nav-label">Next</span>
+            <span class="page-nav-title">Researching Your Health Safely</span>
+          </div>
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AI 101 for Patients</strong> · Your Guide to Using AI with Your Health</div>
+      <div>v1.0 · 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+
+</body>
+</html>
