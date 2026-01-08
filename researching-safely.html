@@ -36,6 +36,21 @@
     .spiral-signs { display: grid; gap: 1rem; margin: 1.5rem 0; }
     .spiral-sign { display: flex; gap: 1rem; align-items: flex-start; background: #fef2f2; padding: 1rem; border-radius: 8px; }
     .spiral-sign i { color: #dc2626; flex-shrink: 0; margin-top: 2px; }
+    .source-card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; margin: 1rem 0; }
+    .source-card h4 { margin: 0 0 0.5rem 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+    .source-card p { margin: 0; color: #64748b; font-size: 0.95rem; }
+    .source-tier { display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.5rem; border-radius: 4px; margin-left: 0.5rem; }
+    .tier-gold { background: #fef3c7; color: #92400e; }
+    .tier-silver { background: #e2e8f0; color: #475569; }
+    .tier-bronze { background: #fce7f3; color: #9d174d; }
+    .workflow-step { display: flex; gap: 1rem; margin: 1.5rem 0; }
+    .workflow-number { background: #3b82f6; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+    .workflow-content { flex: 1; }
+    .workflow-content h4 { margin: 0 0 0.5rem 0; color: #1e293b; }
+    .workflow-content p { margin: 0; color: #64748b; }
+    .citation { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+    .citation a { color: #2563eb; text-decoration: none; }
+    .citation a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -68,7 +83,7 @@
         <div class="unit-meta">
           <span class="unit-meta-item">
             <i data-lucide="clock"></i>
-            12 min read
+            18 min read
           </span>
         </div>
       </header>
@@ -90,6 +105,13 @@
           more scary possibilities.
         </p>
 
+        <p>
+          This pattern isn't unique to AI - it's been happening since the early days of
+          web search. But AI makes it more conversational and personalized, which can
+          make it feel even more real and concerning. The key is developing strategies
+          to use AI effectively without falling into harmful patterns.
+        </p>
+
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
           <p style="margin-bottom: 0;">
@@ -98,6 +120,32 @@
             not aware of the pattern.
           </p>
         </div>
+        <p class="citation">Source: The term "cyberchondria" has been studied in medical literature, including publications in Cyberpsychology, Behavior, and Social Networking.</p>
+
+        <details class="learn-more">
+          <summary>Learn More: Understanding health anxiety in the digital age</summary>
+          <div class="learn-more-content">
+            <p>
+              Health anxiety exists on a spectrum. Most people experience some worry about
+              their health at times - this is normal and can be protective. But for some,
+              health anxiety becomes excessive and interferes with daily life.
+            </p>
+            <p>
+              The internet and AI can amplify health anxiety because:
+            </p>
+            <ul>
+              <li>Information is always available, enabling constant checking</li>
+              <li>Rare conditions appear alongside common ones in search results</li>
+              <li>Personal stories of worst-case outcomes are easy to find</li>
+              <li>AI's confident tone can make scary possibilities feel more real</li>
+            </ul>
+            <p>
+              If health anxiety is significantly affecting your life, consider talking to
+              a mental health professional. Cognitive behavioral therapy (CBT) is highly
+              effective for health anxiety.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -117,6 +165,8 @@
           <li>Preparing questions for your doctor</li>
           <li>Looking up how to manage symptoms your doctor has explained</li>
           <li>Setting a time limit and sticking to it</li>
+          <li>Ending your research session with clearer understanding</li>
+          <li>Using research to become a better partner in your care</li>
         </ul>
 
         <h3>Harmful Spiraling Looks Like:</h3>
@@ -126,6 +176,8 @@
           <li>Jumping to rare, serious conditions based on common symptoms</li>
           <li>Feeling more anxious after researching than before</li>
           <li>Avoiding the doctor because you're afraid of what they'll find</li>
+          <li>Repeatedly asking the same question hoping for different answers</li>
+          <li>Ignoring common explanations and focusing on worst cases</li>
         </ul>
 
         <div class="callout-news">
@@ -135,6 +187,66 @@
             online is associated with both positive outcomes (better health knowledge) and
             negative outcomes (increased anxiety) depending on how it's done. The key is
             approach, not avoidance.
+          </p>
+        </div>
+        <p class="citation">Source: Research on online health information seeking has been published in journals including the Journal of Medical Internet Research.</p>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>A Healthy Research Workflow</h2>
+
+        <p>
+          Here's a structured approach that uses AI effectively while minimizing risks:
+        </p>
+
+        <div class="workflow-step">
+          <div class="workflow-number">1</div>
+          <div class="workflow-content">
+            <h4>Define your question clearly</h4>
+            <p>Before you start, write down exactly what you want to know. Are you trying to understand a diagnosis? Prepare for an appointment? Learn about a treatment? Having a clear goal prevents wandering into worry territory.</p>
+          </div>
+        </div>
+
+        <div class="workflow-step">
+          <div class="workflow-number">2</div>
+          <div class="workflow-content">
+            <h4>Set a time limit</h4>
+            <p>Decide you'll spend 15-20 minutes maximum. Set a timer. When time's up, you either have your answer or you need to talk to a healthcare provider instead of researching more.</p>
+          </div>
+        </div>
+
+        <div class="workflow-step">
+          <div class="workflow-number">3</div>
+          <div class="workflow-content">
+            <h4>Start with AI for basic understanding</h4>
+            <p>Ask AI to explain the topic in simple terms. This gives you foundational knowledge and helps you form better questions. AI is good at explaining concepts accessibly.</p>
+          </div>
+        </div>
+
+        <div class="workflow-step">
+          <div class="workflow-number">4</div>
+          <div class="workflow-content">
+            <h4>Verify important claims</h4>
+            <p>For anything you might act on, verify with authoritative sources: major medical centers, government health sites, or your healthcare team. Don't trust AI statistics or citations without checking.</p>
+          </div>
+        </div>
+
+        <div class="workflow-step">
+          <div class="workflow-number">5</div>
+          <div class="workflow-content">
+            <h4>Write your conclusions and stop</h4>
+            <p>At the end, write down: what you learned, what questions you still have, and what you'll do next. Then close the browser. Don't keep researching.</p>
+          </div>
+        </div>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            Next time you want to research a symptom, set a 15-minute timer. At the end, write
+            down: (1) the most likely explanation, (2) whether you need to see a doctor, and
+            (3) one action you'll take. Then stop.
           </p>
         </div>
       </section>
@@ -169,6 +281,10 @@
             <i data-lucide="alert-circle"></i>
             <div><strong>You're reading instead of acting.</strong> You know you should call the doctor but keep researching instead.</div>
           </div>
+          <div class="spiral-sign">
+            <i data-lucide="alert-circle"></i>
+            <div><strong>You're checking your body repeatedly.</strong> Research has led to physical self-examination that feeds more worry.</div>
+          </div>
         </div>
 
         <div class="stop-sign">
@@ -180,8 +296,111 @@
             <li>You've been researching for a while without reassurance</li>
             <li>Your gut tells you something is wrong</li>
             <li>AI or search results suggest you should seek care</li>
+            <li>The same worry keeps returning despite research</li>
           </ul>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Breaking the research spiral</summary>
+          <div class="learn-more-content">
+            <p>
+              If you find yourself caught in a research spiral, try these techniques:
+            </p>
+            <p>
+              <strong>Physically step away:</strong> Close your laptop or put down your phone.
+              Go to a different room. Do something else for at least 30 minutes.
+            </p>
+            <p>
+              <strong>Challenge your thinking:</strong> Ask yourself: "What's the most likely
+              explanation?" Common conditions are common. Rare conditions are rare.
+            </p>
+            <p>
+              <strong>Set a decision point:</strong> Tell yourself: "If I'm still worried in
+              24 hours, I'll call my doctor." Then stop researching and wait.
+            </p>
+            <p>
+              <strong>Talk to someone:</strong> Sometimes saying your fears out loud to a
+              trusted person helps you see them more clearly.
+            </p>
+            <p>
+              <strong>Limit access:</strong> If this is a recurring problem, consider using
+              website blockers during certain hours or deleting health apps from your phone.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Know Your Sources</h2>
+
+        <p>
+          Not all health information is equally reliable. Here's a hierarchy of sources:
+        </p>
+
+        <div class="source-card">
+          <h4><i data-lucide="award"></i> Government and Academic Medical Centers <span class="source-tier tier-gold">GOLD TIER</span></h4>
+          <p>CDC, NIH, FDA, WHO, Mayo Clinic, Cleveland Clinic, Johns Hopkins. These have medical review processes and update information regularly. Start here for foundational information.</p>
+        </div>
+
+        <div class="source-card">
+          <h4><i data-lucide="shield"></i> Professional Medical Organizations <span class="source-tier tier-gold">GOLD TIER</span></h4>
+          <p>American Heart Association, American Cancer Society, American Academy of Pediatrics. These organizations set guidelines for their specialties.</p>
+        </div>
+
+        <div class="source-card">
+          <h4><i data-lucide="message-square"></i> AI Chatbots <span class="source-tier tier-silver">SILVER TIER</span></h4>
+          <p>ChatGPT, Claude, Gemini. Good for explaining concepts and generating questions. But verify specific claims, don't trust citations, and never rely on AI alone for medical decisions.</p>
+        </div>
+
+        <div class="source-card">
+          <h4><i data-lucide="globe"></i> Health News Sites <span class="source-tier tier-bronze">BRONZE TIER</span></h4>
+          <p>WebMD, Healthline, Medical News Today. Can be useful but vary in quality. Often cover new studies before they're established. Be aware of advertising relationships.</p>
+        </div>
+
+        <div class="source-card">
+          <h4><i data-lucide="users"></i> Patient Communities and Forums <span class="source-tier tier-bronze">BRONZE TIER</span></h4>
+          <p>Reddit, patient forums, Facebook groups. Valuable for patient experiences, not for medical facts. What worked for someone else may not work for you.</p>
+        </div>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            The best research uses multiple source tiers. Start with AI to understand concepts,
+            verify with gold-tier sources for facts, and use patient communities for lived
+            experience - while always filtering through your healthcare team.
+          </p>
+        </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Evaluating a health website</summary>
+          <div class="learn-more-content">
+            <p>
+              When you land on a health website you don't recognize, ask:
+            </p>
+            <p>
+              <strong>Who runs this site?</strong> Look for an "About" page. Is it a medical
+              organization, a company selling something, or an individual?
+            </p>
+            <p>
+              <strong>Who wrote this content?</strong> Is there a named author with medical
+              credentials? Is the content medically reviewed?
+            </p>
+            <p>
+              <strong>When was it updated?</strong> Medical information can become outdated.
+              Look for a "last updated" date.
+            </p>
+            <p>
+              <strong>What's the site's purpose?</strong> Is it trying to inform you or
+              sell you something? Are there ads for specific treatments?
+            </p>
+            <p>
+              <strong>Does it cite sources?</strong> Reliable sites link to research or
+              cite medical organizations for their claims.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -216,14 +435,35 @@
           <p>At the end of your research session, write one sentence: what you learned and what you'll do next. Then close the browser.</p>
         </div>
 
-        <div class="callout-try">
-          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
-          <p style="margin-bottom: 0;">
-            Next time you want to research a symptom, set a 15-minute timer. At the end, write
-            down: (1) the most likely explanation, (2) whether you need to see a doctor, and
-            (3) one action you'll take. Then stop.
-          </p>
+        <div class="research-tip">
+          <h4>Ask for perspective on probability</h4>
+          <p>Try: "Given these symptoms in a [your age/sex] person, what are the most common causes, in order of likelihood?" This grounds you in probability rather than possibility.</p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Using AI to reduce rather than increase anxiety</summary>
+          <div class="learn-more-content">
+            <p>
+              AI can actually help reduce health anxiety if used correctly:
+            </p>
+            <p>
+              <strong>Ask about common vs. rare:</strong> "How common is [condition] in people
+              with [symptom]?" This helps you understand probability.
+            </p>
+            <p>
+              <strong>Ask for reassurance appropriately:</strong> "What would make this symptom
+              more concerning vs. less concerning?" This helps you evaluate your situation.
+            </p>
+            <p>
+              <strong>Ask about next steps:</strong> "What would a doctor do to evaluate this?"
+              Understanding the process can reduce uncertainty.
+            </p>
+            <p>
+              <strong>Ask for practical action:</strong> "What should I do about this symptom
+              in the meantime?" Having an action plan feels better than just worrying.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -242,6 +482,7 @@
           <li>"What are the common side effects of [medication]?" - Knowing what to expect</li>
           <li>"How should I take [medication]?" - Timing, food, etc.</li>
           <li>"What should I tell my doctor if I experience [symptom]?" - When to report back</li>
+          <li>"How long does it typically take for [medication] to start working?" - Setting expectations</li>
         </ul>
 
         <h3>Risky Medication Questions:</h3>
@@ -269,6 +510,32 @@
             answer questions in minutes that would take days to get answered through your doctor.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Understanding medication side effect information</summary>
+          <div class="learn-more-content">
+            <p>
+              When you research medication side effects, it's important to understand how
+              this information is reported:
+            </p>
+            <p>
+              <strong>Common side effects</strong> (affecting more than 10% of people) are
+              the ones most likely to affect you. Focus on these.
+            </p>
+            <p>
+              <strong>Rare side effects</strong> (affecting less than 1 in 1000) are possible
+              but very unlikely. Reading about these can create unnecessary worry.
+            </p>
+            <p>
+              <strong>Listed side effects</strong> aren't necessarily caused by the medication.
+              They occurred during testing, but some may be coincidental.
+            </p>
+            <p>
+              <strong>Severity varies:</strong> "Headache" as a side effect doesn't tell you
+              if it's mild or severe. Ask your pharmacist about what to expect.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -300,6 +567,12 @@
           Your outcome will depend on many factors specific to you.
         </p>
 
+        <h3>Focus on what's actionable</h3>
+        <p>
+          Rather than endless research about what might happen, focus on what you can do:
+          lifestyle changes, treatment adherence, symptom management, question preparation.
+        </p>
+
         <details class="learn-more">
           <summary>Learn More: Understanding health statistics</summary>
           <div class="learn-more-content">
@@ -325,6 +598,34 @@
             </p>
           </div>
         </details>
+
+        <details class="learn-more">
+          <summary>Learn More: Researching chronic conditions</summary>
+          <div class="learn-more-content">
+            <p>
+              If you have a chronic condition, AI can be a valuable ongoing resource:
+            </p>
+            <p>
+              <strong>Stay current:</strong> Ask AI periodically about recent developments
+              in treatment. Verify interesting findings with gold-tier sources.
+            </p>
+            <p>
+              <strong>Understand your labs:</strong> Ask AI to explain your test results
+              in context. Track trends over time.
+            </p>
+            <p>
+              <strong>Lifestyle research:</strong> Learn about diet, exercise, and lifestyle
+              factors that affect your condition.
+            </p>
+            <p>
+              <strong>Prepare for appointments:</strong> Use AI to generate questions about
+              your condition management.
+            </p>
+            <p>
+              The key is making this a structured practice rather than reactive worry.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -341,7 +642,18 @@
           <li><strong>Can I take action on this information?</strong> If not, why am I looking it up?</li>
           <li><strong>Would my doctor find this helpful?</strong> Good research leads to good questions. Bad research leads to panic.</li>
           <li><strong>How do I feel?</strong> If you feel worse than when you started, stop.</li>
+          <li><strong>Am I ready to stop?</strong> If you can't stop, that's itself a warning sign.</li>
         </ul>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            If health research is regularly causing you significant anxiety, affecting your
+            sleep, or leading you to avoid necessary medical care, consider talking to a
+            mental health professional about health anxiety. This is a real condition that
+            affects many people and is highly treatable.
+          </p>
+        </div>
 
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
@@ -360,9 +672,11 @@
           <li>If you're more anxious after researching than before, stop</li>
           <li>Focus on understanding your actual situation, not every possible diagnosis</li>
           <li>Use AI for perspective and preparation, not self-diagnosis</li>
+          <li>Verify important claims with gold-tier sources like CDC, NIH, and major medical centers</li>
           <li>For medication questions, your pharmacist is often the best resource</li>
           <li>When in doubt, call your doctor rather than researching more</li>
           <li>Good research leads to good questions; bad research leads to panic</li>
+          <li>If health research regularly causes significant anxiety, consider talking to a mental health professional</li>
         </ul>
       </div>
 
@@ -374,11 +688,11 @@
             <span class="page-nav-title">Preparing for Doctor Appointments</span>
           </div>
         </a>
-        <a href="how-ai-thinks.html" class="page-nav-link next">
+        <a href="privacy.html" class="page-nav-link next">
           <span class="page-nav-arrow"><i data-lucide="arrow-right"></i></span>
           <div>
             <span class="page-nav-label">Next</span>
-            <span class="page-nav-title">How AI "Thinks"</span>
+            <span class="page-nav-title">Privacy &amp; Your Health Data</span>
           </div>
         </a>
       </nav>

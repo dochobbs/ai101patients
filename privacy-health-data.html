@@ -32,6 +32,12 @@
     .comparison-table th, .comparison-table td { padding: 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
     .comparison-table th { background: #f8fafc; font-weight: 700; color: #1e293b; }
     .comparison-table td { color: #475569; }
+    .citation { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+    .citation a { color: #2563eb; text-decoration: none; }
+    .citation a:hover { text-decoration: underline; }
+    .quote-box { background: #f8fafc; border-left: 4px solid #94a3b8; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
+    .quote-box blockquote { margin: 0 0 0.5rem 0; font-style: italic; color: #334155; font-size: 1.1rem; }
+    .quote-box .attribution { color: #64748b; font-size: 0.9rem; }
   </style>
 </head>
 <body>
@@ -64,7 +70,7 @@
         <div class="unit-meta">
           <span class="unit-meta-item">
             <i data-lucide="clock"></i>
-            15 min read
+            20 min read
           </span>
         </div>
       </header>
@@ -80,13 +86,29 @@
         <p>
           HIPAA (the Health Insurance Portability and Accountability Act) is the law that protects
           your medical records at your doctor's office, hospital, or insurance company. It limits
-          who can see your data and what they can do with it.
+          who can see your data and what they can do with it. It requires organizations to notify
+          you if your data is breached. It gives you legal recourse if your privacy is violated.
         </p>
 
         <p>
           But HIPAA only applies to "covered entities"—healthcare providers, health plans, and
           their business partners. <strong>AI companies like OpenAI are not covered entities.</strong>
+          This creates what privacy experts call the "HIPAA gap"—a situation where your most
+          sensitive health information loses its legal protections the moment you share it with
+          consumer AI tools.
         </p>
+
+        <div class="quote-box">
+          <blockquote>
+            "When consumers share their personal health information with these AI chatbots, that
+            information immediately falls outside the scope of HIPAA... Consumers no longer have
+            the privacy protections they've come to expect from the healthcare system."
+          </blockquote>
+          <div class="attribution">
+            — Andrew Crawford, Senior Technologist, Center for Democracy and Technology
+          </div>
+          <p class="citation">Source: <a href="https://decrypt.co/294820/chatgpt-health-records-privacy-hipaa" target="_blank">Decrypt, January 2026</a></p>
+        </div>
 
         <div class="callout callout-warning">
           <div class="callout-title">Warning</div>
@@ -96,6 +118,42 @@
             privacy policy—not federal law—determines what happens to it.
           </p>
         </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>The "Consumer Control" Question</h2>
+
+        <p>
+          One argument you'll hear is that because <em>you</em> choose to share your data,
+          it's different from when a healthcare provider shares it. This is called "consumer-mediated
+          access"—you're the one authorizing the transfer, so you're making an informed choice.
+        </p>
+
+        <p>
+          But privacy advocates point out that true informed consent requires understanding
+          all the implications of that choice—something that's hard when privacy policies
+          are long, complex, and can change over time.
+        </p>
+
+        <div class="quote-box">
+          <blockquote>
+            "Just because consumers click 'agree' doesn't mean they truly understand what
+            they're consenting to. These AI systems are complex, the data practices are
+            opaque, and the downstream uses of health information are often unclear even
+            to the companies themselves."
+          </blockquote>
+          <div class="attribution">
+            — J.B. Branch, Health Policy Analyst, Public Citizen
+          </div>
+          <p class="citation">Source: <a href="https://decrypt.co/294820/chatgpt-health-records-privacy-hipaa" target="_blank">Decrypt, January 2026</a></p>
+        </div>
+
+        <p>
+          This doesn't mean you shouldn't use these tools—but it does mean you should go in
+          with eyes open about what protections you're giving up.
+        </p>
       </section>
 
       <div class="section-divider"></div>
@@ -112,6 +170,7 @@
           <li><strong>Not used for training:</strong> OpenAI says health data won't be used to train their AI models</li>
           <li><strong>Encryption:</strong> Data is encrypted both when stored and when transmitted</li>
           <li><strong>You control what's shared:</strong> You decide which records to connect and can disconnect anytime</li>
+          <li><strong>Consumer-mediated access:</strong> You explicitly authorize what's shared through the b.well integration</li>
         </ul>
 
         <div class="callout-news">
@@ -127,6 +186,12 @@
           These are good practices. But here's the catch: <strong>these are company policies,
           not legal requirements.</strong> They could change. And if something goes wrong,
           your legal protections are limited compared to what you'd have under HIPAA.
+        </p>
+
+        <p>
+          Company policies can be updated with notice to users. A new CEO, a financial crisis,
+          an acquisition by another company—any of these could lead to policy changes that
+          affect how your health data is handled.
         </p>
       </section>
 
@@ -169,6 +234,16 @@
               <td>Requires new legislation</td>
               <td>Company can update anytime</td>
             </tr>
+            <tr>
+              <td>Right to access records</td>
+              <td>Guaranteed by law</td>
+              <td>Depends on company</td>
+            </tr>
+            <tr>
+              <td>Training data use</td>
+              <td>Strictly regulated</td>
+              <td>Policy promises only</td>
+            </tr>
           </tbody>
         </table>
 
@@ -185,6 +260,62 @@
       <div class="section-divider"></div>
 
       <section class="long-form-text">
+        <h2>Types of Health Data and Risk Levels</h2>
+
+        <p>
+          Not all health information carries the same risk. Understanding the sensitivity of
+          different types of data can help you make smarter decisions about what to share.
+        </p>
+
+        <h3>Higher Risk Data</h3>
+        <ul>
+          <li><strong>Mental health diagnoses:</strong> Could affect employment, insurance, relationships</li>
+          <li><strong>Substance use history:</strong> Stigmatized, potential legal/employment implications</li>
+          <li><strong>Sexual health information:</strong> Highly personal, potential for discrimination</li>
+          <li><strong>Genetic information:</strong> Affects family members, long-term insurance implications</li>
+          <li><strong>HIV status:</strong> Protected by additional laws, but not when shared with AI</li>
+        </ul>
+
+        <h3>Moderate Risk Data</h3>
+        <ul>
+          <li><strong>Chronic disease diagnoses:</strong> Could affect insurance, employment in some cases</li>
+          <li><strong>Medication lists:</strong> Reveals health conditions, treatment approaches</li>
+          <li><strong>Lab results:</strong> May indicate conditions you'd prefer to keep private</li>
+        </ul>
+
+        <h3>Lower Risk Data</h3>
+        <ul>
+          <li><strong>General health questions:</strong> "What is diabetes?" doesn't reveal you have it</li>
+          <li><strong>Wellness information:</strong> Diet, exercise, sleep questions</li>
+          <li><strong>Medication general info:</strong> Asking how a drug works, not that you take it</li>
+        </ul>
+
+        <details class="learn-more">
+          <summary>Learn More: Why mental health data needs extra caution</summary>
+          <div class="learn-more-content">
+            <p>
+              Mental health information is among the most sensitive categories of health data.
+              Despite legal protections in healthcare settings, stigma still exists. Mental
+              health diagnoses can affect life insurance eligibility, security clearances,
+              custody decisions, and more.
+            </p>
+            <p>
+              When you share mental health information with AI, you lose the enhanced
+              protections that apply in clinical settings. There's no guarantee this
+              information won't be used in ways you didn't anticipate.
+            </p>
+            <p>
+              If you want to use AI for mental health support, consider being general
+              ("I'm feeling anxious") rather than specific ("I was diagnosed with
+              generalized anxiety disorder in 2019 and take Lexapro").
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
         <h2>Making Informed Choices</h2>
 
         <p>
@@ -195,18 +326,29 @@
         <p>
           You can use ChatGPT for health questions without connecting your medical records.
           Just type in your questions. This limits what the AI knows but also limits your privacy exposure.
+          You maintain full control over what information you share, one question at a time.
         </p>
 
         <h3>Option 2: Connect Records Selectively</h3>
         <p>
           ChatGPT Health lets you choose what to share. You might connect recent lab results
-          but not your full medical history. You control the scope.
+          but not your full medical history. You control the scope. Think carefully about which
+          records are truly necessary for the help you need.
         </p>
 
         <h3>Option 3: Full Integration with Eyes Open</h3>
         <p>
           If you decide the benefits outweigh the privacy trade-offs, connect everything—but
           understand what you're agreeing to. Read the privacy policy. Know you can disconnect later.
+          Set a reminder to periodically review what you've shared.
+        </p>
+
+        <h3>Option 4: Use General Questions</h3>
+        <p>
+          Instead of sharing specific personal information, ask general questions. Rather than
+          "My A1C is 7.2, what should I do?", try "What does an A1C of 7.2 generally indicate,
+          and what are common approaches?" This gets you useful information without revealing
+          your specific situation.
         </p>
 
         <div class="callout-try">
@@ -214,9 +356,57 @@
           <p style="margin-bottom: 0;">
             Before connecting any health data, find and read the privacy policy for the AI tool
             you're using. Look specifically for: What data is collected? How long is it stored?
-            Is it used for training? Can you delete it?
+            Is it used for training? Can you delete it? What happens if the company is sold?
           </p>
         </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Understanding Data Retention and Deletion</h2>
+
+        <p>
+          When you share data with AI companies, it's important to understand how long they
+          keep it and whether you can truly delete it.
+        </p>
+
+        <h3>What "Delete" Actually Means</h3>
+        <p>
+          When you request deletion, your data may be removed from active systems but could
+          remain in backups, logs, or derived data products. "Deletion" policies vary by
+          company and may not mean what you expect.
+        </p>
+
+        <h3>Training Data Concerns</h3>
+        <p>
+          If your data was used to train AI models before deletion policies changed, that
+          influence persists. The model "learned" from your data even if the original data
+          is deleted. This is one reason OpenAI's promise not to use health data for training
+          is significant—but also why such promises matter before you share, not after.
+        </p>
+
+        <details class="learn-more">
+          <summary>Learn More: What happens to data when companies are acquired</summary>
+          <div class="learn-more-content">
+            <p>
+              When tech companies are bought or merge, user data is typically transferred as
+              a company asset. Privacy policies usually include language allowing this. The
+              acquiring company may have different privacy practices than the original.
+            </p>
+            <p>
+              This is particularly relevant for AI startups, many of which will be acquired
+              by larger companies or go out of business. What happens to your health data
+              in either scenario is governed by the privacy policy—and that policy can
+              change with new ownership.
+            </p>
+            <p>
+              Before sharing sensitive health information, consider the company's stability
+              and ownership structure. Established companies may be more predictable, though
+              they're not immune to acquisition either.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -232,6 +422,8 @@
           <li><strong>Is it necessary?</strong> Could I get similar help without sharing this particular data?</li>
           <li><strong>Do I trust this company?</strong> Does their track record give me confidence?</li>
           <li><strong>Can I undo it?</strong> If I change my mind, can I delete my data and disconnect?</li>
+          <li><strong>What if policies change?</strong> Am I comfortable with uncertainty about future use?</li>
+          <li><strong>Who else could this affect?</strong> Does this data reveal information about family members?</li>
         </ol>
 
         <details class="learn-more">
@@ -246,8 +438,64 @@
               Some delete your data automatically after a period. Always check before sharing
               sensitive health information.
             </p>
+            <p>
+              Also consider specialized health AI tools versus general-purpose chatbots. Some
+              healthcare-specific AI tools may have stronger privacy protections because they're
+              designed for health data from the start—though they still typically fall outside HIPAA.
+            </p>
           </div>
         </details>
+
+        <details class="learn-more">
+          <summary>Learn More: State privacy laws that might help</summary>
+          <div class="learn-more-content">
+            <p>
+              While federal law (HIPAA) doesn't protect consumer AI health data, some states are
+              stepping in. California's CCPA/CPRA gives residents rights to know what data is
+              collected, request deletion, and opt out of data sales. Other states are passing
+              similar laws.
+            </p>
+            <p>
+              However, these laws vary significantly by state and may have exceptions for
+              certain types of data or companies. They also require you to actively exercise
+              your rights—companies don't typically offer protections proactively.
+            </p>
+            <p>
+              Check what privacy laws apply in your state, but don't assume they provide the
+              same level of protection as HIPAA does for traditional healthcare data.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Practical Privacy Tips</h2>
+
+        <p>
+          Here are concrete steps you can take to protect your health privacy while still
+          benefiting from AI tools:
+        </p>
+
+        <ul>
+          <li><strong>Use anonymous or separate accounts:</strong> Consider a dedicated account for health-related AI use, not linked to your primary email</li>
+          <li><strong>Be general when possible:</strong> Ask about conditions, not your specific diagnosis</li>
+          <li><strong>Read before connecting:</strong> Review privacy policies before linking health records</li>
+          <li><strong>Periodically audit:</strong> Check what data you've shared and delete what's no longer needed</li>
+          <li><strong>Consider timing:</strong> Discuss sensitive topics with your doctor directly, use AI for general learning</li>
+          <li><strong>Disable chat history:</strong> If available, turn off features that save your conversations</li>
+          <li><strong>Don't share images:</strong> Avoid uploading photos of prescriptions, lab results, or medical documents</li>
+        </ul>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            A good rule of thumb: Don't share anything with AI that you wouldn't want to appear
+            in a newspaper article about data breaches. Hope for the best, but protect against
+            the worst.
+          </p>
+        </div>
       </section>
 
       <div class="section-divider"></div>
@@ -266,6 +514,11 @@
           you share.
         </p>
 
+        <p>
+          The regulatory landscape is evolving. Lawmakers are beginning to recognize the HIPAA gap,
+          and new protections may emerge. But for now, consumer caution is your best protection.
+        </p>
+
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
           <p style="margin-bottom: 0;">
@@ -280,8 +533,10 @@
         <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
         <ul>
           <li>HIPAA doesn't apply to AI companies—your legal protections are limited</li>
+          <li>Privacy experts warn that consumers may not fully understand what they're consenting to</li>
           <li>OpenAI promises to keep health data separate and not use it for training</li>
           <li>These are company policies, not legal requirements—they could change</li>
+          <li>Different types of health data carry different risk levels—be especially careful with mental health, substance use, and genetic information</li>
           <li>You control what you share—you don't have to connect everything</li>
           <li>Read privacy policies before sharing sensitive health information</li>
           <li>The question isn't "should I use AI" but "what am I comfortable sharing?"</li>

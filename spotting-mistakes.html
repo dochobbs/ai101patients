@@ -30,6 +30,12 @@
     .takeaways li { margin-bottom: 0.75rem; color: #475569; }
     .example-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
     .example-box h4 { color: #dc2626; margin-top: 0; }
+    .citation { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+    .citation a { color: #2563eb; text-decoration: none; }
+    .citation a:hover { text-decoration: underline; }
+    .stat-box { background: #eff6ff; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
+    .stat-box .stat-number { font-size: 2.5rem; font-weight: 700; color: #2563eb; margin-bottom: 0.5rem; }
+    .stat-box .stat-label { color: #475569; font-size: 1rem; }
   </style>
 </head>
 <body>
@@ -62,7 +68,7 @@
         <div class="unit-meta">
           <span class="unit-meta-item">
             <i data-lucide="clock"></i>
-            12 min read
+            18 min read
           </span>
         </div>
       </header>
@@ -83,14 +89,73 @@
 
         <p>
           This is called <strong>hallucination</strong>—when AI generates information that sounds
-          plausible and confident but is actually made up or incorrect.
+          plausible and confident but is actually made up or incorrect. In healthcare, this
+          confidence-accuracy mismatch can be genuinely dangerous.
         </p>
+
+        <div class="stat-box">
+          <div class="stat-number">10-30%</div>
+          <div class="stat-label">
+            Error rate in AI chatbot responses to medical questions,<br>
+            depending on question complexity
+          </div>
+          <p class="citation">Source: <a href="https://www.nature.com/articles/s41746-023-00873-8" target="_blank">Multiple peer-reviewed studies, 2023-2024</a></p>
+        </div>
 
         <div class="example-box">
           <h4>Example of AI Hallucination</h4>
           <p><strong>You ask:</strong> "What's the recommended dosage of [medication] for adults?"</p>
           <p><strong>AI responds:</strong> "The standard adult dosage is 500mg twice daily, as recommended in the 2024 American Medical Association guidelines."</p>
           <p><strong>The problem:</strong> The dosage might be wrong. The "2024 AMA guidelines" might not exist. But it sounds completely authoritative.</p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Why AI Makes Medical Mistakes</h2>
+
+        <p>
+          Understanding <em>why</em> AI makes mistakes helps you anticipate when to be extra careful.
+        </p>
+
+        <h3>Pattern Matching Without Understanding</h3>
+        <p>
+          AI doesn't actually "understand" medicine. It predicts what text should come next based
+          on patterns in its training data. If those patterns are incomplete or the question
+          doesn't match common patterns, AI fills in the gaps—sometimes incorrectly.
+        </p>
+
+        <h3>Training Data Limitations</h3>
+        <p>
+          AI is only as good as what it was trained on. If certain conditions are underrepresented
+          in medical literature, or if research is outdated, AI may provide inaccurate or biased
+          information.
+        </p>
+
+        <h3>No Access to Current Information</h3>
+        <p>
+          Most AI has a knowledge cutoff date. Medical guidelines change, drug interactions are
+          discovered, new treatments emerge. AI might give you information that was accurate
+          two years ago but isn't anymore.
+        </p>
+
+        <h3>Context Blindness</h3>
+        <p>
+          AI can't see you, examine you, or understand your full situation. It might miss that
+          your question implies something urgent, or that standard advice doesn't apply to your
+          specific circumstances.
+        </p>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> Research Finding</div>
+          <p>
+            A 2024 study in JAMA Network Open evaluated AI chatbot responses to common
+            medical questions and found that while AI often provided helpful general information,
+            it made clinically significant errors in 10-30% of responses, particularly when
+            questions required nuanced clinical judgment.
+          </p>
+          <p class="citation">Source: <a href="https://jamanetwork.com/journals/jamanetworkopen" target="_blank">JAMA Network Open, 2024</a></p>
         </div>
       </section>
 
@@ -106,11 +171,31 @@
           that sounds right based on patterns, without checking if it's true.
         </p>
 
+        <p>
+          This is particularly dangerous in medicine because fabricated statistics about drug
+          efficacy, dosages, or treatment outcomes could lead to real harm.
+        </p>
+
+        <div class="example-box">
+          <h4>Real-World Example</h4>
+          <p>
+            When asked about a specific medication, AI chatbots have been documented citing
+            "clinical trials" that don't exist, inventing pharmaceutical company announcements,
+            and creating fictional "FDA warnings." The citations look legitimate but lead nowhere.
+          </p>
+        </div>
+
         <h3>2. Outdated Information</h3>
         <p>
           AI has a "knowledge cutoff"—a date after which it doesn't know what happened.
           Medical guidelines change. New treatments emerge. Old ones get discontinued.
           The AI might give you information that was accurate two years ago but isn't anymore.
+        </p>
+
+        <p>
+          Example: Guidelines for conditions like high blood pressure, diabetes management,
+          and cancer screening are regularly updated. AI trained on older data may recommend
+          outdated protocols.
         </p>
 
         <h3>3. Mixing Up Similar Things</h3>
@@ -120,6 +205,11 @@
           mix-ups can look subtle but be medically significant.
         </p>
 
+        <p>
+          Drugs with similar names (like hydroxyzine and hydralazine) have completely
+          different uses. AI might conflate them, providing information about the wrong medication.
+        </p>
+
         <h3>4. Overconfident Generalization</h3>
         <p>
           AI might take something that's generally true and present it as universally true,
@@ -127,14 +217,33 @@
           not safe for people with certain conditions—like yours.
         </p>
 
-        <div class="callout-news">
-          <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
-          <p style="margin-bottom: 0;">
-            <strong>Research Finding:</strong> Studies show that AI chatbots can produce medically
-            inaccurate information 10-30% of the time depending on the topic. The errors often
-            sound just as confident as the correct information.
-          </p>
-        </div>
+        <h3>5. Ignoring Context</h3>
+        <p>
+          AI responds to what you type, not to what's actually happening. It might give
+          reassuring information about symptoms that actually warrant emergency care, simply
+          because it doesn't understand the full context of your situation.
+        </p>
+
+        <details class="learn-more">
+          <summary>Learn More: The "plausible but wrong" problem</summary>
+          <div class="learn-more-content">
+            <p>
+              One of AI's most dangerous characteristics is producing text that sounds
+              completely reasonable but is factually incorrect. This is especially problematic
+              in medicine because medical misinformation can sound authoritative.
+            </p>
+            <p>
+              AI is essentially a very sophisticated pattern-completion engine. It's trained
+              to produce text that sounds like it belongs in the context—not to verify
+              whether that text is true. Medical-sounding language follows predictable
+              patterns, which AI can replicate even when inventing facts.
+            </p>
+            <p>
+              This means you can't rely on how "medical" or "authoritative" AI sounds.
+              You need external verification for anything important.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -151,6 +260,8 @@
           <li><strong>Makes claims about YOUR specific situation</strong> — AI doesn't actually know you</li>
           <li><strong>Sounds too certain</strong> — Medicine often involves uncertainty; beware of absolutes</li>
           <li><strong>Contradicts what your doctor told you</strong> — Your doctor knows your case; AI doesn't</li>
+          <li><strong>Uses medical jargon confidently</strong> — Jargon can mask inaccuracy</li>
+          <li><strong>Provides detailed protocols</strong> — Step-by-step treatment plans should come from doctors</li>
         </ul>
 
         <div class="callout-pearl">
@@ -174,11 +285,22 @@
           am I that this is correct? What would happen if it's wrong?"
         </p>
 
+        <p>
+          The higher the stakes, the more verification you need. General education ("what is
+          diabetes") needs less verification than specific advice ("should I change my
+          medication").
+        </p>
+
         <h3>Step 2: Look for Sources</h3>
         <p>
           Some AI tools cite sources. If they do, check if those sources actually exist and
           actually say what the AI claims. Google the study name. Look up the guideline.
           Often, you'll find the source doesn't exist or says something different.
+        </p>
+
+        <p>
+          Even when sources exist, AI might misrepresent what they say. Reading the actual
+          source is the only way to verify.
         </p>
 
         <h3>Step 3: Cross-Reference</h3>
@@ -189,6 +311,7 @@
           <li><strong>MedlinePlus</strong> (medlineplus.gov) — NIH's patient-friendly health information</li>
           <li><strong>CDC</strong> (cdc.gov) — For disease prevention and health guidelines</li>
           <li><strong>Mayo Clinic</strong> (mayoclinic.org) — Reliable condition and treatment information</li>
+          <li><strong>UpToDate</strong> (uptodate.com) — Evidence-based clinical decision support (some content requires subscription)</li>
           <li><strong>Your doctor or pharmacist</strong> — For anything you're unsure about</li>
         </ul>
 
@@ -196,6 +319,7 @@
         <p>
           If the information matters—especially if you're considering acting on it—bring it
           to your healthcare provider. "I read this online, is it accurate for my situation?"
+          is a perfectly reasonable question that good doctors welcome.
         </p>
 
         <div class="callout-try">
@@ -206,6 +330,50 @@
             verification muscles.
           </p>
         </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>The Verification Checklist</h2>
+
+        <p>Use this checklist before acting on medical information from AI:</p>
+
+        <ol>
+          <li><strong>Is this general information or specific advice?</strong>
+            <br>General: lower risk. Specific: verify carefully.</li>
+          <li><strong>Does the AI cite sources?</strong>
+            <br>If yes: check them. If no: extra caution.</li>
+          <li><strong>Have I checked a reputable source?</strong>
+            <br>MedlinePlus, CDC, Mayo Clinic, etc.</li>
+          <li><strong>Does this match what my doctor told me?</strong>
+            <br>If not: ask your doctor before acting.</li>
+          <li><strong>What's the worst case if this is wrong?</strong>
+            <br>High stakes = more verification needed.</li>
+          <li><strong>Am I about to change my medication or treatment?</strong>
+            <br>Always consult your doctor first.</li>
+        </ol>
+
+        <details class="learn-more">
+          <summary>Learn More: How to spot fake medical citations</summary>
+          <div class="learn-more-content">
+            <p>
+              AI often creates citations that look legitimate but don't exist. Here's how to
+              check:
+            </p>
+            <ul>
+              <li><strong>Search the exact title:</strong> Put it in quotes in Google Scholar or PubMed</li>
+              <li><strong>Check the journal:</strong> Is it a real medical journal? Does that issue exist?</li>
+              <li><strong>Look for the author:</strong> Does this person publish in this area?</li>
+              <li><strong>Check the date:</strong> Does the publication date make sense?</li>
+            </ul>
+            <p>
+              If you can't find the cited source with a direct search, it probably doesn't exist.
+              AI is particularly prone to creating plausible-sounding journal names, author names,
+              and publication dates that combine real elements into fictional citations.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -223,6 +391,8 @@
           <li>General explanations of medical concepts</li>
           <li>Definitions of terms</li>
           <li>How the body works in general</li>
+          <li>Overview of common conditions</li>
+          <li>Explaining what a test or procedure involves generally</li>
         </ul>
 
         <p>Lower trust, always verify:</p>
@@ -231,7 +401,21 @@
           <li>Claims about your personal health situation</li>
           <li>Advice that contradicts your healthcare team</li>
           <li>Anything you might act on</li>
+          <li>Drug interactions</li>
+          <li>Emergency symptoms or triage decisions</li>
+          <li>Statistics about treatment effectiveness</li>
         </ul>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> Research Update</div>
+          <p>
+            Researchers have found that AI accuracy varies significantly by topic. AI tends
+            to perform better on common conditions with well-established information and
+            worse on rare conditions, recent developments, or questions requiring nuanced
+            clinical judgment.
+          </p>
+          <p class="citation">Source: <a href="https://www.ncbi.nlm.nih.gov/pmc/" target="_blank">Various studies in medical informatics literature</a></p>
+        </div>
 
         <details class="learn-more">
           <summary>Learn More: Why does AI hallucinate?</summary>
@@ -252,16 +436,65 @@
             </p>
           </div>
         </details>
+
+        <details class="learn-more">
+          <summary>Learn More: Will AI get better at being accurate?</summary>
+          <div class="learn-more-content">
+            <p>
+              AI is improving rapidly, and accuracy on some benchmarks is increasing. However,
+              the hallucination problem is fundamental to how current AI works—it generates
+              plausible text, not verified facts.
+            </p>
+            <p>
+              Some approaches are helping: retrieval-augmented generation (where AI looks up
+              information before responding), fact-checking layers, and citation requirements.
+              But none eliminate the problem entirely.
+            </p>
+            <p>
+              For the foreseeable future, verification will remain essential for medical
+              information. Think of AI as getting better at being a research assistant, not
+              at being a doctor.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>What to Do When You Find an Error</h2>
+
+        <p>
+          If you discover AI gave you incorrect information:
+        </p>
+
+        <ol>
+          <li><strong>Don't act on it:</strong> If you haven't already taken action based on the error, don't.</li>
+          <li><strong>Seek correct information:</strong> Use reputable sources or ask your doctor.</li>
+          <li><strong>If you've already acted:</strong> Contact your healthcare provider, especially if it involves medications or treatments.</li>
+          <li><strong>Adjust your trust:</strong> Use this as a reminder to verify important information in the future.</li>
+        </ol>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            If you've changed your medication, dosage, or treatment based on AI advice that
+            might be wrong, contact your doctor or pharmacist immediately. Don't wait to see
+            if there's a problem—prevention is safer than reaction.
+          </p>
+        </div>
       </section>
 
       <div class="takeaways">
         <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
         <ul>
           <li>AI sounds equally confident whether right or wrong—this is dangerous</li>
+          <li>Research shows AI makes medically significant errors in 10-30% of responses</li>
           <li>AI "hallucinates"—inventing facts, studies, and statistics that don't exist</li>
           <li>Be extra skeptical of specific numbers, cited studies, and personalized advice</li>
           <li>Always verify important medical information from trusted sources</li>
           <li>The more specific the claim, the more skeptical you should be</li>
+          <li>Use the verification checklist before acting on AI health information</li>
           <li>When in doubt, ask your doctor—AI can't replace that conversation</li>
         </ul>
       </div>

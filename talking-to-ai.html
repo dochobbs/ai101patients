@@ -35,6 +35,9 @@
     .example-good { background: #f0fdf4; border-color: #bbf7d0; }
     .example-good h4 { color: #16a34a; }
     .prompt-text { font-family: monospace; background: #f8fafc; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-size: 0.95rem; line-height: 1.6; white-space: pre-wrap; }
+    .citation { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+    .citation a { color: #2563eb; text-decoration: none; }
+    .citation a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -67,7 +70,7 @@
         <div class="unit-meta">
           <span class="unit-meta-item">
             <i data-lucide="clock"></i>
-            12 min read
+            18 min read
           </span>
         </div>
       </header>
@@ -87,6 +90,12 @@
           for what you actually need.
         </p>
 
+        <p>
+          The way you communicate with AI is sometimes called "prompting." While there's
+          a whole industry around "prompt engineering," you don't need to be an expert.
+          The basic principles are intuitive once you understand how AI works.
+        </p>
+
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
           <p style="margin-bottom: 0;">
@@ -95,6 +104,29 @@
             help they can give.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Why AI responds differently to different prompts</summary>
+          <div class="learn-more-content">
+            <p>
+              AI chatbots work by predicting what response would be most helpful given your
+              input. When you provide more specific, detailed information, the AI has more
+              to work with in crafting its response.
+            </p>
+            <p>
+              Think of it like asking directions. "How do I get there?" requires guessing
+              where "there" is and where you're starting from. "How do I get from downtown
+              Chicago to O'Hare Airport using public transit?" gives everything needed
+              for a useful answer.
+            </p>
+            <p>
+              The same principle applies to health questions. "Why am I tired?" could have
+              thousands of answers. "I'm a 45-year-old woman who sleeps 7 hours but wakes
+              up tired, especially on days after I eat late. What might explain this?"
+              narrows it down significantly.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -134,6 +166,18 @@
           <div class="prompt-text">I'm a 45-year-old woman with type 2 diabetes. I take metformin. My doctor wants to add a new medication called Jardiance. Can you explain what Jardiance does and how it might work together with metformin?</div>
         </div>
 
+        <p>
+          Context that can be helpful includes:
+        </p>
+        <ul>
+          <li>Your age and sex</li>
+          <li>Relevant medical conditions</li>
+          <li>Current medications</li>
+          <li>Family history (if relevant)</li>
+          <li>Lifestyle factors (activity level, diet, sleep patterns)</li>
+          <li>What treatments you've already tried</li>
+        </ul>
+
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
           <p style="margin-bottom: 0;">
@@ -159,6 +203,18 @@
           <div class="prompt-text">Give me a bullet-point list of questions I should ask my cardiologist about my high blood pressure. Keep it to the 5 most important questions.</div>
         </div>
 
+        <p>
+          Format options to consider:
+        </p>
+        <ul>
+          <li><strong>Simple language:</strong> "Explain this like I'm explaining to a family member"</li>
+          <li><strong>Bullet points:</strong> Easier to scan and remember</li>
+          <li><strong>Tables:</strong> Great for comparing options</li>
+          <li><strong>Step-by-step:</strong> Helpful for procedures or processes</li>
+          <li><strong>Summary:</strong> When you want the key points only</li>
+          <li><strong>Detailed:</strong> When you want comprehensive information</li>
+        </ul>
+
         <h3>4. Tell It Your Goal</h3>
         <p>
           Explain why you're asking. This helps the AI focus on what's actually useful to you.
@@ -168,6 +224,16 @@
           <h4>Including your goal:</h4>
           <div class="prompt-text">I was just diagnosed with hypothyroidism and I'm feeling overwhelmed. I want to understand the basics before my follow-up appointment next week. Can you explain what hypothyroidism means for my daily life in a way that won't scare me?</div>
         </div>
+
+        <p>
+          Stating your goal helps in several ways:
+        </p>
+        <ul>
+          <li>The AI adjusts its tone (reassuring vs. clinical)</li>
+          <li>It focuses on actionable information</li>
+          <li>It avoids overwhelming you with irrelevant details</li>
+          <li>It can structure information to meet your needs</li>
+        </ul>
 
         <div class="callout-try">
           <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
@@ -230,6 +296,19 @@ Help me:
 3. Identify any information I should bring or prepare</div>
         </div>
 
+        <h3>Understanding Medication Side Effects</h3>
+        <div class="example-box example-good">
+          <h4>Prompt template:</h4>
+          <div class="prompt-text">I'm taking [medication] for [condition]. I'm experiencing [symptom/concern].
+
+Can you help me understand:
+1. Is this a known side effect of this medication?
+2. Is it usually temporary or ongoing?
+3. Should I contact my doctor about this, and if so, what should I tell them?
+
+Please differentiate between common/mild side effects and ones that need medical attention.</div>
+        </div>
+
         <div class="callout-news">
           <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
           <p style="margin-bottom: 0;">
@@ -238,6 +317,33 @@ Help me:
             care plan. AI can be a helpful tool for this preparation.
           </p>
         </div>
+        <p class="citation">Source: Research on patient question preparation has been published in medical journals including Patient Education and Counseling.</p>
+
+        <details class="learn-more">
+          <summary>Learn More: Creating your own prompt templates</summary>
+          <div class="learn-more-content">
+            <p>
+              Once you find prompts that work well for you, save them for reuse. You can
+              create templates for situations you encounter regularly:
+            </p>
+            <p>
+              <strong>For chronic conditions:</strong> Create a template that includes your
+              condition, current medications, and typical concerns.
+            </p>
+            <p>
+              <strong>For recurring appointments:</strong> Create a pre-appointment template
+              with your standard context already filled in.
+            </p>
+            <p>
+              <strong>For medication questions:</strong> Keep a template that asks about
+              interactions, timing, and side effects.
+            </p>
+            <p>
+              You can save these in a notes app and copy-paste them when needed, filling
+              in the specific details for each situation.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -258,7 +364,20 @@ Help me:
           <li>"What would this look like in everyday life?"</li>
           <li>"Is there anything you're uncertain about in your answer?"</li>
           <li>"What are the most important things I should remember from this?"</li>
+          <li>"Can you summarize that in 2-3 sentences?"</li>
+          <li>"What else should I know that I haven't asked about?"</li>
         </ul>
+
+        <h3>Probing for Uncertainty</h3>
+        <p>
+          AI often sounds more confident than it should be. You can ask it to acknowledge
+          uncertainty directly:
+        </p>
+
+        <div class="example-box example-good">
+          <h4>Asking about confidence:</h4>
+          <div class="prompt-text">You sounded very confident in that answer. How sure are you about this information? What parts should I definitely verify with my doctor?</div>
+        </div>
 
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
@@ -276,6 +395,18 @@ Help me:
           <li>Breaking a complex question into smaller parts</li>
           <li>Explicitly asking for a different approach: "That was too technical. Can you explain it like I'm explaining to a family member?"</li>
           <li>Starting a new conversation with fresh context</li>
+          <li>Asking a different AI tool (different tools have different strengths)</li>
+        </ul>
+
+        <h3>Building on Previous Answers</h3>
+        <p>
+          AI remembers what you've discussed in the same conversation. Use this to go deeper:
+        </p>
+        <ul>
+          <li>"Based on what we just discussed, what should I do next?"</li>
+          <li>"Given my situation, which of those options makes the most sense?"</li>
+          <li>"Can you relate that to what you said earlier about [topic]?"</li>
+          <li>"Now that you understand my background, what questions should I ask my doctor?"</li>
         </ul>
 
         <div class="callout-try">
@@ -286,6 +417,75 @@ Help me:
             This helps you prioritize and reminds you to verify.
           </p>
         </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Managing Sensitive Health Topics</h2>
+
+        <p>
+          Some health topics feel more sensitive or embarrassing to discuss. One advantage
+          of AI is that you can ask about anything without judgment. However, there are
+          still considerations:
+        </p>
+
+        <h3>Privacy Considerations</h3>
+        <ul>
+          <li>Remember that your conversations may be stored (unless you use temporary chat mode)</li>
+          <li>For very sensitive topics, consider using temporary/private chat modes</li>
+          <li>Don't include identifying information you don't need to share</li>
+          <li>Be aware of who might have access to your devices</li>
+        </ul>
+
+        <h3>Getting Useful Answers on Sensitive Topics</h3>
+        <p>
+          AI is often cautious about sensitive health topics. If you're getting overly
+          generic responses, try being more specific about what you need:
+        </p>
+
+        <div class="example-box example-good">
+          <h4>Being specific about sensitive topics:</h4>
+          <div class="prompt-text">I'm experiencing [sensitive symptom]. I've been hesitant to bring this up with my doctor because [reason]. Can you:
+1. Help me understand if this is something I should see a doctor about
+2. Suggest how I might bring this up with my doctor
+3. Explain what kind of doctor would be appropriate to see
+
+I'm looking for practical guidance, not just "see a doctor."</div>
+        </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Using AI for mental health topics</summary>
+          <div class="learn-more-content">
+            <p>
+              AI can be helpful for learning about mental health conditions, understanding
+              treatment options, and preparing for appointments. However, it has limitations:
+            </p>
+            <p>
+              <strong>What AI can help with:</strong>
+            </p>
+            <ul>
+              <li>Explaining mental health conditions in accessible terms</li>
+              <li>Describing what therapy or treatment might involve</li>
+              <li>Helping you organize your thoughts before a mental health appointment</li>
+              <li>Providing coping strategies based on established techniques</li>
+            </ul>
+            <p>
+              <strong>What AI cannot do:</strong>
+            </p>
+            <ul>
+              <li>Provide therapy or mental health treatment</li>
+              <li>Diagnose mental health conditions</li>
+              <li>Replace ongoing care from a mental health professional</li>
+              <li>Provide crisis intervention</li>
+            </ul>
+            <p>
+              <strong>In crisis:</strong> If you're experiencing a mental health crisis,
+              please contact a crisis line or emergency services. AI is not appropriate
+              for crisis support.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -303,6 +503,8 @@ Help me:
           <li><strong>Don't ignore uncertainty:</strong> If AI says "might," "could," or "possibly," those words matter.</li>
           <li><strong>Don't use AI for emergencies:</strong> Chest pain, difficulty breathing, or severe symptoms need 911, not a chatbot.</li>
           <li><strong>Don't skip verification:</strong> Always verify important information with your healthcare team.</li>
+          <li><strong>Don't argue with AI:</strong> If you disagree with an answer, rephrase your question rather than arguing.</li>
+          <li><strong>Don't share more than necessary:</strong> You can be specific without including identifying information you don't need to share.</li>
         </ul>
 
         <div class="callout callout-warning">
@@ -313,6 +515,15 @@ Help me:
             specific medical advice, that's a feature, not a bug.
           </p>
         </div>
+
+        <h3>Common Mistakes That Lead to Poor Answers</h3>
+        <ul>
+          <li><strong>Being too brief:</strong> "Should I worry?" gives AI nothing to work with</li>
+          <li><strong>Being too lengthy:</strong> Very long messages may bury the actual question</li>
+          <li><strong>Multiple unrelated questions:</strong> Ask one topic at a time for better focus</li>
+          <li><strong>Leading questions:</strong> "Isn't it true that..." pushes AI toward what you want to hear</li>
+          <li><strong>Expecting diagnosis:</strong> AI is trained not to diagnose, so don't expect it to</li>
+        </ul>
 
         <details class="learn-more">
           <summary>Learn More: Why AI has safety guardrails</summary>
@@ -331,6 +542,39 @@ Help me:
               The guardrails are designed to keep AI in its lane: helping you understand
               information and prepare questions, not replacing professional medical judgment.
             </p>
+            <p>
+              When AI says "consult a healthcare provider," it's not being unhelpful—it's
+              recognizing the limits of what it can safely do.
+            </p>
+          </div>
+        </details>
+
+        <details class="learn-more">
+          <summary>Learn More: What to do when AI seems too cautious</summary>
+          <div class="learn-more-content">
+            <p>
+              Sometimes AI refuses to engage with questions that seem perfectly reasonable.
+              This happens because the guardrails are intentionally broad to avoid edge cases.
+            </p>
+            <p>
+              If this happens, try:
+            </p>
+            <p>
+              <strong>Reframe as education:</strong> "I'm trying to understand [topic] in
+              general terms" rather than "What should I do about..."
+            </p>
+            <p>
+              <strong>Ask for information, not advice:</strong> "What are the typical
+              treatments for [condition]?" rather than "Should I get [treatment]?"
+            </p>
+            <p>
+              <strong>Focus on preparation:</strong> "Help me prepare questions for my
+              doctor about [topic]" positions AI as a preparation tool.
+            </p>
+            <p>
+              <strong>Be explicit about your intent:</strong> "I'm not asking for medical
+              advice, I'm trying to understand the options before my appointment."
+            </p>
           </div>
         </details>
       </section>
@@ -341,8 +585,10 @@ Help me:
           <li>Be specific: include symptoms, timing, and relevant personal details</li>
           <li>Provide context: age, conditions, medications, and why you're asking</li>
           <li>Request the format you need: simple language, bullet points, or tables</li>
+          <li>State your goal: what you're trying to accomplish with this information</li>
           <li>Follow up to clarify or go deeper - it's a conversation, not a search</li>
           <li>Ask AI about its uncertainty: "How confident are you about this?"</li>
+          <li>Save prompts that work well as templates for future use</li>
           <li>Always verify important health information with your healthcare team</li>
         </ul>
       </div>

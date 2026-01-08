@@ -35,6 +35,9 @@
     .comparison-row { display: flex; gap: 2rem; margin: 2rem 0; flex-wrap: wrap; }
     .comparison-item { flex: 1; min-width: 250px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
     .comparison-item h4 { margin-top: 0; margin-bottom: 1rem; }
+    .citation { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+    .citation a { color: #2563eb; text-decoration: none; }
+    .citation a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -67,7 +70,7 @@
         <div class="unit-meta">
           <span class="unit-meta-item">
             <i data-lucide="clock"></i>
-            15 min read
+            18 min read
           </span>
           <span class="unit-meta-item" style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">
             Optional/Advanced
@@ -98,6 +101,47 @@
             from human thinking.
           </p>
         </div>
+
+        <h3>The Consciousness Question</h3>
+        <p>
+          You might wonder: could AI be conscious in some way we don't understand? This
+          is a question philosophers and scientists actively debate. What we can say with
+          confidence is that current AI systems don't have the biological structures associated
+          with consciousness, don't have continuous experiences or memories between conversations,
+          and don't have desires or goals of their own.
+        </p>
+
+        <p>
+          When AI says "I think" or "I feel," it's using language patterns it learned from
+          human text - not expressing actual experiences. This is important to remember when
+          AI responses seem very human-like.
+        </p>
+
+        <details class="learn-more">
+          <summary>Learn More: The Chinese Room thought experiment</summary>
+          <div class="learn-more-content">
+            <p>
+              Philosopher John Searle proposed a famous thought experiment in 1980: imagine
+              someone who doesn't understand Chinese is locked in a room with a book of rules
+              for responding to Chinese characters. They receive Chinese messages, follow the
+              rules to produce responses, and send those back - all without understanding
+              a word of Chinese.
+            </p>
+            <p>
+              This is analogous to how AI works. The AI manipulates symbols according to
+              learned patterns without understanding what those symbols mean. Just as the
+              person in the room might produce perfect Chinese responses without understanding
+              Chinese, AI produces coherent text without understanding its meaning.
+            </p>
+            <p>
+              Critics argue this analogy has limits, but it helps illustrate why "understanding"
+              in AI is different from human understanding.
+            </p>
+            <p class="citation">
+              Source: <a href="https://plato.stanford.edu/entries/chinese-room/" target="_blank">Stanford Encyclopedia of Philosophy - The Chinese Room Argument</a>
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -129,6 +173,20 @@
           pages of text.
         </p>
 
+        <h3>Tokens: How AI Reads Text</h3>
+        <p>
+          AI doesn't actually read word by word - it reads in "tokens." A token is usually
+          about 3/4 of a word. Common words like "the" are one token, while longer or unusual
+          words might be broken into multiple tokens. Medical terms often get split up:
+          "hypertension" might become "hyper" + "tension" as separate tokens.
+        </p>
+
+        <p>
+          This tokenization affects how AI handles medical terminology. Words it saw
+          frequently during training are handled as single units, while rare medical
+          terms might be processed as fragments, potentially affecting accuracy.
+        </p>
+
         <div class="callout-try">
           <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
           <p style="margin-bottom: 0;">
@@ -137,6 +195,28 @@
             This is called "non-deterministic" behavior.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: The mathematics behind prediction</summary>
+          <div class="learn-more-content">
+            <p>
+              When AI predicts the next word, it's actually calculating probability
+              distributions over its entire vocabulary (often 50,000+ tokens). For each
+              position, it might calculate: "Paris" has 85% probability, "Lyon" has 5%,
+              "France" has 3%, and so on.
+            </p>
+            <p>
+              The AI then samples from this distribution - usually picking high-probability
+              options, but with some randomness. This is why you get different answers to
+              the same question: the sampling process introduces variation.
+            </p>
+            <p>
+              A setting called "temperature" controls this randomness. Lower temperature
+              means more predictable, repetitive responses. Higher temperature means more
+              creative but potentially less accurate responses.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -161,6 +241,22 @@
           </p>
         </div>
 
+        <h3>The Three Phases of Training</h3>
+        <p>
+          Modern AI like ChatGPT goes through multiple training phases:
+        </p>
+        <ol>
+          <li><strong>Pre-training:</strong> The AI reads vast amounts of text and learns to predict words. This is where it gains general knowledge about language and the world.</li>
+          <li><strong>Fine-tuning:</strong> The AI is trained on examples of helpful conversations, learning to be more useful and follow instructions.</li>
+          <li><strong>Alignment:</strong> Human feedback helps the AI learn what kinds of responses are helpful, accurate, and safe. Trainers rate responses, and the AI learns from these ratings.</li>
+        </ol>
+
+        <p>
+          This alignment phase is why AI tries to be helpful and avoids harmful content.
+          But it's not perfect - the AI learned general patterns, not specific rules about
+          every possible situation.
+        </p>
+
         <h3>The Cutoff Problem</h3>
         <p>
           AI training happened at a specific point in time. Everything after that cutoff
@@ -182,6 +278,89 @@
             currency matters.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: How medical knowledge gets into AI</summary>
+          <div class="learn-more-content">
+            <p>
+              Medical knowledge enters AI through multiple channels during training:
+            </p>
+            <p>
+              <strong>Published research:</strong> Peer-reviewed papers from journals like
+              JAMA, NEJM, and The Lancet are included in training data. However, AI can't
+              distinguish between a landmark study and a minor paper.
+            </p>
+            <p>
+              <strong>Medical textbooks:</strong> Standard references like Harrison's Principles
+              of Internal Medicine may be included, providing foundational knowledge.
+            </p>
+            <p>
+              <strong>Health websites:</strong> Content from sites like Mayo Clinic, WebMD,
+              and NIH pages are included - but so is less reliable health content.
+            </p>
+            <p>
+              <strong>Online forums:</strong> Patient discussions from sites like Reddit or
+              health forums become part of training data, including anecdotes and misinformation.
+            </p>
+            <p>
+              The AI learns from all of this without distinguishing sources. This is why
+              verification is so important.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Neural Networks: The Structure Behind AI</h2>
+
+        <p>
+          AI is powered by structures called "neural networks," which are loosely inspired
+          by how neurons in your brain connect. But don't let the name fool you - they're
+          mathematical functions, not biological systems.
+        </p>
+
+        <div class="concept-box">
+          <h4><i data-lucide="network"></i> How Neural Networks Work</h4>
+          <p>
+            A neural network is layers of mathematical calculations. Information flows
+            through these layers, being transformed at each step. By adjusting millions
+            (or billions) of numerical parameters, the network learns to produce useful outputs.
+          </p>
+          <p style="margin-bottom: 0;">
+            Modern large language models like GPT-4 have hundreds of billions of parameters.
+            These parameters encode patterns learned from training data - but not in a way
+            humans can easily interpret.
+          </p>
+        </div>
+
+        <h3>Transformers: The Key Innovation</h3>
+        <p>
+          The "T" in ChatGPT stands for "Transformer" - a type of neural network architecture
+          introduced in 2017 that revolutionized AI language capabilities. Transformers are
+          particularly good at understanding relationships between words, even when those
+          words are far apart in a sentence.
+        </p>
+
+        <p>
+          When you ask AI a complex question about your health, the transformer architecture
+          allows it to connect your question with relevant patterns it learned during training,
+          even if those connections span many concepts.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            You don't need to understand the technical details to use AI well. The key
+            insight is that AI is pattern matching at massive scale - impressive and useful,
+            but fundamentally different from human reasoning.
+          </p>
+        </div>
+
+        <p class="citation">
+          Source: <a href="https://arxiv.org/abs/1706.03762" target="_blank">Vaswani et al., "Attention Is All You Need" (2017) - The original Transformer paper</a>
+        </p>
       </section>
 
       <div class="section-divider"></div>
@@ -211,6 +390,18 @@
           confident tone.
         </p>
 
+        <h3>The Confidence Calibration Problem</h3>
+        <p>
+          Research has shown that AI systems are often poorly calibrated - meaning their
+          expressed confidence doesn't match their actual accuracy. A study might find that
+          when AI says it's "90% confident," it's actually only correct 70% of the time.
+          This miscalibration is particularly dangerous in healthcare contexts.
+        </p>
+
+        <p class="citation">
+          Source: <a href="https://arxiv.org/abs/2207.05221" target="_blank">Kadavath et al., "Language Models (Mostly) Know What They Know" (2022) - Research on AI calibration</a>
+        </p>
+
         <h3>Hallucinations: When AI Makes Things Up</h3>
         <p>
           Sometimes AI generates information that is completely false but sounds completely
@@ -220,6 +411,7 @@
           <li><strong>Fake citations:</strong> AI invents journal articles, complete with authors and publication details that don't exist</li>
           <li><strong>Made-up statistics:</strong> Percentages and numbers that sound precise but have no basis</li>
           <li><strong>Confident misinformation:</strong> Stating false facts with no hedging or uncertainty</li>
+          <li><strong>Plausible but wrong medical claims:</strong> Information that sounds medical but doesn't reflect actual evidence</li>
         </ul>
 
         <div class="callout callout-warning">
@@ -230,6 +422,14 @@
             of whether it's factually correct.
           </p>
         </div>
+
+        <h3>Hallucination Rates in Healthcare</h3>
+        <p>
+          Studies examining AI accuracy in medical contexts have found concerning rates
+          of errors. While exact rates vary by model and task, research consistently shows
+          that AI can generate medically inaccurate information even when it sounds authoritative.
+          This is why verification is essential for any health-related AI output.
+        </p>
 
         <details class="learn-more">
           <summary>Learn More: Why hallucinations happen</summary>
@@ -249,6 +449,35 @@
               For medical information, this means you should be especially careful with
               specific claims, statistics, and citations. The more specific a claim, the
               more likely AI may have generated it rather than recalled it from training.
+            </p>
+          </div>
+        </details>
+
+        <details class="learn-more">
+          <summary>Learn More: Types of AI errors in medicine</summary>
+          <div class="learn-more-content">
+            <p>
+              AI errors in medical contexts fall into several categories:
+            </p>
+            <p>
+              <strong>Factual errors:</strong> Getting basic medical facts wrong, like
+              incorrect drug dosages or wrong symptoms for a condition.
+            </p>
+            <p>
+              <strong>Outdated information:</strong> Providing recommendations based on
+              guidelines that have since been updated.
+            </p>
+            <p>
+              <strong>Overgeneralization:</strong> Applying general information to specific
+              cases where it doesn't fit.
+            </p>
+            <p>
+              <strong>Missing context:</strong> Providing technically correct information
+              that's incomplete or misleading without additional context.
+            </p>
+            <p>
+              <strong>Fabricated sources:</strong> Citing non-existent studies or
+              misattributing information to real sources.
             </p>
           </div>
         </details>
@@ -273,6 +502,8 @@
               <li>No accountability for advice</li>
               <li>Equally confident right or wrong</li>
               <li>Static knowledge (training cutoff)</li>
+              <li>No memory between conversations</li>
+              <li>Can't order tests or prescribe</li>
             </ul>
           </div>
           <div class="comparison-item">
@@ -284,6 +515,8 @@
               <li>Professional and legal accountability</li>
               <li>Can express appropriate uncertainty</li>
               <li>Continuously learns and updates</li>
+              <li>Knows your medical history</li>
+              <li>Can take action on your behalf</li>
             </ul>
           </div>
         </div>
@@ -296,6 +529,20 @@
             AI can help with the knowledge part, but the rest requires a human.
           </p>
         </div>
+
+        <h3>The Clinical Reasoning Gap</h3>
+        <p>
+          Doctors don't just know facts - they reason through problems. They consider
+          what's common vs. rare, what's dangerous vs. benign, what tests will give
+          useful information, and how to balance competing concerns. This clinical
+          reasoning develops through years of training and experience.
+        </p>
+
+        <p>
+          AI can pattern-match to produce text that sounds like clinical reasoning,
+          but it's not actually reasoning through your specific case. It's generating
+          text based on patterns from training data.
+        </p>
       </section>
 
       <div class="section-divider"></div>
@@ -313,6 +560,8 @@
           <li><strong>Summarizing information:</strong> Pattern recognition helps distill key points</li>
           <li><strong>Generating questions:</strong> It knows what kinds of questions people ask about topics</li>
           <li><strong>Translating medical jargon:</strong> It has seen terms explained many times</li>
+          <li><strong>Brainstorming possibilities:</strong> It can surface many options you might not have considered</li>
+          <li><strong>Drafting communications:</strong> It's good at producing well-structured text</li>
         </ul>
 
         <h3>AI struggles where patterns aren't enough</h3>
@@ -321,6 +570,8 @@
           <li><strong>Knowing current information:</strong> Limited by training data</li>
           <li><strong>Knowing what it doesn't know:</strong> No reliable uncertainty signal</li>
           <li><strong>Verifying facts:</strong> It generates plausible text, not verified facts</li>
+          <li><strong>Understanding your specific context:</strong> It only knows what you tell it</li>
+          <li><strong>Accounting for rare conditions:</strong> Less training data means less reliable patterns</li>
         </ul>
 
         <div class="callout-try">
@@ -331,6 +582,30 @@
             prompt to have in your toolkit.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Why AI is better at some medical topics than others</summary>
+          <div class="learn-more-content">
+            <p>
+              AI's accuracy varies significantly by medical topic, largely due to training data:
+            </p>
+            <p>
+              <strong>More reliable:</strong> Common conditions with extensive online information
+              (diabetes, hypertension, common infections), basic anatomy and physiology,
+              widely-discussed medications.
+            </p>
+            <p>
+              <strong>Less reliable:</strong> Rare diseases with limited information online,
+              recent treatment advances, complex multi-system conditions, pediatric and
+              geriatric specifics, conditions that present differently in different populations.
+            </p>
+            <p>
+              This reflects a fundamental limitation: AI can only be as good as its training
+              data. Topics with abundant, high-quality training examples will generally
+              produce better outputs.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -348,6 +623,8 @@
           <li><strong>AI augments, doesn't replace.</strong> Use AI for what it's good at (explaining, summarizing, preparing) and humans for what they're good at (examining, diagnosing, treating).</li>
           <li><strong>Ask about sources.</strong> Even if AI can't always verify its sources, asking makes it more careful.</li>
           <li><strong>Check dates.</strong> For anything time-sensitive, verify AI's information against current sources.</li>
+          <li><strong>Consider rarity.</strong> AI is less reliable for rare conditions or unusual presentations.</li>
+          <li><strong>Provide context.</strong> The more specific information you give AI, the more relevant its output - but remember it still can't examine you.</li>
         </ol>
 
         <details class="learn-more">
@@ -375,6 +652,33 @@
             </p>
           </div>
         </details>
+
+        <details class="learn-more">
+          <summary>Learn More: Specialized medical AI vs. general chatbots</summary>
+          <div class="learn-more-content">
+            <p>
+              General chatbots like ChatGPT are trained on broad internet data. Specialized
+              medical AI systems are being developed with different approaches:
+            </p>
+            <p>
+              <strong>Medical-specific training:</strong> Some AI systems are trained
+              primarily on peer-reviewed medical literature, potentially improving accuracy
+              for clinical questions.
+            </p>
+            <p>
+              <strong>Expert validation:</strong> Systems that have medical professionals
+              review and validate outputs before they're used.
+            </p>
+            <p>
+              <strong>FDA-cleared AI:</strong> Some AI tools have gone through regulatory
+              review for specific clinical uses, like analyzing medical images.
+            </p>
+            <p>
+              However, even specialized medical AI has limitations. The fundamental
+              challenge of AI not truly understanding remains, even with better training data.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="takeaways">
@@ -384,7 +688,9 @@
           <li>AI was trained on vast text data with a cutoff date - it may be outdated</li>
           <li>AI sounds confident whether right or wrong because that's how fluent text sounds</li>
           <li>"Hallucinations" happen when AI generates plausible-sounding but false information</li>
+          <li>Neural networks and transformers enable pattern matching at massive scale</li>
           <li>AI excels at pattern-based tasks (explaining, summarizing) but struggles with verification</li>
+          <li>Clinical reasoning requires integration that AI cannot perform</li>
           <li>Use AI for what it's good at; use humans for examination, diagnosis, and treatment</li>
         </ul>
       </div>

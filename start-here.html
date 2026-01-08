@@ -12,28 +12,29 @@
     .long-form-text p { margin-bottom: 1.5rem; }
     .long-form-text strong { color: #0f172a; font-weight: 700; }
     .section-divider { height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent); margin: 3rem 0; }
-
-    /* Callout boxes for patients */
     .callout-pearl { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
     .callout-pearl .callout-title { color: #16a34a; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
     .callout-news { background: #eff6ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
     .callout-news .callout-title { color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
     .callout-try { background: #fefce8; border-left: 4px solid #ca8a04; padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; }
     .callout-try .callout-title { color: #ca8a04; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
-
-    /* Learn More expandable */
     .learn-more { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 2rem 0; }
     .learn-more summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #475569; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
     .learn-more summary::-webkit-details-marker { display: none; }
     .learn-more summary::before { content: "+"; font-size: 1.2rem; font-weight: 700; color: #94a3b8; }
     .learn-more[open] summary::before { content: "−"; }
     .learn-more-content { padding: 0 1.5rem 1.5rem 1.5rem; color: #64748b; line-height: 1.7; }
-
-    /* Key takeaways */
     .takeaways { background: #f8fafc; border-radius: 12px; padding: 2rem; margin: 3rem 0; }
     .takeaways h3 { margin-top: 0; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
     .takeaways ul { margin-bottom: 0; }
     .takeaways li { margin-bottom: 0.75rem; color: #475569; }
+    .citation { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+    .citation a { color: #2563eb; text-decoration: none; }
+    .citation a:hover { text-decoration: underline; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .stat-card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; text-align: center; }
+    .stat-number { font-size: 2.5rem; font-weight: 800; color: #2563eb; }
+    .stat-label { color: #64748b; font-size: 0.95rem; margin-top: 0.5rem; }
   </style>
 </head>
 <body>
@@ -66,7 +67,7 @@
         <div class="unit-meta">
           <span class="unit-meta-item">
             <i data-lucide="clock"></i>
-            10 min read
+            15 min read
           </span>
         </div>
       </header>
@@ -81,23 +82,51 @@
         </p>
 
         <p>
-          This isn't science fiction. It's available now. And over 40 million people already ask
-          ChatGPT health questions every single day.
+          This isn't science fiction. It's available now. And the numbers are staggering: ChatGPT
+          has over 800 million weekly active users worldwide, and according to OpenAI, approximately
+          one in four of them—that's 200 million people each week—submit prompts about healthcare.
+          More than 40 million people ask ChatGPT health or insurance questions every single day.
         </p>
+
+        <p class="citation">
+          Source: <a href="https://openai.com/index/introducing-chatgpt-health/" target="_blank">OpenAI, "Introducing ChatGPT Health," January 2026</a>
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">800M</div>
+            <div class="stat-label">Weekly active ChatGPT users</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">25%</div>
+            <div class="stat-label">Ask health questions weekly</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">40M+</div>
+            <div class="stat-label">Daily health queries</div>
+          </div>
+        </div>
 
         <div class="callout-news">
           <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
-          <p style="margin-bottom: 0;">
-            <strong>January 2026:</strong> OpenAI launches ChatGPT Health, allowing users to connect
-            medical records from over 2.2 million healthcare providers. The feature works with
-            Apple Health, Peloton, MyFitnessPal, and other wellness apps.
+          <p>
+            <strong>January 7, 2026:</strong> OpenAI launches ChatGPT Health, allowing users to
+            securely connect medical records from over 2.2 million healthcare providers across
+            320+ health plans. The integration is powered by b.well's health data platform,
+            enabling access to longitudinal patient records spanning multiple electronic
+            medical record systems.
+          </p>
+          <p style="margin-bottom: 0;" class="citation">
+            Source: <a href="https://www.prnewswire.com/news-releases/openai-selects-bwell-to-power-secure-health-data-connectivity-for-ai-driven-health-experiences-in-chatgpt-302655598.html" target="_blank">b.well Press Release, January 2026</a>
           </p>
         </div>
 
         <p>
           This is powerful. And a little scary. AI can help you understand your health in ways
-          that weren't possible before. But it can also make mistakes, misunderstand your situation,
-          or give you advice that sounds confident but is completely wrong.
+          that weren't possible before—summarizing complex medical records, explaining test results
+          in plain language, helping you prepare questions for your doctor. But it can also make
+          mistakes, misunderstand your situation, or give you advice that sounds confident but
+          is completely wrong.
         </p>
 
         <p>
@@ -108,41 +137,133 @@
       <div class="section-divider"></div>
 
       <section class="long-form-text">
+        <h2>Why This Matters Right Now</h2>
+
+        <p>
+          You're probably already using AI for health questions—even if you don't realize it.
+          When you search on Google, you now see "AI Overviews" at the top of many results.
+          When you ask Siri or Alexa a health question, AI is generating the response. When
+          you use symptom checker apps, many are powered by AI.
+        </p>
+
+        <p>
+          But there's a crucial difference between casually asking AI about a headache and
+          connecting it to your complete medical history. ChatGPT Health represents a new
+          level of AI integration with your personal health data—and that brings both
+          opportunities and risks you need to understand.
+        </p>
+
+        <h3>The Opportunity</h3>
+        <p>
+          Imagine having a knowledgeable assistant available 24/7 who has read your entire
+          medical history and can:
+        </p>
+        <ul>
+          <li>Explain what your lab results actually mean in plain English</li>
+          <li>Help you understand a new diagnosis and what questions to ask your doctor</li>
+          <li>Remind you about medication interactions before you take something new</li>
+          <li>Prepare a summary of your health concerns before an appointment</li>
+          <li>Translate complex medical jargon from your discharge summary</li>
+        </ul>
+
+        <h3>The Risk</h3>
+        <p>
+          That same assistant might also:
+        </p>
+        <ul>
+          <li>Sound completely confident while giving you wrong information</li>
+          <li>Miss something urgent because it can't actually examine you</li>
+          <li>Give generic advice that doesn't apply to your specific situation</li>
+          <li>Store your sensitive health data in ways you don't fully understand</li>
+          <li>Delay you from seeking real medical care when you need it</li>
+        </ul>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            The goal of AI literacy isn't to make you afraid of these tools—it's to help you
+            use them wisely. Understanding both the power and the limitations lets you get
+            the benefits while avoiding the pitfalls.
+          </p>
+        </div>
+
+        <details class="learn-more">
+          <summary>Learn More: How did we get here so fast?</summary>
+          <div class="learn-more-content">
+            <p>
+              The rapid advancement of AI in healthcare might seem sudden, but it's been building
+              for years. Large language models like ChatGPT represent a breakthrough in AI's ability
+              to understand and generate human language—including complex medical terminology.
+            </p>
+            <p>
+              What's new is the integration with personal health records. The infrastructure for
+              sharing medical data electronically (through standards like FHIR and partnerships
+              with health data platforms) has matured to the point where AI can now access your
+              records with your permission.
+            </p>
+            <p>
+              OpenAI reports they worked with over 260 physicians from 60 countries in developing
+              ChatGPT Health—but that doesn't mean the technology is perfect. It's an early step
+              in a rapidly evolving field.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
         <h2>What You'll Learn</h2>
 
         <p>
           This guide teaches you how to use AI tools for your health—safely and effectively.
-          No technical background needed. No medical degree required.
+          No technical background needed. No medical degree required. Just practical knowledge
+          you can apply immediately.
         </p>
 
-        <p>We cover three main areas:</p>
+        <p>We organize the learning into three main areas:</p>
 
-        <h3>1. Safety First</h3>
+        <h3>1. Safety First (5 Modules)</h3>
         <p>
           Before you dive into using AI with your health information, you need to understand
-          the risks. What can go wrong? How do you protect your privacy? When should you
-          absolutely NOT trust what AI tells you?
+          the risks. These foundational modules cover:
         </p>
+        <ul>
+          <li><strong>What AI can and can't do</strong> — Setting realistic expectations</li>
+          <li><strong>Privacy and your health data</strong> — What happens when you share with AI</li>
+          <li><strong>Spotting AI mistakes</strong> — Recognizing when AI is wrong</li>
+          <li><strong>When to call your doctor</strong> — Knowing when AI isn't enough</li>
+        </ul>
 
-        <h3>2. Practical Skills</h3>
+        <h3>2. Practical Skills (6 Modules)</h3>
         <p>
-          Once you know the guardrails, you'll learn how to actually use these tools. How to
-          ask better questions. How to evaluate AI responses. How to prepare for doctor
-          appointments using AI as a helper.
+          Once you know the guardrails, you'll learn how to actually use these tools effectively:
         </p>
+        <ul>
+          <li><strong>AI tools you should know</strong> — ChatGPT, Claude, Perplexity, and more</li>
+          <li><strong>ChatGPT Health deep dive</strong> — Connecting your records step by step</li>
+          <li><strong>How to talk to AI</strong> — Getting better answers through better questions</li>
+          <li><strong>Understanding AI responses</strong> — Evaluating what you're told</li>
+          <li><strong>Preparing for appointments</strong> — Using AI as your preparation assistant</li>
+          <li><strong>Researching safely</strong> — Looking up conditions without spiraling</li>
+        </ul>
 
-        <h3>3. Going Deeper (Optional)</h3>
+        <h3>3. Going Deeper (3 Optional Modules)</h3>
         <p>
-          For the curious: how does AI actually work? Why does it make the mistakes it makes?
-          What's coming next in healthcare AI?
+          For those who want to understand more about how these systems work:
         </p>
+        <ul>
+          <li><strong>How AI "thinks"</strong> — A plain-language explanation of the technology</li>
+          <li><strong>AI bias and health</strong> — Why AI might treat different people differently</li>
+          <li><strong>The future of AI in healthcare</strong> — What's coming next</li>
+        </ul>
 
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
           <p style="margin-bottom: 0;">
             AI is a tool, not a doctor. The goal of this guide isn't to replace your healthcare
             team—it's to help you become a better-informed patient who uses AI as one resource
-            among many.
+            among many. Think of AI as a research assistant, not a medical advisor.
           </p>
         </div>
       </section>
@@ -153,22 +274,35 @@
         <h2>How to Use This Guide</h2>
 
         <p>
-          Each module takes about <strong>10-15 minutes</strong> to read. You can work through
-          them in order, or jump to what's most relevant to you.
+          Each module takes about <strong>15-20 minutes</strong> to read. You can work through
+          them in order, or jump to what's most relevant to you. The modules are designed to
+          stand alone while building on each other.
         </p>
 
         <p>
           <strong>Our recommendation:</strong> Start with the "Safety First" modules before
           diving into practical skills. Understanding the risks upfront will help you use
-          AI more confidently.
+          AI more confidently—and more safely.
         </p>
 
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            As you read through the modules, try the activities in the "Try This" boxes.
+            Learning by doing is more effective than just reading. You don't need any special
+            setup—just access to ChatGPT or another AI chatbot.
+          </p>
+        </div>
+
         <h3>What You'll See in Each Module</h3>
+
+        <p>Throughout this guide, you'll encounter several types of highlighted boxes:</p>
 
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
           <p style="margin-bottom: 0;">
             <strong>Pearls</strong> are practical tips and key takeaways you can use right away.
+            These are the "if you remember nothing else, remember this" moments.
           </p>
         </div>
 
@@ -176,14 +310,15 @@
           <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
           <p style="margin-bottom: 0;">
             <strong>In the News</strong> boxes highlight recent developments that affect how you
-            should think about AI and health.
+            should think about AI and health. AI is moving fast—these keep you current.
           </p>
         </div>
 
         <div class="callout-try">
           <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
           <p style="margin-bottom: 0;">
-            <strong>Try This</strong> boxes give you hands-on activities to practice what you're learning.
+            <strong>Try This</strong> boxes give you hands-on activities to practice what you're
+            learning. The best way to understand AI is to use it.
           </p>
         </div>
 
@@ -191,6 +326,7 @@
           <div class="callout-title">Warning</div>
           <p style="margin-bottom: 0;">
             <strong>Warnings</strong> highlight safety-critical information you shouldn't skip.
+            These are the "this could seriously affect your health" moments.
           </p>
         </div>
 
@@ -202,8 +338,19 @@
               They're optional—the main content gives you everything you need. But if you're
               curious about the details, click to expand.
             </p>
+            <p>
+              These sections often include more technical explanations, additional context,
+              or nuances that might interest some readers but aren't essential for everyone.
+            </p>
           </div>
         </details>
+
+        <h3>Sources and Citations</h3>
+        <p>
+          When we make specific claims—especially statistics or research findings—we provide
+          sources so you can verify the information yourself. This is the same standard we
+          encourage you to apply to AI: don't just trust, verify.
+        </p>
       </section>
 
       <div class="section-divider"></div>
@@ -218,24 +365,70 @@
           <li>You're a caregiver helping a family member navigate healthcare</li>
           <li>You're curious about ChatGPT Health and want to know if it's safe</li>
           <li>You want to be a more informed, empowered patient</li>
+          <li>You've heard about AI in healthcare and want to understand what it means for you</li>
         </ul>
+
+        <p>
+          You don't need any technical background. You don't need to be "good with computers."
+          If you can use a smartphone or search the internet, you have all the skills you need.
+        </p>
 
         <h3>What This Guide Is NOT</h3>
         <p>
-          This is not medical advice. AI tools are not a replacement for your doctor, nurse
-          practitioner, or other healthcare providers. This guide helps you use AI as one
-          tool among many—while knowing its limits and when to seek real medical care.
+          This is not medical advice. We are not doctors, and this guide is not a substitute
+          for professional medical care. AI tools are not a replacement for your doctor, nurse
+          practitioner, or other healthcare providers.
         </p>
+        <p>
+          This guide helps you use AI as one tool among many—while knowing its limits and when
+          to seek real medical care. If you have a medical concern, talk to your healthcare
+          provider. If you're experiencing an emergency, call 911.
+        </p>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            Never delay seeking medical care because you're waiting for AI to give you an answer.
+            If something feels wrong, contact your healthcare provider or go to an emergency room.
+            AI cannot examine you, run tests, or provide treatment.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Ready to Begin?</h2>
+
+        <p>
+          The next module covers what AI can actually do—and where it falls short. Understanding
+          these capabilities and limitations is the foundation for everything else you'll learn.
+        </p>
+
+        <p>
+          Take your time. There's no test at the end. The goal is practical knowledge you can
+          use to make better decisions about your health.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            The fact that you're here, taking the time to learn before diving in, already puts
+            you ahead. Most people use AI for health questions without thinking about safety,
+            privacy, or accuracy. You're choosing to be informed.
+          </p>
+        </div>
       </section>
 
       <div class="takeaways">
         <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
         <ul>
-          <li>AI can now connect to your medical records—this changes everything</li>
-          <li>40+ million people already ask ChatGPT health questions daily</li>
-          <li>This guide teaches you to use AI safely AND effectively</li>
-          <li>Start with safety, then build practical skills</li>
-          <li>AI is a tool, not a doctor—it's here to help you, not replace your care team</li>
+          <li>ChatGPT Health launched in January 2026, letting you connect your medical records to AI</li>
+          <li>Over 800 million people use ChatGPT weekly; 25% ask health questions (OpenAI, 2026)</li>
+          <li>AI offers real benefits: understanding records, preparing for appointments, explaining medical terms</li>
+          <li>AI also has real risks: hallucinations, privacy concerns, and the danger of replacing real medical care</li>
+          <li>This guide teaches you to use AI safely AND effectively—start with Safety First modules</li>
+          <li>AI is a tool, not a doctor—use it as a research assistant, not a medical advisor</li>
         </ul>
       </div>
 

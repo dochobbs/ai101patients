@@ -36,6 +36,11 @@
     .timeline-section h3::before { content: ""; position: absolute; left: -1.75rem; top: 0.5rem; width: 12px; height: 12px; background: #3b82f6; border-radius: 50%; }
     .stay-informed { background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
     .stay-informed h4 { margin-top: 0; color: #1e293b; }
+    .citation { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+    .citation a { color: #2563eb; text-decoration: none; }
+    .citation a:hover { text-decoration: underline; }
+    .stat-highlight { background: #f0f9ff; border-left: 4px solid #0284c7; padding: 1.25rem; margin: 1.5rem 0; border-radius: 0 12px 12px 0; }
+    .stat-highlight h4 { margin-top: 0; color: #0369a1; margin-bottom: 0.5rem; }
   </style>
 </head>
 <body>
@@ -68,7 +73,7 @@
         <div class="unit-meta">
           <span class="unit-meta-item">
             <i data-lucide="clock"></i>
-            12 min read
+            20 min read
           </span>
           <span class="unit-meta-item" style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">
             Optional/Advanced
@@ -90,6 +95,18 @@
           Understanding what's coming helps you be a more informed patient and better
           advocate for yourself as these technologies become part of your care.
         </p>
+
+        <div class="stat-highlight">
+          <h4>AI Medical Devices by the Numbers</h4>
+          <p style="margin-bottom: 0;">
+            The FDA has authorized over 900 AI-enabled medical devices for marketing as of 2024,
+            with the majority focused on radiology. The number of authorizations has grown
+            rapidly, with more devices approved in the last few years than in all previous years combined.
+          </p>
+          <p class="citation">
+            Source: <a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices" target="_blank">FDA - AI/ML-Enabled Medical Devices Database</a>
+          </p>
+        </div>
 
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
@@ -114,20 +131,36 @@
         <div class="future-card">
           <div class="timeline">Already widespread</div>
           <h4><i data-lucide="file-image"></i> Medical Imaging Analysis</h4>
-          <p style="margin-bottom: 0;">
+          <p>
             AI helps radiologists read X-rays, CT scans, MRIs, and other images. It can
             flag potential issues, measure changes over time, and help ensure nothing
             is missed. Your doctor still makes the final call, but AI assists.
+          </p>
+          <p style="margin-bottom: 0;">
+            AI has shown particular promise in detecting conditions like diabetic retinopathy
+            (an eye condition from diabetes), breast cancer on mammograms, and lung nodules
+            on CT scans.
+          </p>
+          <p class="citation">
+            Source: <a href="https://www.nature.com/articles/s41591-018-0107-6" target="_blank">De Fauw et al., "Clinically applicable deep learning for diagnosis and referral in retinal disease" Nature Medicine (2018)</a>
           </p>
         </div>
 
         <div class="future-card">
           <div class="timeline">Growing rapidly</div>
           <h4><i data-lucide="file-text"></i> Clinical Documentation</h4>
-          <p style="margin-bottom: 0;">
+          <p>
             AI can now transcribe doctor-patient conversations and draft clinical notes.
             This lets your doctor focus on you instead of typing during your appointment.
             You may notice your doctor using these tools.
+          </p>
+          <p style="margin-bottom: 0;">
+            Studies suggest physicians spend about two hours on electronic health records
+            for every hour of direct patient care. AI documentation tools aim to reduce this
+            burden significantly.
+          </p>
+          <p class="citation">
+            Source: <a href="https://annals.org/aim/article-abstract/2546704/allocation-physician-time-ambulatory-practice-time-motion-study-4-specialties" target="_blank">Sinsky et al., "Allocation of Physician Time in Ambulatory Practice" Annals of Internal Medicine (2016)</a>
           </p>
         </div>
 
@@ -151,6 +184,16 @@
           </p>
         </div>
 
+        <div class="future-card">
+          <div class="timeline">Rapidly growing</div>
+          <h4><i data-lucide="heart-pulse"></i> Remote Patient Monitoring</h4>
+          <p style="margin-bottom: 0;">
+            AI analyzes data from wearables and home monitoring devices, identifying
+            patterns that might indicate problems. This enables earlier intervention
+            for patients with chronic conditions.
+          </p>
+        </div>
+
         <div class="callout-news">
           <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
           <p style="margin-bottom: 0;">
@@ -160,6 +203,71 @@
             doctors receive while maintaining accuracy.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: AI in pathology and lab work</summary>
+          <div class="learn-more-content">
+            <p>
+              Beyond radiology, AI is making inroads in pathology - the analysis of tissue
+              samples and cells. AI can help pathologists:
+            </p>
+            <p>
+              <strong>Count and classify cells:</strong> Tasks that previously required
+              tedious manual counting can be automated with high accuracy.
+            </p>
+            <p>
+              <strong>Detect cancer in biopsies:</strong> AI can identify cancerous cells
+              and even predict tumor aggressiveness in some cases.
+            </p>
+            <p>
+              <strong>Analyze genetic markers:</strong> AI helps interpret complex genetic
+              tests that inform treatment decisions.
+            </p>
+            <p>
+              These applications are often invisible to patients but can significantly
+              affect the speed and accuracy of diagnoses.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>AI in Drug Discovery and Development</h2>
+
+        <p>
+          One of the most impactful applications of AI in healthcare is happening in
+          pharmaceutical research. AI is helping identify new drug candidates and
+          accelerate the development process.
+        </p>
+
+        <h3>How AI Helps Discover Drugs</h3>
+        <ul>
+          <li><strong>Target identification:</strong> AI analyzes biological data to identify proteins or pathways that could be targeted by drugs</li>
+          <li><strong>Molecule design:</strong> AI can generate and evaluate potential drug molecules far faster than traditional methods</li>
+          <li><strong>Clinical trial optimization:</strong> AI helps identify which patients are most likely to respond to treatments and designs more efficient trials</li>
+          <li><strong>Predicting side effects:</strong> AI models can predict potential adverse effects earlier in development</li>
+        </ul>
+
+        <div class="stat-highlight">
+          <h4>Accelerating the Timeline</h4>
+          <p style="margin-bottom: 0;">
+            Traditional drug development takes an average of 10-15 years from discovery to
+            approval. AI-assisted approaches have shown potential to significantly reduce
+            this timeline, with some AI-discovered drugs reaching clinical trials in a
+            fraction of the traditional time.
+          </p>
+          <p class="citation">
+            Source: <a href="https://www.nature.com/articles/d41573-019-00074-z" target="_blank">Mak & Pichika, "Artificial intelligence in drug development" Drug Discovery Today (2019)</a>
+          </p>
+        </div>
+
+        <p>
+          While no fully AI-discovered drug has yet reached market approval, several
+          are in clinical trials. This could eventually mean faster access to new
+          treatments for conditions that currently have limited options.
+        </p>
       </section>
 
       <div class="section-divider"></div>
@@ -174,6 +282,7 @@
             <li><strong>Better wearable integration:</strong> Your smartwatch and health devices will connect more seamlessly with AI tools</li>
             <li><strong>Improved accuracy:</strong> AI will get better at knowing what it doesn't know and when to defer to humans</li>
             <li><strong>Multimodal AI:</strong> AI that can analyze images, text, and voice together for more complete understanding</li>
+            <li><strong>Ambient clinical intelligence:</strong> AI that listens to doctor visits and creates documentation automatically</li>
           </ul>
         </div>
 
@@ -184,6 +293,7 @@
             <li><strong>Predictive health:</strong> AI that can warn you about health risks before symptoms appear</li>
             <li><strong>Drug discovery impact:</strong> Medications discovered or optimized by AI reaching patients</li>
             <li><strong>Mental health AI:</strong> More sophisticated AI support for mental health, used alongside human therapists</li>
+            <li><strong>Virtual second opinions:</strong> AI systems that can review your case and provide another perspective</li>
           </ul>
         </div>
 
@@ -194,6 +304,7 @@
             <li><strong>Personalized medicine:</strong> Treatment plans tailored to your genetics, lifestyle, and health history</li>
             <li><strong>Continuous monitoring:</strong> AI that watches your health data and alerts you and your doctor to concerns</li>
             <li><strong>Global health access:</strong> AI bringing medical expertise to underserved areas</li>
+            <li><strong>Preventive care transformation:</strong> AI identifying and addressing health risks before they become diseases</li>
           </ul>
         </div>
 
@@ -205,6 +316,111 @@
             envisioned. What's certain is that AI in healthcare will continue evolving.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: The promise and challenges of predictive health</summary>
+          <div class="learn-more-content">
+            <p>
+              One of the most promising (and controversial) applications of AI is predicting
+              health problems before they occur. This includes:
+            </p>
+            <p>
+              <strong>Cardiovascular risk prediction:</strong> AI analyzing health records and
+              test results to predict heart attack or stroke risk years in advance.
+            </p>
+            <p>
+              <strong>Cancer screening:</strong> AI identifying subtle patterns that might
+              indicate early-stage cancer before traditional detection methods.
+            </p>
+            <p>
+              <strong>Mental health prediction:</strong> AI analyzing patterns in speech,
+              writing, or behavior that might indicate developing mental health conditions.
+            </p>
+            <p>
+              These capabilities raise important questions: Do you want to know about health
+              risks years in advance? How accurate should predictions be before acting on them?
+              Who should have access to predictive health information?
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Concerns and Challenges</h2>
+
+        <p>
+          While AI offers significant potential benefits in healthcare, there are also
+          legitimate concerns that are being actively debated:
+        </p>
+
+        <h3>Privacy and Data Security</h3>
+        <p>
+          AI systems often need access to sensitive health data to work effectively.
+          This raises questions about who has access to your data, how it's protected,
+          and whether it might be used in ways you didn't expect.
+        </p>
+
+        <h3>The "Black Box" Problem</h3>
+        <p>
+          Many AI systems make recommendations that even their creators can't fully
+          explain. This is particularly concerning in healthcare, where understanding
+          the reasoning behind a recommendation can be important.
+        </p>
+
+        <div class="stat-highlight">
+          <h4>Explainability in Healthcare AI</h4>
+          <p style="margin-bottom: 0;">
+            Research shows that physicians are more likely to accept AI recommendations
+            when they can understand the reasoning. This has led to growing emphasis on
+            "explainable AI" - systems that can show their work.
+          </p>
+          <p class="citation">
+            Source: <a href="https://www.nature.com/articles/s41591-019-0665-2" target="_blank">Tonekaboni et al., "What Clinicians Want: Contextualizing Explainable Machine Learning for Clinical End Use" Nature Medicine (2019)</a>
+          </p>
+        </div>
+
+        <h3>Liability and Accountability</h3>
+        <p>
+          When AI contributes to a medical decision that goes wrong, who is responsible?
+          The doctor? The hospital? The AI company? These questions don't have clear
+          answers yet, and the legal framework is still developing.
+        </p>
+
+        <h3>Healthcare Workforce Impact</h3>
+        <p>
+          There are concerns about how AI might change healthcare jobs. While most experts
+          believe AI will augment rather than replace healthcare workers, the nature of
+          many roles is likely to change.
+        </p>
+
+        <details class="learn-more">
+          <summary>Learn More: The debate over AI replacing doctors</summary>
+          <div class="learn-more-content">
+            <p>
+              Headlines sometimes suggest AI will replace doctors. The reality is more nuanced:
+            </p>
+            <p>
+              <strong>What AI does well:</strong> Pattern recognition in images, processing
+              large amounts of data quickly, consistent application of guidelines, 24/7 availability.
+            </p>
+            <p>
+              <strong>What humans do that AI cannot:</strong> Physical examination, building
+              trust and rapport, understanding context and nuance, making complex ethical
+              decisions, adapting to unusual situations.
+            </p>
+            <p>
+              Most experts predict a future where AI handles certain tasks (like initial image
+              screening or documentation) while humans focus on tasks requiring judgment,
+              communication, and physical presence.
+            </p>
+            <p>
+              As the saying goes: "AI won't replace doctors, but doctors who use AI may replace
+              those who don't."
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -223,6 +439,8 @@
           <li>"If AI helped draft this message or recommendation, has a human reviewed it?"</li>
           <li>"What happens if I want a fully human review of something AI was involved in?"</li>
           <li>"How is my health data being used with AI systems?"</li>
+          <li>"Is the AI system that was used FDA-approved for this purpose?"</li>
+          <li>"What are the known limitations or error rates of this AI system?"</li>
         </ul>
 
         <div class="callout-pearl">
@@ -260,6 +478,35 @@
             </p>
           </div>
         </details>
+
+        <details class="learn-more">
+          <summary>Learn More: The regulatory landscape for health AI</summary>
+          <div class="learn-more-content">
+            <p>
+              Multiple agencies and frameworks govern AI in healthcare:
+            </p>
+            <p>
+              <strong>FDA:</strong> The Food and Drug Administration regulates AI as a medical
+              device when it's used for clinical purposes. They've developed a framework for
+              AI/ML-based Software as a Medical Device (SaMD).
+            </p>
+            <p>
+              <strong>ONC:</strong> The Office of the National Coordinator for Health IT
+              oversees health information technology standards, including some aspects of AI.
+            </p>
+            <p>
+              <strong>State medical boards:</strong> These regulate how physicians use AI in
+              clinical practice and may set standards for physician oversight of AI tools.
+            </p>
+            <p>
+              <strong>International standards:</strong> The EU AI Act and other international
+              frameworks are establishing requirements for high-risk AI applications.
+            </p>
+            <p class="citation">
+              Source: <a href="https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd" target="_blank">FDA - Software as a Medical Device (SaMD)</a>
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -279,8 +526,21 @@
             <li><strong>Ask your healthcare providers:</strong> They're often aware of AI tools being adopted in their practice</li>
             <li><strong>Check patient advocacy groups:</strong> Organizations focused on your conditions often track relevant technology developments</li>
             <li><strong>Be skeptical of hype:</strong> Both overly enthusiastic and overly fearful coverage of AI tends to miss nuance</li>
+            <li><strong>Look for peer-reviewed research:</strong> Claims about AI effectiveness should ideally be backed by published studies</li>
           </ul>
         </div>
+
+        <h3>Red Flags to Watch For</h3>
+        <p>
+          As AI health tools proliferate, be cautious of:
+        </p>
+        <ul>
+          <li>Apps or services that claim to diagnose conditions without physician involvement</li>
+          <li>AI tools that aren't transparent about their limitations</li>
+          <li>Services that ask for extensive health data without clear privacy policies</li>
+          <li>Claims of "revolutionary" or "perfect" accuracy without evidence</li>
+          <li>Tools that discourage you from seeing a real doctor</li>
+        </ul>
 
         <div class="callout-try">
           <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
@@ -290,6 +550,35 @@
             my treatment." Most providers will appreciate your engagement.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Evaluating health AI claims</summary>
+          <div class="learn-more-content">
+            <p>
+              When you hear about a new AI health tool, consider asking:
+            </p>
+            <p>
+              <strong>What's the evidence?</strong> Has this been tested in peer-reviewed
+              research? On how many patients? In what settings?
+            </p>
+            <p>
+              <strong>What population was it tested on?</strong> Does that match your
+              demographics? (Remember the bias issues we discussed earlier.)
+            </p>
+            <p>
+              <strong>What are the error rates?</strong> No AI is perfect. What are the
+              false positive and false negative rates?
+            </p>
+            <p>
+              <strong>Is it FDA-cleared?</strong> For clinical AI tools, FDA clearance
+              indicates some level of safety and effectiveness review.
+            </p>
+            <p>
+              <strong>What happens when it's wrong?</strong> Is there human oversight to
+              catch errors?
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -309,6 +598,19 @@
           help make that relationship more informed and more efficient, but it
           can't replace it.
         </p>
+
+        <div class="stat-highlight">
+          <h4>What Patients Value</h4>
+          <p style="margin-bottom: 0;">
+            Research consistently shows that patients value human connection in healthcare.
+            Studies find that physician empathy is associated with better patient outcomes,
+            higher satisfaction, and better adherence to treatment plans - factors that AI
+            cannot replicate.
+          </p>
+          <p class="citation">
+            Source: <a href="https://pubmed.ncbi.nlm.nih.gov/22836852/" target="_blank">Kelley et al., "The Influence of the Patient-Clinician Relationship on Healthcare Outcomes" PLOS ONE (2014)</a>
+          </p>
+        </div>
 
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
@@ -332,13 +634,32 @@
           good judgment about how to use AI in your health journey while keeping your
           human healthcare team at the center of your care.
         </p>
+
+        <h3>Looking Ahead</h3>
+        <p>
+          The healthcare AI landscape will continue changing rapidly. New tools will
+          emerge, regulations will evolve, and our understanding of what AI can and
+          cannot do will deepen. By understanding the fundamentals - how AI works,
+          its limitations, and how to evaluate its outputs - you're prepared to
+          navigate these changes.
+        </p>
+
+        <p>
+          The patients who will benefit most from AI in healthcare are those who
+          approach it thoughtfully: using AI as a tool for empowerment while maintaining
+          healthy skepticism, staying informed about developments, and keeping their
+          human healthcare relationships at the center of their care.
+        </p>
       </section>
 
       <div class="takeaways">
         <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
         <ul>
           <li>AI is already being used in healthcare for imaging, documentation, and clinical support</li>
+          <li>The FDA has authorized hundreds of AI-enabled medical devices, with rapid growth continuing</li>
           <li>More personalized, accurate, and integrated AI tools are coming in the next few years</li>
+          <li>AI is accelerating drug discovery, potentially bringing new treatments faster</li>
+          <li>Important concerns remain about privacy, explainability, and liability</li>
           <li>You have the right to ask about AI use in your care and how your data is being used</li>
           <li>Stay informed through reputable health news sources and conversations with your providers</li>
           <li>AI is a powerful tool, but human connection remains at the heart of good healthcare</li>

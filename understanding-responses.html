@@ -40,6 +40,9 @@
     .verification-step { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; margin: 1rem 0; display: flex; gap: 1rem; align-items: flex-start; }
     .verification-step .step-icon { background: #eff6ff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .verification-step .step-icon i { color: #3b82f6; width: 20px; height: 20px; }
+    .citation { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+    .citation a { color: #2563eb; text-decoration: none; }
+    .citation a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -72,7 +75,7 @@
         <div class="unit-meta">
           <span class="unit-meta-item">
             <i data-lucide="clock"></i>
-            12 min read
+            18 min read
           </span>
         </div>
       </header>
@@ -92,6 +95,13 @@
           right. You need to develop your own sense of what to trust and what to verify.
         </p>
 
+        <p>
+          This consistent confidence is a fundamental feature of how AI language models
+          work. They're designed to produce fluent, natural-sounding text—and fluent text
+          typically sounds confident. The AI isn't trying to deceive you; it simply
+          doesn't experience doubt the way humans do.
+        </p>
+
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
           <p style="margin-bottom: 0;">
@@ -100,6 +110,31 @@
             should skip your own judgment.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Why AI doesn't know when it's wrong</summary>
+          <div class="learn-more-content">
+            <p>
+              AI language models work by predicting what words should come next based on
+              patterns in their training data. They don't have a separate "fact-checking"
+              system that verifies their outputs.
+            </p>
+            <p>
+              When you ask a question, the AI generates an answer that sounds right based
+              on similar patterns it's seen before. Sometimes those patterns lead to correct
+              information. Sometimes they don't.
+            </p>
+            <p>
+              This is fundamentally different from how humans work. Humans often have a sense
+              of what they know confidently vs. what they're less sure about. AI lacks this
+              metacognition—it can't really "know what it knows."
+            </p>
+            <p>
+              This is why your critical thinking is essential. The AI won't tell you when
+              it's guessing or when its training data was incomplete.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -131,6 +166,8 @@
           <li><strong>Basic explanations:</strong> What is blood pressure? How do antibiotics work? AI is usually accurate with fundamental medical concepts.</li>
           <li><strong>General descriptions:</strong> Common symptoms of flu, what to expect after a procedure, general lifestyle advice.</li>
           <li><strong>Organizing information:</strong> Summarizing what you've shared, creating lists, structuring your thoughts.</li>
+          <li><strong>Definitions:</strong> Explaining what medical terms mean in simpler language.</li>
+          <li><strong>General process explanations:</strong> How a test is performed, what happens during a procedure.</li>
         </ul>
 
         <h3>What AI Often Gets Wrong</h3>
@@ -140,6 +177,8 @@
           <li><strong>Your specific situation:</strong> AI doesn't know the nuances of your case the way your doctor does.</li>
           <li><strong>Drug interactions:</strong> AI might miss important interactions or overstate minor ones.</li>
           <li><strong>Rare conditions:</strong> Less common conditions have less training data, leading to more errors.</li>
+          <li><strong>Local or specific resources:</strong> AI may not know about services specific to your area or situation.</li>
+          <li><strong>Recent developments:</strong> New treatments, recent studies, or updated guidelines may not be in the training data.</li>
         </ul>
 
         <div class="callout-news">
@@ -150,6 +189,33 @@
             study found over 40% of AI-generated medical citations were fabricated.
           </p>
         </div>
+        <p class="citation">Source: Multiple studies on AI hallucination in medical contexts have been published, including research in JAMA and Nature Medicine.</p>
+
+        <details class="learn-more">
+          <summary>Learn More: Understanding AI hallucination</summary>
+          <div class="learn-more-content">
+            <p>
+              "Hallucination" is the term used when AI generates information that sounds
+              plausible but is factually incorrect or entirely made up. It's one of the
+              most significant problems with current AI systems.
+            </p>
+            <p>
+              In healthcare contexts, hallucinations can include:
+            </p>
+            <ul>
+              <li>Citing studies or journal articles that don't exist</li>
+              <li>Providing statistics without a real source</li>
+              <li>Describing treatments or medications incorrectly</li>
+              <li>Making up dosage information</li>
+              <li>Inventing guidelines from medical organizations</li>
+            </ul>
+            <p>
+              The problem is especially tricky because hallucinated content often sounds
+              exactly as confident and well-written as accurate content. There's no easy
+              way to distinguish them without verification.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -170,8 +236,22 @@
             <li><strong>Claims that contradict your doctor:</strong> Your doctor knows you; AI doesn't.</li>
             <li><strong>Advice to delay seeking care:</strong> When in doubt, talk to a healthcare provider.</li>
             <li><strong>Outdated information:</strong> Medical guidance changes; AI's training has a cutoff date.</li>
+            <li><strong>Overly confident claims about rare conditions:</strong> AI has less reliable data on uncommon situations.</li>
+            <li><strong>Specific journal citations:</strong> These are frequently fabricated and should always be verified.</li>
           </ul>
         </div>
+
+        <h3>Language That Should Make You Pause</h3>
+        <p>
+          Pay attention to how AI phrases things. Some language patterns warrant extra caution:
+        </p>
+        <ul>
+          <li><strong>"Research shows..." or "Studies indicate..."</strong> without naming the research</li>
+          <li><strong>"The recommended dose is..."</strong> - dosing should come from a healthcare provider</li>
+          <li><strong>"You should stop taking..."</strong> - never stop medications based on AI</li>
+          <li><strong>"This is definitely..."</strong> when discussing diagnosis</li>
+          <li><strong>Very specific percentages or statistics</strong> without context</li>
+        </ul>
 
         <div class="callout callout-warning">
           <div class="callout-title">Warning</div>
@@ -181,6 +261,32 @@
             something online that said X. Can you help me understand the difference?"
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Why AI gives overly specific statistics</summary>
+          <div class="learn-more-content">
+            <p>
+              AI often provides very specific-sounding statistics ("73.2% of patients...")
+              that may not be based on real data. This happens because:
+            </p>
+            <p>
+              <strong>Pattern matching:</strong> The AI has seen many texts with specific
+              statistics and learns to generate similar-looking numbers.
+            </p>
+            <p>
+              <strong>Perceived authority:</strong> Specific numbers sound more authoritative
+              than vague statements, so the AI may default to them.
+            </p>
+            <p>
+              <strong>No source checking:</strong> The AI can't actually look up real
+              statistics, so it generates plausible-sounding ones.
+            </p>
+            <p>
+              When you see specific statistics, ask for the source. If AI can't provide
+              a verifiable source, treat the statistic with skepticism.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -199,7 +305,7 @@
             <strong>Ask for sources</strong>
             <p style="margin: 0.5rem 0 0 0; color: #64748b;">
               "What sources are you basing this on?" or "Can you cite specific research?"
-              If AI provides citations, verify they actually exist.
+              If AI provides citations, verify they actually exist by searching for them.
             </p>
           </div>
         </div>
@@ -237,12 +343,78 @@
           </div>
         </div>
 
+        <div class="verification-step">
+          <div class="step-icon"><i data-lucide="book-open"></i></div>
+          <div>
+            <strong>Look for consensus</strong>
+            <p style="margin: 0.5rem 0 0 0; color: #64748b;">
+              If multiple reputable sources say the same thing, that's more reliable
+              than a single source. Be wary of claims that seem unique to AI.
+            </p>
+          </div>
+        </div>
+
+        <h3>Reliable Sources for Health Information</h3>
+        <p>
+          When verifying AI's claims, these sources are generally trustworthy:
+        </p>
+        <ul>
+          <li><strong>Government health sites:</strong> CDC, NIH, FDA, WHO</li>
+          <li><strong>Academic medical centers:</strong> Mayo Clinic, Cleveland Clinic, Johns Hopkins</li>
+          <li><strong>Professional organizations:</strong> American Heart Association, American Cancer Society</li>
+          <li><strong>Peer-reviewed journals:</strong> JAMA, NEJM, Lancet (but verify AI's citations exist!)</li>
+          <li><strong>Your healthcare team:</strong> The ultimate authority for your specific situation</li>
+        </ul>
+
         <div class="callout-try">
           <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
           <p style="margin-bottom: 0;">
             After AI gives you health information, ask: "What's your confidence level on
             this, and what should I verify with a healthcare professional?" This prompts
             AI to acknowledge its limitations.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Understanding Hedging Language</h2>
+
+        <p>
+          Pay close attention to qualifying words AI uses. They matter more than you
+          might think:
+        </p>
+
+        <h3>Words That Signal Uncertainty</h3>
+        <ul>
+          <li><strong>"May" or "might":</strong> This is a possibility, not a certainty</li>
+          <li><strong>"Could":</strong> One of several possibilities</li>
+          <li><strong>"Sometimes":</strong> Doesn't happen always or even most of the time</li>
+          <li><strong>"Often" vs. "always":</strong> There are exceptions</li>
+          <li><strong>"In some cases":</strong> Not a universal rule</li>
+          <li><strong>"Typically" or "usually":</strong> Common but not guaranteed</li>
+        </ul>
+
+        <p>
+          When AI uses these words, it's (correctly) expressing uncertainty. Don't
+          mentally convert "may cause" to "will cause" or "sometimes helps" to
+          "definitely helps."
+        </p>
+
+        <h3>The Danger of Reading Past Uncertainty</h3>
+        <p>
+          Humans naturally want certainty, especially about health. It's tempting to
+          focus on the parts of AI's response that sound definite and skip the qualifiers.
+          Resist this tendency. The qualifiers are often the most important part.
+        </p>
+
+        <div class="callout-pearl">
+          <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
+          <p style="margin-bottom: 0;">
+            When you notice AI using lots of hedging language ("may," "could," "sometimes"),
+            that's a signal that the topic is genuinely uncertain—and perhaps a good topic
+            to discuss with your doctor rather than rely on AI.
           </p>
         </div>
       </section>
@@ -263,6 +435,8 @@
           <li>Verifying specific claims before acting on them</li>
           <li>Asking follow-up questions when something seems unclear or surprising</li>
           <li>Discussing AI-provided information with your healthcare team</li>
+          <li>Recognizing the difference between understanding and diagnosis</li>
+          <li>Being aware of AI's training data limitations</li>
         </ul>
 
         <h3>Bad Skepticism Looks Like:</h3>
@@ -270,7 +444,18 @@
           <li>Ignoring everything AI says because "it might be wrong"</li>
           <li>Using AI's potential for error to avoid learning about your health</li>
           <li>Dismissing your doctor's advice because AI said something different</li>
+          <li>Spending more time fact-checking AI than actually using the information</li>
+          <li>Never using AI for health questions out of fear</li>
         </ul>
+
+        <h3>Finding the Right Balance</h3>
+        <p>
+          The key is proportional verification. For basic explanations ("What is
+          hypertension?"), a quick sanity check is probably enough. For specific
+          claims that would affect your treatment decisions, more thorough verification
+          is warranted. And for anything urgent or serious, professional medical
+          advice is essential.
+        </p>
 
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
@@ -280,6 +465,32 @@
             then verify important details through more authoritative sources.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Building your verification instincts</summary>
+          <div class="learn-more-content">
+            <p>
+              Over time, you'll develop better instincts for what to trust and what to verify.
+              Some tips for building these instincts:
+            </p>
+            <p>
+              <strong>Notice when you're surprised:</strong> If AI says something unexpected,
+              that's a signal to verify. Your intuition is often picking up on something.
+            </p>
+            <p>
+              <strong>Pay attention to specificity:</strong> Very general statements are often
+              more reliable than very specific claims. The more specific, the more you should verify.
+            </p>
+            <p>
+              <strong>Consider the stakes:</strong> The higher the stakes of getting it wrong,
+              the more verification is warranted.
+            </p>
+            <p>
+              <strong>Learn from mistakes:</strong> If you discover AI was wrong about something,
+              note what kind of claim it was. You'll start seeing patterns.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -319,6 +530,12 @@
           human clinician, not from AI.
         </p>
 
+        <h3>Step 5: Consider whether AI might be outdated</h3>
+        <p>
+          AI's training data has a cutoff date. Your doctor may be following newer
+          guidelines or research that AI doesn't know about yet.
+        </p>
+
         <details class="learn-more">
           <summary>Learn More: Why doctors and AI might say different things</summary>
           <div class="learn-more-content">
@@ -347,6 +564,36 @@
             </p>
           </div>
         </details>
+
+        <details class="learn-more">
+          <summary>Learn More: How to bring up AI information with your doctor</summary>
+          <div class="learn-more-content">
+            <p>
+              Some patients worry their doctor will be annoyed if they mention AI. Here are
+              ways to bring it up constructively:
+            </p>
+            <p>
+              <strong>Frame it as a question, not a challenge:</strong> "I read something online
+              that made me curious about..." rather than "The AI said you're wrong about..."
+            </p>
+            <p>
+              <strong>Express your goal:</strong> "I'm trying to understand my condition better.
+              Can you help me make sense of what I read?"
+            </p>
+            <p>
+              <strong>Be specific:</strong> Share what the AI actually said so your doctor can
+              respond to the specific claim.
+            </p>
+            <p>
+              <strong>Stay open:</strong> Your doctor may have a good reason for their recommendation
+              that applies specifically to you.
+            </p>
+            <p>
+              Most doctors appreciate engaged patients who want to understand their care. They'd
+              rather you ask than silently distrust their recommendations.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="takeaways">
@@ -355,9 +602,11 @@
           <li>AI sounds confident whether it's right or wrong - don't trust based on tone alone</li>
           <li>Trust basic explanations more than specific statistics, citations, or diagnoses</li>
           <li>Watch for red flags: made-up citations, definitive diagnoses, medication doses</li>
+          <li>Pay attention to hedging language ("may," "could," "sometimes") - it signals uncertainty</li>
           <li>Verify important claims through reputable medical sites and your healthcare team</li>
           <li>When AI conflicts with your doctor, discuss it openly rather than choosing one blindly</li>
           <li>Healthy skepticism means treating AI as a starting point, not the final word</li>
+          <li>The higher the stakes, the more verification is warranted</li>
         </ul>
       </div>
 

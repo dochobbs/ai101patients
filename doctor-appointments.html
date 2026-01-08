@@ -37,6 +37,9 @@
     .checklist-box li { margin-bottom: 0.5rem; }
     .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
     @media (max-width: 700px) { .two-column { grid-template-columns: 1fr; } }
+    .citation { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+    .citation a { color: #2563eb; text-decoration: none; }
+    .citation a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -69,7 +72,7 @@
         <div class="unit-meta">
           <span class="unit-meta-item">
             <i data-lucide="clock"></i>
-            12 min read
+            18 min read
           </span>
         </div>
       </header>
@@ -89,6 +92,13 @@
           AI can help you prepare so you make the most of every minute.
         </p>
 
+        <p>
+          The benefits of preparation extend beyond just time efficiency. When you come
+          prepared, you're a better advocate for your own health. You can communicate more
+          clearly, ask better questions, and leave with a clearer understanding of your
+          care plan.
+        </p>
+
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
           <p style="margin-bottom: 0;">
@@ -97,6 +107,36 @@
             preparation faster and more thorough.
           </p>
         </div>
+        <p class="citation">Source: Studies on patient preparation have been published in journals including Patient Education and Counseling and the Journal of General Internal Medicine.</p>
+
+        <details class="learn-more">
+          <summary>Learn More: The research on appointment preparation</summary>
+          <div class="learn-more-content">
+            <p>
+              Multiple studies have examined how patient preparation affects healthcare encounters:
+            </p>
+            <p>
+              <strong>Question asking:</strong> Patients who prepare questions in advance ask
+              more questions during visits and are more likely to get their concerns addressed.
+            </p>
+            <p>
+              <strong>Recall:</strong> Preparation improves how much patients remember from
+              their visits, leading to better adherence to treatment plans.
+            </p>
+            <p>
+              <strong>Satisfaction:</strong> Prepared patients report higher satisfaction with
+              their care and their doctor-patient relationship.
+            </p>
+            <p>
+              <strong>Health outcomes:</strong> Some studies suggest that better-prepared patients
+              have improved health outcomes, though this is harder to measure directly.
+            </p>
+            <p>
+              AI tools make it easier than ever to prepare effectively, lowering the barrier
+              to getting these benefits.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -127,6 +167,24 @@ Please format this as a brief summary I can hand to my doctor or read quickly at
           <li><strong>Triggers:</strong> Does anything make it worse? Better?</li>
           <li><strong>Impact:</strong> How is this affecting your daily life?</li>
           <li><strong>What you've tried:</strong> Any treatments, medications, or home remedies?</li>
+          <li><strong>Associated symptoms:</strong> What else happens along with the main symptom?</li>
+          <li><strong>Relevant history:</strong> Previous similar issues, family history if relevant</li>
+        </ul>
+
+        <h3>The OLDCARTS Framework</h3>
+        <p>
+          Doctors often use a framework called OLDCARTS to understand symptoms. If you organize
+          your information this way, you're speaking their language:
+        </p>
+        <ul>
+          <li><strong>O</strong>nset: When did it start?</li>
+          <li><strong>L</strong>ocation: Where exactly is it?</li>
+          <li><strong>D</strong>uration: How long does each episode last?</li>
+          <li><strong>C</strong>haracter: What does it feel like? (Sharp, dull, throbbing, etc.)</li>
+          <li><strong>A</strong>lleviating/Aggravating: What makes it better or worse?</li>
+          <li><strong>R</strong>adiation: Does it spread to other areas?</li>
+          <li><strong>T</strong>iming: Is there a pattern? (Morning, after eating, etc.)</li>
+          <li><strong>S</strong>everity: How bad is it on a 1-10 scale?</li>
         </ul>
 
         <div class="callout-try">
@@ -134,9 +192,37 @@ Please format this as a brief summary I can hand to my doctor or read quickly at
           <p style="margin-bottom: 0;">
             Before your next appointment, spend 5 minutes describing your symptoms to AI in
             your own words. Then ask it to organize what you said into a clear, one-paragraph
-            summary. Bring that summary to your appointment.
+            summary using the OLDCARTS framework. Bring that summary to your appointment.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Creating a symptom diary with AI</summary>
+          <div class="learn-more-content">
+            <p>
+              For ongoing or recurring symptoms, keeping a diary can be incredibly valuable.
+              AI can help you create and summarize one:
+            </p>
+            <p>
+              <strong>Daily tracking:</strong> Each day, tell AI about your symptoms. It can
+              help you identify patterns over time.
+            </p>
+            <p>
+              <strong>Pre-appointment summary:</strong> Before your appointment, ask AI to
+              summarize your diary entries: "Based on what I've told you over the past two
+              weeks, summarize the patterns in my symptoms."
+            </p>
+            <p>
+              <strong>Correlation finding:</strong> AI can help identify correlations you might
+              miss: "Do my headaches seem to correlate with anything else I've mentioned—sleep,
+              stress, food, weather?"
+            </p>
+            <p>
+              This kind of systematic tracking can provide your doctor with much richer
+              information than you could recall from memory.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -173,6 +259,18 @@ Put the most important questions first.</div>
           <li><strong>Warning signs:</strong> "What symptoms should make me call you or go to the ER?"</li>
           <li><strong>Lifestyle:</strong> "Are there lifestyle changes that would help with this?"</li>
           <li><strong>Medications:</strong> "What side effects should I watch for? How long should I take this?"</li>
+          <li><strong>Prognosis:</strong> "What can I expect over time? Will this get better, stay the same, or get worse?"</li>
+          <li><strong>Second opinion:</strong> "Is this something where a second opinion might be helpful?"</li>
+        </ul>
+
+        <h3>Prioritizing Your Questions</h3>
+        <p>
+          You may not have time for all your questions. Prioritize by asking:
+        </p>
+        <ul>
+          <li>What do I absolutely need to know before I leave?</li>
+          <li>What would affect my immediate decisions or safety?</li>
+          <li>What questions could wait for a follow-up or portal message?</li>
         </ul>
 
         <div class="callout-pearl">
@@ -209,6 +307,17 @@ Please give me a brief overview of:
 Keep it simple and focused on what will help me prepare.</div>
         </div>
 
+        <h3>Building a Vocabulary</h3>
+        <p>
+          Understanding basic medical terms helps you follow the conversation and ask
+          better questions. Before a specialist appointment, ask AI:
+        </p>
+        <ul>
+          <li>"What are the key medical terms I might hear related to [condition]?"</li>
+          <li>"Explain these terms in simple language: [list of terms from your records]"</li>
+          <li>"What tests might my doctor order, and what do they check for?"</li>
+        </ul>
+
         <div class="callout-news">
           <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
           <p style="margin-bottom: 0;">
@@ -217,6 +326,36 @@ Keep it simple and focused on what will help me prepare.</div>
             outcomes. Preparation isn't just about efficiency - it leads to better care.
           </p>
         </div>
+        <p class="citation">Source: Health literacy research has consistently shown correlations between patient understanding and treatment adherence.</p>
+
+        <details class="learn-more">
+          <summary>Learn More: Preparing for specific types of appointments</summary>
+          <div class="learn-more-content">
+            <p>
+              Different types of appointments benefit from different preparation:
+            </p>
+            <p>
+              <strong>Annual physical:</strong> Review any symptoms you've had since your last
+              visit, update your medication list, think about preventive care questions.
+            </p>
+            <p>
+              <strong>Specialist consult:</strong> Bring relevant records and test results,
+              understand why you were referred, prepare questions about next steps.
+            </p>
+            <p>
+              <strong>Follow-up visit:</strong> Track how you've been since the last visit,
+              note any medication side effects, prepare questions about your progress.
+            </p>
+            <p>
+              <strong>New symptom visit:</strong> Focus on OLDCARTS (see above), bring any
+              relevant photos or documentation, think about timeline.
+            </p>
+            <p>
+              <strong>Results review:</strong> Prepare questions about what the results mean,
+              what the next steps are, and what changes you need to make.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -239,6 +378,8 @@ Keep it simple and focused on what will help me prepare.</div>
               <li>List of current medications and supplements</li>
               <li>Notes on what you've already tried</li>
               <li>Your goals for the visit</li>
+              <li>Photos of visible symptoms (rashes, swelling)</li>
+              <li>Records from other providers if relevant</li>
             </ul>
           </div>
           <div class="checklist-box">
@@ -249,8 +390,30 @@ Keep it simple and focused on what will help me prepare.</div>
               <li>Treatment recommendations - let your doctor decide</li>
               <li>Drug interaction warnings - pharmacist should verify</li>
               <li>Claims that contradict previous medical advice</li>
+              <li>Dosage information - always verify with provider</li>
             </ul>
           </div>
+        </div>
+
+        <h3>Creating a One-Page Summary</h3>
+        <p>
+          For complex situations or new doctors, ask AI to help you create a one-page
+          health summary:
+        </p>
+
+        <div class="prompt-box">
+          <h4>Prompt to try:</h4>
+          <div class="prompt-text">Help me create a one-page health summary for a new doctor. Include:
+
+- My basic info: [age, sex]
+- Current conditions: [list your diagnoses]
+- Current medications: [list your medications with doses]
+- Allergies: [list allergies]
+- Major surgeries/hospitalizations: [list if any]
+- Family history highlights: [relevant family history]
+- Current concern: [why you're seeing this doctor]
+
+Format this clearly so a doctor can scan it quickly.</div>
         </div>
 
         <div class="callout callout-warning">
@@ -275,6 +438,20 @@ Keep it simple and focused on what will help me prepare.</div>
           <li>Take notes, or ask if you can record the conversation</li>
           <li>Ask for clarification: "Can you explain that in simpler terms?"</li>
           <li>Before you leave, confirm: "So the next steps are..." to make sure you understand</li>
+          <li>Ask: "What should I call you about vs. what can wait until my follow-up?"</li>
+          <li>If you didn't get to all your questions, ask how to follow up</li>
+        </ul>
+
+        <h3>Recording Your Appointment</h3>
+        <p>
+          Many patients find it helpful to record appointments (with permission) so they
+          can review the information later. If you do:
+        </p>
+        <ul>
+          <li>Always ask your doctor first</li>
+          <li>Use your phone's voice recorder app</li>
+          <li>After the appointment, AI can help you summarize the recording</li>
+          <li>Focus on understanding, not having a "record" of what was said</li>
         </ul>
 
         <h3>After Your Appointment</h3>
@@ -292,6 +469,25 @@ Can you help me:
 1. Understand any medical terms they used
 2. Organize the next steps I need to take
 3. Identify anything I should ask about if I'm unclear</div>
+        </div>
+
+        <h3>Creating an Action List</h3>
+        <p>
+          After your appointment, use AI to turn what you learned into actionable steps:
+        </p>
+
+        <div class="prompt-box">
+          <h4>Prompt to try:</h4>
+          <div class="prompt-text">Based on my doctor visit, here's what I need to do:
+[List what the doctor recommended]
+
+Help me create a clear action list with:
+1. Things to do immediately
+2. Things to do this week
+3. Things to remember for the long term
+4. Warning signs to watch for
+
+Include any reminders about medications, follow-up appointments, or lifestyle changes.</div>
         </div>
 
         <div class="callout-try">
@@ -317,6 +513,41 @@ Can you help me:
             <p>
               This helps you communicate effectively without writing an essay or forgetting
               important details. Keep messages focused - your doctor reads many messages a day.
+            </p>
+            <p>
+              Tips for portal messages:
+            </p>
+            <ul>
+              <li>Be specific about what you're asking</li>
+              <li>Include relevant context (when symptoms started, what you've tried)</li>
+              <li>Keep it concise - aim for 1-2 short paragraphs</li>
+              <li>Ask one or two questions, not many</li>
+              <li>Indicate urgency if appropriate</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="learn-more">
+          <summary>Learn More: Following up effectively</summary>
+          <div class="learn-more-content">
+            <p>
+              Good follow-up is an important part of your care. AI can help you:
+            </p>
+            <p>
+              <strong>Track your progress:</strong> If you were given a treatment plan, document
+              how it's going so you can report back.
+            </p>
+            <p>
+              <strong>Notice changes:</strong> Keep track of any new symptoms or changes that
+              develop after your appointment.
+            </p>
+            <p>
+              <strong>Prepare for follow-ups:</strong> Before your next appointment, review what
+              was discussed last time and prepare to update your doctor.
+            </p>
+            <p>
+              <strong>Know when to reach out:</strong> If you experience warning signs your doctor
+              mentioned, or if something seems significantly wrong, don't wait for your follow-up.
             </p>
           </div>
         </details>
@@ -351,6 +582,32 @@ Help me prepare:
 2. Questions to ensure thorough evaluation
 3. Phrases to advocate for them respectfully but firmly</div>
         </div>
+
+        <h3>Navigating Complex or Serious Diagnoses</h3>
+        <div class="prompt-box">
+          <h4>Prompt to try:</h4>
+          <div class="prompt-text">I've been diagnosed with [serious condition] and have an appointment to discuss treatment options.
+
+Help me prepare:
+1. Questions about the diagnosis and what it means
+2. Questions about treatment options and their pros/cons
+3. Questions about prognosis and what to expect
+4. Questions about support resources
+
+I want to be informed and prepared without being overwhelmed.</div>
+        </div>
+
+        <h3>Telemedicine Appointments</h3>
+        <p>
+          Video visits require some additional preparation:
+        </p>
+        <ul>
+          <li>Test your technology beforehand</li>
+          <li>Find a quiet, well-lit space</li>
+          <li>Have your vitals ready if you can measure them (blood pressure, temperature, weight)</li>
+          <li>Have your medication bottles nearby so you can show them if needed</li>
+          <li>Prepare to describe symptoms you can't show on camera</li>
+        </ul>
       </section>
 
       <div class="takeaways">
@@ -358,10 +615,13 @@ Help me prepare:
         <ul>
           <li>Use AI to organize your symptoms into a clear, concise summary before appointments</li>
           <li>Prepare a prioritized list of questions - you may only have time for a few</li>
+          <li>Use the OLDCARTS framework to describe symptoms the way doctors think</li>
           <li>Research your condition basics so you can have an informed conversation</li>
           <li>Bring AI-organized materials, but verify AI-generated claims before presenting them as fact</li>
+          <li>Create a one-page health summary for new doctors or complex situations</li>
           <li>After appointments, use AI to help understand and organize what you learned</li>
           <li>Lead with your main concern - don't save the most important thing for last</li>
+          <li>Use your patient portal for follow-up questions, with AI helping you write clear messages</li>
         </ul>
       </div>
 

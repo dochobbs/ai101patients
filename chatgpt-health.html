@@ -34,6 +34,9 @@
     .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
     .data-card { background: #f8fafc; border-radius: 8px; padding: 1rem; text-align: center; }
     .data-card strong { display: block; font-size: 1.5rem; color: #3b82f6; margin-bottom: 0.25rem; }
+    .citation { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+    .citation a { color: #2563eb; text-decoration: none; }
+    .citation a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -66,7 +69,7 @@
         <div class="unit-meta">
           <span class="unit-meta-item">
             <i data-lucide="clock"></i>
-            15 min read
+            20 min read
           </span>
         </div>
       </header>
@@ -87,6 +90,13 @@
           over the past year?"
         </p>
 
+        <p>
+          The feature represents a significant shift in how patients can interact with their
+          health data. Previously, you might have downloaded your records and manually asked
+          AI about specific values. Now, the AI can access and analyze your comprehensive
+          health picture—if you choose to grant it access.
+        </p>
+
         <div class="callout-news">
           <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
           <p style="margin-bottom: 0;">
@@ -95,6 +105,7 @@
             than 320 health plans. OpenAI states that health data is not used to train AI models.
           </p>
         </div>
+        <p class="citation">Source: <a href="https://openai.com/index/chatgpt-health/" target="_blank">OpenAI ChatGPT Health announcement, January 2026</a></p>
       </section>
 
       <div class="section-divider"></div>
@@ -103,9 +114,10 @@
         <h2>How It Works: The b.well Connection</h2>
 
         <p>
-          ChatGPT Health connects to your medical records through a company called <strong>b.well</strong>.
+          ChatGPT Health connects to your medical records through a company called <strong>b.well Connected Health</strong>.
           This is a health data platform that already works with thousands of healthcare systems.
-          When you connect, b.well pulls your records and makes them available to ChatGPT.
+          When you connect, b.well pulls your records and makes them available to ChatGPT through
+          FHIR-based APIs—the modern standard for healthcare data exchange.
         </p>
 
         <div class="data-grid">
@@ -122,6 +134,23 @@
             <span>Pharmacies</span>
           </div>
         </div>
+        <p class="citation">Source: <a href="https://www.icanbwell.com/" target="_blank">b.well Connected Health</a> - provider and health plan network statistics as of January 2026</p>
+
+        <h3>Understanding FHIR and Why It Matters</h3>
+        <p>
+          FHIR (Fast Healthcare Interoperability Resources) is the modern technical standard
+          that allows different healthcare systems to share data. Before FHIR, getting your
+          records from different doctors was often difficult because each system stored
+          data differently.
+        </p>
+
+        <p>
+          b.well uses FHIR-based APIs to collect your records from various healthcare
+          organizations in a standardized format. This is the same technology that allows
+          Apple Health to pull in your medical records and that powers many patient portal
+          integrations. The standardization means ChatGPT can understand and analyze your
+          records regardless of which hospital or clinic they came from.
+        </p>
 
         <h3>What Records Can ChatGPT Access?</h3>
         <p>Once connected, ChatGPT can see:</p>
@@ -132,6 +161,8 @@
           <li><strong>Procedures</strong> - Surgeries, treatments you've had</li>
           <li><strong>Immunizations</strong> - Vaccine records</li>
           <li><strong>Allergies</strong> - Documented allergies and reactions</li>
+          <li><strong>Vital signs</strong> - Blood pressure, weight, height over time</li>
+          <li><strong>Clinical notes</strong> - In some cases, doctors' notes from visits</li>
         </ul>
 
         <div class="callout-pearl">
@@ -142,6 +173,34 @@
             your doctor hasn't entered into the system won't be visible.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: What is b.well Connected Health?</summary>
+          <div class="learn-more-content">
+            <p>
+              b.well Connected Health is a health technology company that specializes in
+              aggregating health data from multiple sources into a single platform. They've
+              built connections to thousands of healthcare organizations, pharmacies, and
+              health plans.
+            </p>
+            <p>
+              The company was founded in 2015 and has focused on giving patients access to
+              their own health data. Their platform allows consumers to pull their records
+              from various healthcare providers and view them in one place.
+            </p>
+            <p>
+              For the ChatGPT Health integration, b.well acts as the intermediary that
+              handles the technical complexity of connecting to different healthcare systems.
+              When you authorize b.well to access your records, they use industry-standard
+              protocols (FHIR APIs) to retrieve your data and make it available to ChatGPT.
+            </p>
+            <p>
+              b.well is HIPAA-compliant, meaning they follow strict federal regulations
+              about protecting health information. However, when you authorize sharing
+              with ChatGPT, you're making a personal choice about your data.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -155,7 +214,8 @@
           <h4><span class="step-number">1</span> Open ChatGPT Settings</h4>
           <p style="margin-bottom: 0;">
             In the ChatGPT app or website, go to <strong>Settings > Personalization > Health</strong>.
-            You'll see the option to "Connect health data."
+            You'll see the option to "Connect health data." This feature is available to ChatGPT
+            Plus, Team, and Enterprise subscribers.
           </p>
         </div>
 
@@ -163,7 +223,8 @@
           <h4><span class="step-number">2</span> Sign In to b.well</h4>
           <p style="margin-bottom: 0;">
             You'll be redirected to b.well to create an account or sign in. This is where
-            you'll verify your identity and authorize access to your records.
+            you'll verify your identity and authorize access to your records. You'll need
+            to provide personal information to confirm you are who you say you are.
           </p>
         </div>
 
@@ -171,7 +232,8 @@
           <h4><span class="step-number">3</span> Find Your Healthcare Providers</h4>
           <p style="margin-bottom: 0;">
             Search for your doctors, hospitals, and clinics. You can also connect through your
-            health insurance plan. Select each provider you want to connect.
+            health insurance plan. Select each provider you want to connect. Not all providers
+            may be available—the network is large but not universal.
           </p>
         </div>
 
@@ -179,7 +241,8 @@
           <h4><span class="step-number">4</span> Authorize Access</h4>
           <p style="margin-bottom: 0;">
             For each provider, you'll need to authorize b.well to access your records. This
-            usually involves logging into your patient portal or verifying your identity.
+            usually involves logging into your patient portal or verifying your identity
+            through other means. Some providers may require multi-factor authentication.
           </p>
         </div>
 
@@ -187,7 +250,17 @@
           <h4><span class="step-number">5</span> Wait for Sync</h4>
           <p style="margin-bottom: 0;">
             Records can take anywhere from a few minutes to 24 hours to fully sync, depending
-            on your providers. You'll get a notification when your data is ready.
+            on your providers. You'll get a notification when your data is ready. Some providers
+            update more frequently than others.
+          </p>
+        </div>
+
+        <div class="step-box">
+          <h4><span class="step-number">6</span> Review What's Connected</h4>
+          <p style="margin-bottom: 0;">
+            Once connected, review what records ChatGPT can see. Check that the information
+            looks complete and accurate. If something seems missing, you may need to connect
+            additional providers or check if those records are available digitally.
           </p>
         </div>
 
@@ -195,9 +268,39 @@
           <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
           <p style="margin-bottom: 0;">
             Before connecting, make a list of all your healthcare providers from the past few years.
-            Having this ready will make the setup process much smoother.
+            Having this ready will make the setup process much smoother. Include hospitals,
+            specialists, your primary care doctor, urgent care visits, and any labs where
+            you've had blood work done.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Troubleshooting connection issues</summary>
+          <div class="learn-more-content">
+            <p>
+              If you're having trouble connecting your records, here are common issues and solutions:
+            </p>
+            <p>
+              <strong>Provider not found:</strong> Not all healthcare providers are in the b.well
+              network yet. If your provider isn't listed, you may need to wait for them to join
+              or manually upload records.
+            </p>
+            <p>
+              <strong>Authorization fails:</strong> Make sure you're using the correct login
+              credentials for your patient portal. If you've never set up a patient portal
+              account, you may need to do that first with your provider.
+            </p>
+            <p>
+              <strong>Incomplete records:</strong> Some providers share more data than others.
+              Recent visits may not appear immediately. If records seem incomplete, check
+              back in a few days.
+            </p>
+            <p>
+              <strong>Old records missing:</strong> Digital record-keeping has improved over time.
+              Records from many years ago may not be available electronically.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -216,7 +319,9 @@
           <li><strong>Encrypted:</strong> Data is encrypted in transit and at rest</li>
           <li><strong>You control access:</strong> You can disconnect at any time</li>
           <li><strong>HIPAA considerations:</strong> b.well is HIPAA-compliant; ChatGPT itself is not a "covered entity"</li>
+          <li><strong>Data retention:</strong> Check the privacy policy for how long data is retained</li>
         </ul>
+        <p class="citation">Source: <a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI Privacy Policy</a> and ChatGPT Health documentation</p>
 
         <div class="callout callout-warning">
           <div class="callout-title">Warning</div>
@@ -233,7 +338,22 @@
           <li><strong>Delete conversations:</strong> Remove specific chats that contain health info</li>
           <li><strong>Chat history off:</strong> You can disable chat history entirely (conversations won't be saved)</li>
           <li><strong>Temporary chat:</strong> Use temporary chat mode for sensitive questions</li>
+          <li><strong>Data export:</strong> You can request a copy of your data from OpenAI</li>
+          <li><strong>Data deletion:</strong> You can request deletion of your account and associated data</li>
         </ul>
+
+        <h3>Understanding the Privacy Tradeoffs</h3>
+        <p>
+          There's an inherent tension between AI usefulness and privacy. For ChatGPT to give you
+          personalized health insights, it needs access to your personal health data. You need to
+          decide if that tradeoff makes sense for you.
+        </p>
+
+        <p>
+          Consider: Are you comfortable with a technology company having access to your complete
+          medical history? What's the value you're getting in return? Are there alternatives
+          (like manually sharing specific information) that would work for your needs?
+        </p>
 
         <details class="learn-more">
           <summary>Learn More: Understanding HIPAA and AI</summary>
@@ -252,6 +372,44 @@
             <p>
               This isn't necessarily bad, but it means you should be informed about what you're
               agreeing to. Read the privacy policies and understand your rights.
+            </p>
+            <p>
+              Key things to understand:
+            </p>
+            <ul>
+              <li>HIPAA applies to "covered entities" like doctors and insurers, not all tech companies</li>
+              <li>When you authorize sharing, you're exercising your patient rights to your own data</li>
+              <li>Consumer apps are governed by their privacy policies and terms of service</li>
+              <li>The FTC can take action against companies that violate their privacy promises</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="learn-more">
+          <summary>Learn More: Questions to ask yourself before connecting</summary>
+          <div class="learn-more-content">
+            <p>
+              Before connecting your health records, consider these questions:
+            </p>
+            <p>
+              <strong>What do I hope to gain?</strong> Understanding your goals helps you decide
+              if the benefits outweigh the privacy considerations.
+            </p>
+            <p>
+              <strong>Am I comfortable with this company having my health data?</strong> Research
+              the company's track record and privacy practices.
+            </p>
+            <p>
+              <strong>What's the worst that could happen?</strong> Consider potential risks like
+              data breaches, policy changes, or unintended uses of your data.
+            </p>
+            <p>
+              <strong>Are there alternatives?</strong> Could you get similar benefits by manually
+              sharing specific records or using privacy-preserving approaches?
+            </p>
+            <p>
+              <strong>Can I easily disconnect?</strong> Make sure you understand how to remove
+              your data if you change your mind.
             </p>
           </div>
         </details>
@@ -272,8 +430,24 @@
           <li><strong>Apple Health:</strong> Steps, heart rate, sleep, workouts, and more from your iPhone or Apple Watch</li>
           <li><strong>Peloton:</strong> Workout history, heart rate during exercise, activity trends</li>
           <li><strong>MyFitnessPal:</strong> Nutrition tracking, calorie intake, meal logging</li>
+          <li><strong>Oura Ring:</strong> Sleep data, readiness scores, activity tracking</li>
+          <li><strong>Whoop:</strong> Strain, recovery, and sleep metrics</li>
           <li><strong>Other fitness apps:</strong> The list of supported apps continues to grow</li>
         </ul>
+
+        <h3>Combining Medical and Wellness Data</h3>
+        <p>
+          One powerful use case is combining your official medical records with wellness
+          data. For example, you could ask: "Based on my recent blood pressure readings
+          at the doctor and my activity and sleep data from my watch, what patterns
+          do you notice?"
+        </p>
+
+        <p>
+          This kind of holistic view wasn't easily possible before. Your doctor sees your
+          clinical visits; your fitness app sees your daily activity. Now AI can help
+          connect these data sources and identify patterns across them.
+        </p>
 
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
@@ -290,7 +464,8 @@
           <p style="margin-bottom: 0;">
             If you use Apple Health, try connecting it to ChatGPT and asking: "Looking at my
             sleep and activity data from the past month, do you notice any patterns?" This
-            can be a good way to spot trends you might have missed.
+            can be a good way to spot trends you might have missed. Then bring interesting
+            findings to your doctor.
           </p>
         </div>
       </section>
@@ -307,6 +482,8 @@
           <li>"Explain my most recent blood test results in simple terms."</li>
           <li>"What does my A1C level mean, and is mine in a healthy range?"</li>
           <li>"Summarize my health visits from the past year."</li>
+          <li>"What conditions do I have documented in my records?"</li>
+          <li>"Are there any lab values that have been flagged as abnormal?"</li>
         </ul>
 
         <h3>Tracking Changes</h3>
@@ -314,6 +491,8 @@
           <li>"How has my cholesterol changed over the past three years?"</li>
           <li>"Show me the trend in my blood pressure readings."</li>
           <li>"Are there any lab values that have been consistently outside normal range?"</li>
+          <li>"Has my weight trended up or down over the past year?"</li>
+          <li>"Compare my kidney function tests from this year to last year."</li>
         </ul>
 
         <h3>Preparing for Appointments</h3>
@@ -321,6 +500,8 @@
           <li>"Based on my records, what questions should I ask my doctor at my next visit?"</li>
           <li>"Create a summary of my current medications and conditions for a new doctor."</li>
           <li>"What preventive screenings might I be due for based on my age and history?"</li>
+          <li>"Help me prepare a one-page health summary for my upcoming specialist visit."</li>
+          <li>"Based on my health history, what lifestyle factors should I discuss with my doctor?"</li>
         </ul>
 
         <h3>Understanding Medications</h3>
@@ -328,6 +509,15 @@
           <li>"Are any of my current medications known to interact with each other?"</li>
           <li>"Explain what each of my medications is for."</li>
           <li>"What are the common side effects of my medications?"</li>
+          <li>"Based on my records, are there any medications I might be taking duplicates of?"</li>
+          <li>"I'm experiencing [symptom]. Could any of my medications be causing this?"</li>
+        </ul>
+
+        <h3>Connecting Patterns</h3>
+        <ul>
+          <li>"Looking at my records and my fitness data, do you see any correlations?"</li>
+          <li>"My energy has been low lately. Based on my recent labs and sleep data, what might explain this?"</li>
+          <li>"Are there any patterns in when my symptoms seem to flare up based on my health data?"</li>
         </ul>
 
         <div class="callout callout-warning">
@@ -338,6 +528,42 @@
             AI can help you identify questions to ask, not give you medical orders.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Sample conversation with ChatGPT Health</summary>
+          <div class="learn-more-content">
+            <p>
+              Here's an example of how a productive conversation with ChatGPT Health might go:
+            </p>
+            <p>
+              <strong>You:</strong> "Based on my records, help me understand my recent lab results.
+              Focus on anything that's outside normal range or has changed significantly."
+            </p>
+            <p>
+              <strong>ChatGPT:</strong> [Analyzes your connected lab results and provides a summary
+              of notable values, explaining what they mean in simple terms]
+            </p>
+            <p>
+              <strong>You:</strong> "My triglycerides seem high. What does that mean and what
+              questions should I ask my doctor about it?"
+            </p>
+            <p>
+              <strong>ChatGPT:</strong> [Explains triglycerides, what elevated levels might indicate,
+              and suggests specific questions for your doctor]
+            </p>
+            <p>
+              <strong>You:</strong> "Looking at my records over time, has this been a consistent issue?"
+            </p>
+            <p>
+              <strong>ChatGPT:</strong> [Shows the trend in your triglyceride levels over available
+              records and notes any patterns]
+            </p>
+            <p>
+              Notice how this conversation uses AI to understand and prepare, not to diagnose
+              or decide on treatment.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -355,7 +581,26 @@
           <li><strong>Cannot see everything:</strong> Records not in the b.well network won't appear</li>
           <li><strong>Cannot know context:</strong> It doesn't know what you were feeling when tests were done or the full picture your doctor sees</li>
           <li><strong>Can make mistakes:</strong> It might misinterpret data or give incorrect information</li>
+          <li><strong>Cannot replace clinical judgment:</strong> Doctors consider many factors AI doesn't have access to</li>
+          <li><strong>Cannot provide emergency care:</strong> In a medical emergency, call 911, not AI</li>
         </ul>
+
+        <h3>Understanding AI Limitations with Health Data</h3>
+        <p>
+          Even when AI has access to your comprehensive health records, it's working with
+          incomplete information. Your health is more than data points in a database.
+        </p>
+
+        <p>
+          Your doctor considers things like: How do you look today? What's your affect?
+          What did you tell them about your stress levels? What do they know about your
+          family situation? What's their clinical intuition based on years of experience?
+        </p>
+
+        <p>
+          AI can analyze the data in your records, but it can't replace the holistic
+          assessment that comes from a real clinical relationship.
+        </p>
 
         <details class="learn-more">
           <summary>Learn More: Why AI can't replace your doctor's interpretation</summary>
@@ -374,6 +619,41 @@
               understand and prepare, not as a replacement for the clinical relationship
               with your healthcare team.
             </p>
+            <p>
+              Consider: A slightly elevated lab value might be concerning in one patient and
+              completely expected in another based on their history. AI sees the number;
+              your doctor sees the context.
+            </p>
+          </div>
+        </details>
+
+        <details class="learn-more">
+          <summary>Learn More: When AI interpretation might be misleading</summary>
+          <div class="learn-more-content">
+            <p>
+              There are specific situations where AI interpretation of your health data
+              could lead you astray:
+            </p>
+            <p>
+              <strong>Reference ranges vary:</strong> What's "normal" can differ by age, sex,
+              and other factors. AI might flag something as abnormal that's actually fine for you.
+            </p>
+            <p>
+              <strong>Context matters:</strong> A high heart rate during exercise is normal;
+              the same heart rate at rest might be concerning. AI may not always have this context.
+            </p>
+            <p>
+              <strong>Correlations aren't causation:</strong> AI might notice two things happening
+              together without understanding which caused which, or if they're even related.
+            </p>
+            <p>
+              <strong>Rare conditions:</strong> AI has less training data on uncommon conditions
+              and may be less accurate when dealing with them.
+            </p>
+            <p>
+              <strong>Individual variation:</strong> Your normal might be different from
+              population averages. A value that's fine for you might look concerning to AI.
+            </p>
           </div>
         </details>
       </section>
@@ -381,12 +661,14 @@
       <div class="takeaways">
         <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
         <ul>
-          <li>ChatGPT Health connects to your medical records through b.well, covering 2.2M+ providers</li>
+          <li>ChatGPT Health connects to your medical records through b.well, covering 2.2M+ healthcare providers and 320+ health plans</li>
+          <li>The connection uses FHIR-based APIs, the modern healthcare data exchange standard</li>
           <li>You control what's connected and can disconnect anytime</li>
           <li>Health data is not used to train AI models, according to OpenAI</li>
           <li>You can also connect Apple Health, Peloton, MyFitnessPal, and other wellness apps</li>
           <li>Use it to understand your data and prepare questions, not to diagnose or treat yourself</li>
           <li>Be thoughtful about privacy: information you discuss stays in your chat history</li>
+          <li>Consider the privacy tradeoffs before connecting—decide if it's right for you</li>
         </ul>
       </div>
 

@@ -33,6 +33,9 @@
     .tool-meta { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0; font-size: 0.9rem; }
     .tool-meta span { background: #f1f5f9; padding: 0.25rem 0.75rem; border-radius: 20px; color: #64748b; }
     .tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .citation { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+    .citation a { color: #2563eb; text-decoration: none; }
+    .citation a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -65,7 +68,7 @@
         <div class="unit-meta">
           <span class="unit-meta-item">
             <i data-lucide="clock"></i>
-            15 min read
+            18 min read
           </span>
         </div>
       </header>
@@ -79,6 +82,13 @@
           questions—and what each is good (and not good) at.
         </p>
 
+        <p>
+          The AI landscape is evolving rapidly. New tools launch every month, existing tools
+          add new features, and the capabilities keep improving. Rather than trying to track
+          every new release, this module will help you understand the major categories of
+          tools and how to evaluate any AI tool for health use.
+        </p>
+
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
           <p style="margin-bottom: 0;">
@@ -86,6 +96,31 @@
             Knowing what each does well helps you pick the right one for your question.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: How AI tools differ from each other</summary>
+          <div class="learn-more-content">
+            <p>
+              Even though many AI chatbots seem similar on the surface, they differ in important ways:
+            </p>
+            <p>
+              <strong>Training data:</strong> Different companies train their AI on different data sets.
+              This affects what the AI knows and how it responds.
+            </p>
+            <p>
+              <strong>Safety guardrails:</strong> Companies implement different levels of caution around
+              health topics. Some AI tools are more willing to discuss symptoms; others are more cautious.
+            </p>
+            <p>
+              <strong>Web access:</strong> Some tools can search the internet for current information;
+              others only know what was in their training data.
+            </p>
+            <p>
+              <strong>Integrations:</strong> Tools like ChatGPT Health can connect to your actual
+              medical records, while others can only work with information you type in.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -101,9 +136,10 @@
             <span>Web, iOS, Android</span>
             <span>Most popular</span>
           </div>
-          <p>The most widely used AI chatbot. Now includes <strong>ChatGPT Health</strong>, which can connect to your medical records. Good for general health questions, explaining concepts, and preparing for appointments.</p>
+          <p>The most widely used AI chatbot with over 200 million weekly active users. Now includes <strong>ChatGPT Health</strong>, which can connect to your medical records. Good for general health questions, explaining concepts, and preparing for appointments.</p>
           <p><strong>Best for:</strong> General health questions, understanding medical terms, conversation-style learning</p>
           <p><strong>Limitation:</strong> Can hallucinate, especially with specific medical facts</p>
+          <p class="citation">Source: <a href="https://openai.com/index/chatgpt-health/" target="_blank">OpenAI ChatGPT Health announcement, January 2026</a></p>
         </div>
 
         <div class="tool-card">
@@ -112,8 +148,8 @@
             <span>Free + Paid tiers</span>
             <span>Web, iOS, Android</span>
           </div>
-          <p>Known for thoughtful, nuanced responses. Often better at acknowledging uncertainty and limitations. Good for longer conversations where you want careful reasoning.</p>
-          <p><strong>Best for:</strong> Complex questions requiring nuance, understanding different perspectives</p>
+          <p>Known for thoughtful, nuanced responses and strong reasoning capabilities. Often better at acknowledging uncertainty and limitations. Good for longer conversations where you want careful reasoning about complex health topics.</p>
+          <p><strong>Best for:</strong> Complex questions requiring nuance, understanding different perspectives, detailed explanations</p>
           <p><strong>Limitation:</strong> No health records integration (as of early 2026)</p>
         </div>
 
@@ -123,9 +159,9 @@
             <span>Free + Paid tiers</span>
             <span>Web, iOS, Android</span>
           </div>
-          <p>Google's AI, integrated with Google services. Can search the web for current information. Good for questions where recent information matters.</p>
+          <p>Google's AI, integrated with Google services. Can search the web for current information and connects with your Google account. Good for questions where recent information matters or when you want to quickly verify facts.</p>
           <p><strong>Best for:</strong> Questions needing current information, integration with Google ecosystem</p>
-          <p><strong>Limitation:</strong> Sometimes pulls unreliable web sources</p>
+          <p><strong>Limitation:</strong> Sometimes pulls unreliable web sources; requires careful source verification</p>
         </div>
 
         <div class="tool-card">
@@ -134,10 +170,39 @@
             <span>Free + Paid tiers</span>
             <span>Web, Windows, Edge</span>
           </div>
-          <p>Microsoft's AI assistant, integrated with Bing search and Microsoft products. Good for users already in the Microsoft ecosystem.</p>
-          <p><strong>Best for:</strong> Windows users, integration with Microsoft 365</p>
+          <p>Microsoft's AI assistant, integrated with Bing search and Microsoft products. Good for users already in the Microsoft ecosystem. Also available in Bing search results.</p>
+          <p><strong>Best for:</strong> Windows users, integration with Microsoft 365, quick web-verified answers</p>
           <p><strong>Limitation:</strong> Less commonly used for health questions specifically</p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Free vs. paid tiers - is it worth upgrading?</summary>
+          <div class="learn-more-content">
+            <p>
+              Most AI chatbots offer both free and paid options. Here's what you typically get with paid subscriptions:
+            </p>
+            <p>
+              <strong>Better models:</strong> Paid tiers often give access to more advanced AI models
+              that are more accurate and capable of complex reasoning.
+            </p>
+            <p>
+              <strong>Faster responses:</strong> During busy times, free users may experience delays
+              or be temporarily limited. Paid users get priority.
+            </p>
+            <p>
+              <strong>More features:</strong> Advanced features like image analysis, longer conversations,
+              and integrations (like ChatGPT Health) may require paid subscriptions.
+            </p>
+            <p>
+              <strong>Higher limits:</strong> Free tiers often have limits on how many questions
+              you can ask per day. Paid removes or raises these limits.
+            </p>
+            <p>
+              For occasional health questions, free tiers are usually sufficient. If you're managing
+              a chronic condition or using AI regularly for health research, paid tiers may be worth it.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -152,9 +217,9 @@
             <span>Free + Paid tiers</span>
             <span>Web, iOS, Android</span>
           </div>
-          <p>AI-powered search that provides answers with cited sources. You can see where the information came from and verify it yourself. Increasingly popular for health research.</p>
-          <p><strong>Best for:</strong> Research questions where you want to verify sources</p>
-          <p><strong>Limitation:</strong> Quality depends on source websites it pulls from</p>
+          <p>AI-powered search that provides answers with cited sources. You can see where the information came from and verify it yourself. Increasingly popular for health research because you can check the sources directly.</p>
+          <p><strong>Best for:</strong> Research questions where you want to verify sources, comparing information from multiple websites</p>
+          <p><strong>Limitation:</strong> Quality depends on source websites it pulls from; may include unreliable sources</p>
         </div>
 
         <div class="tool-card">
@@ -163,9 +228,9 @@
             <span>Free</span>
             <span>Google Search</span>
           </div>
-          <p>AI-generated summaries that appear at the top of Google search results. You're probably already seeing these. They synthesize information from multiple web sources.</p>
+          <p>AI-generated summaries that appear at the top of Google search results. You're probably already seeing these. They synthesize information from multiple web sources and provide links to the original pages.</p>
           <p><strong>Best for:</strong> Quick answers while doing regular web searches</p>
-          <p><strong>Limitation:</strong> Sometimes summarizes unreliable sources; has had notable errors</p>
+          <p><strong>Limitation:</strong> Sometimes summarizes unreliable sources; has had notable errors in early rollouts</p>
         </div>
 
         <div class="callout-news">
@@ -173,7 +238,29 @@
           <p style="margin-bottom: 0;">
             <strong>2025-2026:</strong> AI search has become mainstream. Most people now encounter
             AI-generated health information whether they're specifically seeking it or not,
-            just by using regular search engines.
+            just by using regular search engines. This makes understanding how to evaluate
+            AI-generated content more important than ever.
+          </p>
+        </div>
+
+        <h3>Using AI Search for Health Research</h3>
+        <p>
+          When using AI search tools like Perplexity for health questions, follow these practices:
+        </p>
+        <ul>
+          <li><strong>Check the sources:</strong> Click through to verify the information comes from reputable medical sites</li>
+          <li><strong>Look for medical sources:</strong> Prefer answers that cite Mayo Clinic, Cleveland Clinic, NIH, CDC, or medical journals</li>
+          <li><strong>Be wary of single sources:</strong> The best answers synthesize information from multiple reliable sources</li>
+          <li><strong>Note the date:</strong> Medical information can become outdated; check when sources were published</li>
+        </ul>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            Try the same health question in both a regular chatbot (like ChatGPT) and an AI search tool
+            (like Perplexity). Notice how Perplexity shows you exactly where the information came from,
+            while ChatGPT doesn't always cite sources. Consider which approach works better for different
+            types of questions.
           </p>
         </div>
       </section>
@@ -190,9 +277,9 @@
             <span>Free</span>
             <span>Web</span>
           </div>
-          <p>Upload documents (like your discharge summary or a research article) and ask questions about them. The AI only answers based on what you uploaded—reducing hallucination risk.</p>
-          <p><strong>Best for:</strong> Understanding medical documents you've received, summarizing long articles</p>
-          <p><strong>Limitation:</strong> Only knows what you upload to it</p>
+          <p>Upload documents (like your discharge summary or a research article) and ask questions about them. The AI only answers based on what you uploaded—reducing hallucination risk significantly.</p>
+          <p><strong>Best for:</strong> Understanding medical documents you've received, summarizing long articles, getting explanations of complex reports</p>
+          <p><strong>Limitation:</strong> Only knows what you upload to it; cannot draw on broader medical knowledge</p>
         </div>
 
         <div class="tool-card">
@@ -203,7 +290,7 @@
           </div>
           <p>AI video generation. Less directly relevant to health questions, but increasingly used for creating educational content and explanations.</p>
           <p><strong>Best for:</strong> Visual learners who want to see concepts explained</p>
-          <p><strong>Limitation:</strong> Generated content may not be medically accurate</p>
+          <p><strong>Limitation:</strong> Generated content may not be medically accurate; should not be used for medical instruction</p>
         </div>
 
         <div class="tool-card">
@@ -212,9 +299,9 @@
             <span>Free + Paid</span>
             <span>Web</span>
           </div>
-          <p>Google's image generation tool. Can create visual explanations of concepts. Use with caution for medical imagery—AI-generated medical images can be misleading.</p>
-          <p><strong>Best for:</strong> Creating simple visual aids or diagrams</p>
-          <p><strong>Limitation:</strong> Don't use for actual medical imagery or diagnosis</p>
+          <p>Google's image generation tool. Can create visual explanations of concepts. Use with caution for medical imagery—AI-generated medical images can be misleading or anatomically incorrect.</p>
+          <p><strong>Best for:</strong> Creating simple visual aids or diagrams for personal understanding</p>
+          <p><strong>Limitation:</strong> Don't use for actual medical imagery or diagnosis; may generate inaccurate anatomical representations</p>
         </div>
 
         <div class="callout-try">
@@ -222,9 +309,40 @@
           <p style="margin-bottom: 0;">
             If you have a medical document you're trying to understand (like discharge instructions),
             try uploading it to NotebookLM and asking: "What are the most important things I need
-            to do based on this document?"
+            to do based on this document?" Then ask: "Explain the medical terms in this document
+            in simple language."
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: How NotebookLM reduces AI errors</summary>
+          <div class="learn-more-content">
+            <p>
+              One of the biggest problems with AI is "hallucination" - making up information
+              that sounds plausible but isn't true. NotebookLM addresses this by limiting
+              the AI to only the documents you upload.
+            </p>
+            <p>
+              When you ask NotebookLM a question, it can only answer based on the text in
+              your uploaded documents. It will tell you if the answer isn't in the documents
+              rather than making something up.
+            </p>
+            <p>
+              This makes it especially useful for:
+            </p>
+            <ul>
+              <li>Understanding your medical records or test results</li>
+              <li>Summarizing long research articles about your condition</li>
+              <li>Finding specific information in discharge instructions</li>
+              <li>Comparing information across multiple documents</li>
+            </ul>
+            <p>
+              The tradeoff is that NotebookLM can't provide general medical context or
+              explain things not mentioned in your documents. For that, you'd use a
+              general chatbot alongside NotebookLM.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -239,9 +357,10 @@
             <span>Free</span>
             <span>iOS, Android</span>
           </div>
-          <p>AI-powered symptom checker that asks questions about your symptoms and suggests possible conditions. Developed with medical expertise.</p>
+          <p>AI-powered symptom checker that asks questions about your symptoms and suggests possible conditions. Developed with medical expertise and used by healthcare organizations worldwide.</p>
           <p><strong>Best for:</strong> Initial symptom assessment before deciding to call your doctor</p>
           <p><strong>Limitation:</strong> Cannot diagnose—only suggests possibilities to discuss with your doctor</p>
+          <p class="citation">Source: Ada Health has been rated highly for accuracy in peer-reviewed studies comparing symptom checker apps.</p>
         </div>
 
         <div class="tool-card">
@@ -250,9 +369,20 @@
             <span>Free + Paid</span>
             <span>iOS, Android</span>
           </div>
-          <p>AI symptom checker that can also connect you with real doctors for telehealth visits. The AI helps gather your information before a human consultation.</p>
+          <p>AI symptom checker that can also connect you with real doctors for telehealth visits. The AI helps gather your information before a human consultation, making appointments more efficient.</p>
           <p><strong>Best for:</strong> Getting from symptoms to doctor consultation efficiently</p>
           <p><strong>Limitation:</strong> Full features require payment; not a replacement for your regular doctor</p>
+        </div>
+
+        <div class="tool-card">
+          <h4><i data-lucide="pill"></i> Drugs.com Medication Guide</h4>
+          <div class="tool-meta">
+            <span>Free</span>
+            <span>Web, iOS, Android</span>
+          </div>
+          <p>While not purely AI, this tool uses intelligent features to help you look up medications, check for interactions, and understand side effects. The information is medically reviewed.</p>
+          <p><strong>Best for:</strong> Medication information, interaction checking, pill identification</p>
+          <p><strong>Limitation:</strong> Always verify with your pharmacist for your specific situation</p>
         </div>
 
         <details class="learn-more">
@@ -274,6 +404,75 @@
             </p>
           </div>
         </details>
+
+        <details class="learn-more">
+          <summary>Learn More: How symptom checker AI works</summary>
+          <div class="learn-more-content">
+            <p>
+              Symptom checker apps like Ada use a combination of AI and medical knowledge bases.
+              When you describe your symptoms, the AI:
+            </p>
+            <p>
+              <strong>Asks clarifying questions:</strong> Unlike general chatbots, symptom checkers
+              follow structured protocols to gather the specific information doctors would want to know.
+            </p>
+            <p>
+              <strong>Considers probability:</strong> They rank possible conditions by how likely
+              they are, not just whether they're possible. A headache is more likely to be tension
+              than a brain tumor.
+            </p>
+            <p>
+              <strong>Account for red flags:</strong> They're programmed to recognize warning signs
+              that need immediate medical attention and will tell you to seek emergency care.
+            </p>
+            <p>
+              However, even the best symptom checkers are only as good as the information you provide,
+              and they cannot examine you. They're best used as a first step to help you decide
+              if and how urgently you need to see a doctor.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Emerging Tools to Watch</h2>
+        <p>
+          The AI health landscape is evolving rapidly. Here are some emerging categories and tools
+          to be aware of:
+        </p>
+
+        <h3>Voice-Based AI Assistants</h3>
+        <p>
+          AI assistants like Amazon Alexa and Google Assistant are adding more health features.
+          You can ask basic health questions, set medication reminders, and in some cases,
+          get health information read aloud. These are convenient but generally less capable
+          than dedicated health AI tools.
+        </p>
+
+        <h3>AI in Patient Portals</h3>
+        <p>
+          Some healthcare systems are integrating AI into their patient portals. These AI
+          assistants can help you understand your test results, schedule appointments, and
+          prepare for visits—all within your healthcare provider's system.
+        </p>
+
+        <h3>Mental Health AI</h3>
+        <p>
+          Apps like Woebot and Wysa use AI for mental health support. They're not replacements
+          for therapy but can provide cognitive behavioral techniques, mood tracking, and
+          coping strategies between sessions or while waiting to see a therapist.
+        </p>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Warning</div>
+          <p style="margin-bottom: 0;">
+            Be cautious with AI tools that make bold health claims or promise to diagnose
+            conditions. Legitimate health AI tools are clear about their limitations and
+            always recommend consulting healthcare providers for diagnosis and treatment.
+          </p>
+        </div>
       </section>
 
       <div class="section-divider"></div>
@@ -295,19 +494,35 @@
             <tr><td style="padding: 1rem; border-bottom: 1px solid #e2e8f0;">Understand your records</td><td style="padding: 1rem; border-bottom: 1px solid #e2e8f0;">ChatGPT Health or NotebookLM</td></tr>
             <tr><td style="padding: 1rem; border-bottom: 1px solid #e2e8f0;">Prepare for an appointment</td><td style="padding: 1rem; border-bottom: 1px solid #e2e8f0;">ChatGPT or Claude</td></tr>
             <tr><td style="padding: 1rem; border-bottom: 1px solid #e2e8f0;">Understand a document</td><td style="padding: 1rem; border-bottom: 1px solid #e2e8f0;">NotebookLM</td></tr>
+            <tr><td style="padding: 1rem; border-bottom: 1px solid #e2e8f0;">Check medication interactions</td><td style="padding: 1rem; border-bottom: 1px solid #e2e8f0;">Drugs.com (then verify with pharmacist)</td></tr>
+            <tr><td style="padding: 1rem; border-bottom: 1px solid #e2e8f0;">Get mental health support</td><td style="padding: 1rem; border-bottom: 1px solid #e2e8f0;">Woebot or Wysa (as supplement, not replacement)</td></tr>
           </tbody>
         </table>
+
+        <h3>Questions to Ask When Evaluating Any AI Tool</h3>
+        <p>
+          When you encounter a new AI tool for health, ask yourself:
+        </p>
+        <ul>
+          <li><strong>Who made it?</strong> Is it from a reputable company? Do they have medical advisors?</li>
+          <li><strong>What are its limitations?</strong> Legitimate tools are clear about what they can't do.</li>
+          <li><strong>Where does the information come from?</strong> Can you verify the sources?</li>
+          <li><strong>How is my data protected?</strong> Read the privacy policy, especially for health data.</li>
+          <li><strong>Does it replace or complement healthcare?</strong> Be wary of tools claiming to replace doctors.</li>
+        </ul>
       </section>
 
       <div class="takeaways">
         <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
         <ul>
           <li>Different AI tools have different strengths—match the tool to your question</li>
-          <li>ChatGPT is most popular and now offers health records integration</li>
-          <li>Perplexity and similar tools let you verify sources</li>
-          <li>NotebookLM is great for understanding documents you upload</li>
-          <li>Health-specific apps like Ada are designed for symptom checking</li>
-          <li>No AI tool replaces your doctor—they're research assistants, not providers</li>
+          <li>ChatGPT is most popular and now offers health records integration through ChatGPT Health</li>
+          <li>Perplexity and similar tools let you verify sources, which is valuable for health research</li>
+          <li>NotebookLM is great for understanding documents you upload and reduces hallucination risk</li>
+          <li>Health-specific apps like Ada are designed for symptom checking with medical oversight</li>
+          <li>AI search is now built into regular search engines—you're likely already encountering it</li>
+          <li>No AI tool replaces your doctor—they're research assistants, not healthcare providers</li>
+          <li>When evaluating new tools, check who made them, their limitations, and privacy policies</li>
         </ul>
       </div>
 

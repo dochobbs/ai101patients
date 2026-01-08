@@ -36,6 +36,11 @@
     .stoplight-yellow { background: #fefce8; border-left: 4px solid #ca8a04; }
     .stoplight-green { background: #f0fdf4; border-left: 4px solid #16a34a; }
     .stoplight-item h4 { margin-top: 0; margin-bottom: 0.75rem; }
+    .citation { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+    .citation a { color: #2563eb; text-decoration: none; }
+    .citation a:hover { text-decoration: underline; }
+    .scenario-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+    .scenario-box h4 { margin-top: 0; color: #1e293b; }
   </style>
 </head>
 <body>
@@ -68,7 +73,7 @@
         <div class="unit-meta">
           <span class="unit-meta-item">
             <i data-lucide="clock"></i>
-            10 min read
+            15 min read
           </span>
         </div>
       </header>
@@ -85,9 +90,40 @@
           <li>Uncontrolled bleeding</li>
           <li>Loss of consciousness</li>
           <li>Thoughts of harming yourself or others</li>
+          <li>Severe abdominal pain</li>
+          <li>High fever (over 103F/39.4C) with confusion or difficulty breathing</li>
         </ul>
         <p style="margin-top: 1rem; margin-bottom: 0;"><strong>AI cannot assess emergencies. Don't waste time typing—call for help.</strong></p>
       </div>
+
+      <section class="long-form-text">
+        <h2>Why This Decision Matters</h2>
+
+        <p>
+          Every day, people face a decision: Should I ask AI about this health concern, or should
+          I call my doctor? Getting this decision right can be the difference between appropriate
+          care and delayed treatment—or between peace of mind and unnecessary anxiety.
+        </p>
+
+        <p>
+          AI can be a valuable tool for health information, but it has real limitations. Understanding
+          when AI is helpful and when it might lead you astray is one of the most important skills
+          for using these tools safely.
+        </p>
+
+        <div class="callout-news">
+          <div class="callout-title"><i data-lucide="newspaper"></i> Research Context</div>
+          <p>
+            Studies show that while AI chatbots can provide helpful health information for
+            general questions, they struggle with urgency assessment. AI often fails to recognize
+            when symptoms indicate a medical emergency, either providing false reassurance or
+            generating unnecessary alarm.
+          </p>
+          <p class="citation">Source: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10400556/" target="_blank">Medical AI assessment studies, 2023-2024</a></p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
 
       <section class="long-form-text">
         <h2>The Stoplight Framework</h2>
@@ -99,7 +135,7 @@
 
         <div class="stoplight">
           <div class="stoplight-item stoplight-red">
-            <h4 style="color: #dc2626;">🔴 RED — Stop. Call Now.</h4>
+            <h4 style="color: #dc2626;">RED — Stop. Call Now.</h4>
             <p style="margin-bottom: 0.5rem;"><strong>Don't use AI. Contact a healthcare provider immediately.</strong></p>
             <ul style="margin-bottom: 0;">
               <li>Any symptom that feels like an emergency to you</li>
@@ -109,11 +145,14 @@
               <li>Mental health crisis</li>
               <li>New symptoms after starting a medication</li>
               <li>Your gut says "something is really wrong"</li>
+              <li>Symptoms in a very young child or elderly person</li>
+              <li>Symptoms in someone with a compromised immune system</li>
+              <li>Unusual reactions to treatments</li>
             </ul>
           </div>
 
           <div class="stoplight-item stoplight-yellow">
-            <h4 style="color: #ca8a04;">🟡 YELLOW — Proceed with Caution</h4>
+            <h4 style="color: #ca8a04;">YELLOW — Proceed with Caution</h4>
             <p style="margin-bottom: 0.5rem;"><strong>AI might help you prepare, but talk to your doctor soon.</strong></p>
             <ul style="margin-bottom: 0;">
               <li>Persistent symptoms that aren't improving</li>
@@ -121,11 +160,14 @@
               <li>Concerns about medication side effects</li>
               <li>New health issues you haven't discussed with a provider</li>
               <li>Anything that's worrying you enough to search online</li>
+              <li>Symptoms that have lasted more than a few days</li>
+              <li>Recurring health problems</li>
+              <li>Questions about test results you've received</li>
             </ul>
           </div>
 
           <div class="stoplight-item stoplight-green">
-            <h4 style="color: #16a34a;">🟢 GREEN — AI Can Help Here</h4>
+            <h4 style="color: #16a34a;">GREEN — AI Can Help Here</h4>
             <p style="margin-bottom: 0.5rem;"><strong>Good situations to use AI as a resource.</strong></p>
             <ul style="margin-bottom: 0;">
               <li>Understanding medical terms and concepts</li>
@@ -134,9 +176,70 @@
               <li>Understanding your lab results (with follow-up from your doctor)</li>
               <li>General health and wellness questions</li>
               <li>Organizing your thoughts about symptoms before calling</li>
+              <li>Explaining what a test or procedure involves</li>
+              <li>Learning about preventive health measures</li>
             </ul>
           </div>
         </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Real-World Scenarios</h2>
+
+        <p>
+          Let's look at some common situations and how to think through them:
+        </p>
+
+        <div class="scenario-box">
+          <h4>Scenario: New symptom you've never had before</h4>
+          <p><strong>Wrong approach:</strong> Ask AI "what could this be?" and accept the answer.</p>
+          <p><strong>Better approach:</strong> Use AI to understand what questions to ask, then contact your doctor. New symptoms need professional evaluation—AI can't examine you.</p>
+        </div>
+
+        <div class="scenario-box">
+          <h4>Scenario: Understanding a diagnosis you just received</h4>
+          <p><strong>Good use of AI:</strong> "I was just diagnosed with [condition]. Can you explain what this means in simple terms?"</p>
+          <p><strong>Caution:</strong> Verify any specific treatment information with your doctor, and bring questions to your follow-up appointment.</p>
+        </div>
+
+        <div class="scenario-box">
+          <h4>Scenario: Wondering if a side effect is from your medication</h4>
+          <p><strong>Yellow light:</strong> AI can tell you common side effects, but contact your doctor or pharmacist about YOUR experience. Some side effects need immediate attention; others are normal.</p>
+        </div>
+
+        <div class="scenario-box">
+          <h4>Scenario: Chest pain that comes and goes</h4>
+          <p><strong>Red light:</strong> Don't ask AI about chest pain. Call your doctor or go to the ER. AI cannot assess cardiac symptoms and could provide false reassurance.</p>
+        </div>
+
+        <div class="scenario-box">
+          <h4>Scenario: Preparing for an appointment about a chronic condition</h4>
+          <p><strong>Good use of AI:</strong> "What questions should I ask my doctor about managing diabetes better?" Use AI to prepare, then have the conversation with your doctor.</p>
+        </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Why AI struggles with urgency</summary>
+          <div class="learn-more-content">
+            <p>
+              Urgency assessment requires clinical judgment—the ability to integrate multiple
+              signals and recognize patterns that indicate danger. AI processes text, but it
+              can't see that you're pale, hear that you're short of breath, or notice that
+              you're clutching your chest.
+            </p>
+            <p>
+              Additionally, the same symptom can be benign in one context and life-threatening
+              in another. A headache after a good night's sleep is different from a headache
+              after a head injury. AI often lacks this contextual understanding.
+            </p>
+            <p>
+              Studies show AI tends to either over-alarm (suggesting everything could be
+              serious) or under-recognize (providing false reassurance about concerning
+              symptoms). Neither is helpful for making good decisions.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -156,6 +259,12 @@
           out of seeking care you might need.
         </p>
 
+        <p>
+          Many serious conditions are first noticed because the patient "knew something
+          was wrong" even when they couldn't articulate exactly what. That gut feeling
+          is worth honoring.
+        </p>
+
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
           <p style="margin-bottom: 0;">
@@ -163,6 +272,68 @@
             This is a good philosophy. AI can't make this judgment call for you.
           </p>
         </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Special Populations: When to Be Extra Careful</h2>
+
+        <p>
+          Certain groups need extra caution when using AI for health information:
+        </p>
+
+        <h3>Children</h3>
+        <p>
+          Children often can't describe symptoms accurately, and many conditions present
+          differently in children than adults. AI trained primarily on adult health
+          information may give inappropriate advice for pediatric concerns. When in
+          doubt, call your pediatrician.
+        </p>
+
+        <h3>Pregnant Women</h3>
+        <p>
+          Pregnancy changes everything—normal ranges, medication safety, symptom
+          interpretation. AI may not adequately account for pregnancy in its responses.
+          Any concerning symptoms during pregnancy warrant a call to your OB or midwife.
+        </p>
+
+        <h3>Elderly Adults</h3>
+        <p>
+          Older adults often present with atypical symptoms—heart attacks without chest
+          pain, infections without fever. AI may miss these atypical presentations.
+          Caution is especially important for anyone over 65 or with multiple health conditions.
+        </p>
+
+        <h3>People with Chronic Conditions</h3>
+        <p>
+          If you have diabetes, heart disease, kidney disease, or other chronic conditions,
+          symptoms may mean something different for you than for a healthy person. Your
+          doctor knows your baseline; AI doesn't.
+        </p>
+
+        <h3>Immunocompromised Individuals</h3>
+        <p>
+          If your immune system is compromised (from medication, treatment, or disease),
+          infections can progress faster and present differently. What would be minor
+          in a healthy person could be serious for you. Err on the side of calling your doctor.
+        </p>
+
+        <details class="learn-more">
+          <summary>Learn More: Why "normal" doesn't mean "normal for you"</summary>
+          <div class="learn-more-content">
+            <p>
+              AI typically provides information based on population averages. But your "normal"
+              might be different. A blood pressure of 140/90 might be high for most people but
+              actually good for someone whose pressure is usually higher.
+            </p>
+            <p>
+              Your doctor tracks your trends over time and knows your baseline. AI only knows
+              what you tell it in the moment. This is why AI-provided "normal ranges" should
+              always be discussed with your doctor in the context of your personal history.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -181,6 +352,7 @@
           <li>Your doctor knows your full history. AI knows what you've told it.</li>
           <li>Your doctor can order tests and adjust treatment. AI can only talk.</li>
           <li>Your doctor is accountable for your care. AI is not.</li>
+          <li>Your doctor made decisions based on factors you might not have shared with AI.</li>
         </ul>
 
         <p>
@@ -212,6 +384,18 @@
           <li><strong>Before appointments:</strong> Use AI to generate questions, understand your condition, organize your concerns</li>
           <li><strong>After appointments:</strong> Use AI to clarify things you didn't understand, research terms the doctor used</li>
           <li><strong>Between appointments:</strong> Use AI for general learning about your health, not for diagnosing new problems</li>
+          <li><strong>For preparation:</strong> Organize your symptom timeline, list your medications, think through your questions</li>
+        </ul>
+
+        <h3>How to Frame Questions to AI</h3>
+        <p>
+          The way you ask AI questions affects the quality of responses you get:
+        </p>
+        <ul>
+          <li><strong>Better:</strong> "What questions should I ask my doctor about my diabetes?" (uses AI as preparation tool)</li>
+          <li><strong>Risky:</strong> "Do I have diabetes?" (uses AI as diagnostic tool)</li>
+          <li><strong>Better:</strong> "Explain what metformin does" (general education)</li>
+          <li><strong>Risky:</strong> "Should I take metformin?" (treatment decision)</li>
         </ul>
 
         <div class="callout-try">
@@ -241,6 +425,27 @@
             </p>
           </div>
         </details>
+
+        <details class="learn-more">
+          <summary>Learn More: When AI can actually help with urgent decisions</summary>
+          <div class="learn-more-content">
+            <p>
+              There's one situation where AI might help with urgent decisions: helping you
+              articulate what's happening so you can communicate better with emergency services
+              or a nurse hotline.
+            </p>
+            <p>
+              For example, if you're unsure how to describe symptoms, AI can help you organize
+              your thoughts: "Help me describe my symptoms clearly to the nurse hotline." But
+              this is about communication, not diagnosis—you're still talking to a real person
+              who makes the actual assessment.
+            </p>
+            <p>
+              Even in this case, don't delay calling. Call first, then organize your thoughts.
+              Never let AI-assisted preparation delay seeking emergency care.
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -255,6 +460,8 @@
           <li><strong>Am I thinking about changing my treatment?</strong> If yes → Talk to your doctor first</li>
           <li><strong>Is this about MY specific health situation?</strong> If yes → Your doctor knows you better than AI</li>
           <li><strong>Am I just trying to understand something better?</strong> If yes → AI can help, but verify important facts</li>
+          <li><strong>Have I been putting off calling the doctor?</strong> If yes → That's probably a sign you should call</li>
+          <li><strong>Would I be relieved to hear "it's nothing"?</strong> If yes → That relief should come from a doctor, not AI</li>
         </ol>
 
         <div class="callout-pearl">
@@ -267,15 +474,45 @@
         </div>
       </section>
 
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Building a Good Relationship with Your Healthcare Team</h2>
+
+        <p>
+          The best way to know when to call your doctor is to have a good relationship
+          with your healthcare team. Here's how to build that:
+        </p>
+
+        <ul>
+          <li><strong>Ask about their preferences:</strong> "When should I call versus message versus wait for an appointment?"</li>
+          <li><strong>Know your access points:</strong> Patient portal, nurse line, after-hours number, urgent care options</li>
+          <li><strong>Don't apologize for calling:</strong> That's what they're there for</li>
+          <li><strong>Be honest:</strong> Tell them if you've been researching online or using AI—they can help put that information in context</li>
+          <li><strong>Follow up:</strong> If something isn't improving, call back—you're not being a bother</li>
+        </ul>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            At your next appointment, ask your doctor: "What are your guidelines for when
+            I should call versus wait? What symptoms would you want me to contact you about
+            right away?" Having this conversation in advance makes future decisions easier.
+          </p>
+        </div>
+      </section>
+
       <div class="takeaways">
         <h3><i data-lucide="check-circle"></i> Key Takeaways</h3>
         <ul>
           <li>Never use AI for emergencies—call 911 or go to the ER</li>
           <li>Use the stoplight framework: Red (call now), Yellow (talk to doctor soon), Green (AI can help)</li>
           <li>Trust your gut—if something feels wrong, seek real medical attention</li>
+          <li>Special populations (children, pregnant women, elderly, chronically ill) need extra caution</li>
           <li>When AI and your doctor disagree, trust your doctor</li>
           <li>Use AI to support your healthcare conversations, not replace them</li>
           <li>Never change medications based on AI advice without talking to your provider</li>
+          <li>Build a relationship with your healthcare team so you know when to call</li>
         </ul>
       </div>
 

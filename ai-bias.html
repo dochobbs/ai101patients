@@ -36,6 +36,11 @@
     .bias-type h4 { margin-top: 0; color: #4f46e5; margin-bottom: 0.5rem; }
     .equity-box { background: linear-gradient(135deg, #fef3c7 0%, #fee2e2 100%); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
     .equity-box h4 { margin-top: 0; color: #92400e; }
+    .citation { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+    .citation a { color: #2563eb; text-decoration: none; }
+    .citation a:hover { text-decoration: underline; }
+    .research-highlight { background: #faf5ff; border-left: 4px solid #9333ea; padding: 1.25rem; margin: 1.5rem 0; border-radius: 0 12px 12px 0; }
+    .research-highlight h4 { margin-top: 0; color: #7c3aed; margin-bottom: 0.5rem; }
   </style>
 </head>
 <body>
@@ -68,7 +73,7 @@
         <div class="unit-meta">
           <span class="unit-meta-item">
             <i data-lucide="clock"></i>
-            12 min read
+            18 min read
           </span>
           <span class="unit-meta-item" style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">
             Optional/Advanced
@@ -100,6 +105,25 @@
             you use AI more critically.
           </p>
         </div>
+
+        <h3>The Data Reflects Society</h3>
+        <p>
+          Medical research has historically had significant representation problems.
+          Women were routinely excluded from clinical trials until the 1990s. Many
+          diseases have been studied primarily in white populations. Certain conditions
+          receive far more research funding than others. All of this shapes the data
+          AI learns from.
+        </p>
+
+        <p>
+          When AI provides health information, it draws on these same sources. The
+          information isn't filtered for representation - it reflects whatever was
+          most prevalent in the training data.
+        </p>
+
+        <p class="citation">
+          Source: <a href="https://www.gao.gov/products/gao-22-103769" target="_blank">U.S. Government Accountability Office - Women's Health: NIH Efforts to Include Women in Research (2022)</a>
+        </p>
       </section>
 
       <div class="section-divider"></div>
@@ -144,6 +168,24 @@
           </p>
         </div>
 
+        <div class="research-highlight">
+          <h4>Research Finding: The Optum Algorithm Study</h4>
+          <p>
+            A landmark 2019 study published in Science examined an algorithm used by health
+            systems to identify patients needing extra care. The study found the algorithm
+            systematically underestimated the health needs of Black patients compared to
+            white patients with similar health conditions.
+          </p>
+          <p style="margin-bottom: 0;">
+            The algorithm used healthcare costs as a proxy for health needs. Because Black
+            patients historically had less access to healthcare, they had lower costs - even
+            when they were equally sick. This created a bias that affected real care decisions.
+          </p>
+          <p class="citation">
+            Source: <a href="https://www.science.org/doi/10.1126/science.aax2342" target="_blank">Obermeyer et al., "Dissecting racial bias in an algorithm used to manage the health of populations" Science (2019)</a>
+          </p>
+        </div>
+
         <div class="callout-news">
           <div class="callout-title"><i data-lucide="newspaper"></i> In the News</div>
           <p style="margin-bottom: 0;">
@@ -153,6 +195,66 @@
             underestimated the needs of Black patients.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: The pulse oximeter bias problem</summary>
+          <div class="learn-more-content">
+            <p>
+              A stark example of how medical devices can have built-in bias involves pulse
+              oximeters - the devices that clip on your finger to measure blood oxygen levels.
+              Research has shown these devices are less accurate for patients with darker skin.
+            </p>
+            <p>
+              A 2020 study in the New England Journal of Medicine found that Black patients
+              were nearly three times as likely as white patients to have low blood oxygen
+              levels that went undetected by pulse oximetry. This has real clinical consequences -
+              patients may not receive needed oxygen therapy.
+            </p>
+            <p>
+              This bias exists because the devices were primarily calibrated using lighter-skinned
+              individuals. Similar issues can affect AI trained on data that reflects these
+              measurement biases.
+            </p>
+            <p class="citation">
+              Source: <a href="https://www.nejm.org/doi/full/10.1056/NEJMc2029240" target="_blank">Sjoding et al., "Racial Bias in Pulse Oximetry Measurement" NEJM (2020)</a>
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>How Bias Shows Up in AI Dermatology</h2>
+
+        <p>
+          One of the most studied areas of AI healthcare bias involves dermatology - the
+          medical specialty dealing with skin conditions. This is a clear example of how
+          training data affects AI accuracy differently across populations.
+        </p>
+
+        <div class="research-highlight">
+          <h4>Research Finding: Skin Condition Recognition</h4>
+          <p>
+            Studies examining AI systems designed to recognize skin conditions have found
+            significant disparities in accuracy across skin tones. When AI image recognition
+            systems are trained primarily on images of lighter skin, they perform worse at
+            identifying conditions on darker skin.
+          </p>
+          <p style="margin-bottom: 0;">
+            This matters because many serious skin conditions - including skin cancer - can
+            present differently in different skin tones, and early detection is often critical.
+          </p>
+          <p class="citation">
+            Source: <a href="https://www.nature.com/articles/s41591-020-0842-3" target="_blank">Adamson & Smith, "Machine Learning and Health Care Disparities in Dermatology" JAMA Dermatology (2018)</a>
+          </p>
+        </div>
+
+        <p>
+          Text-based AI like ChatGPT can also reflect these biases. When describing how
+          conditions appear, AI tends to describe "typical" presentations - which often
+          means presentations in lighter skin, because that's what dominated training data.
+        </p>
       </section>
 
       <div class="section-divider"></div>
@@ -206,6 +308,21 @@
           </p>
         </div>
 
+        <div class="example-scenario">
+          <h4>Example: Pain Assessment</h4>
+          <p>
+            Historical biases in pain treatment - where some groups' pain has been
+            systematically undertreated - may be reflected in AI responses. AI might
+            be more or less likely to validate pain concerns based on how similar
+            concerns were discussed in training data.
+          </p>
+          <p style="color: #16a34a;">
+            <strong>What to do:</strong> Be specific about your pain experience. If AI
+            seems dismissive, recognize this may reflect biases in its training and
+            advocate for yourself with your healthcare provider.
+          </p>
+        </div>
+
         <div class="callout-try">
           <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
           <p style="margin-bottom: 0;">
@@ -214,6 +331,60 @@
             or might it be different for some groups?"
           </p>
         </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="long-form-text">
+        <h2>Algorithmic Fairness: A Growing Field</h2>
+
+        <p>
+          The study of how to make AI systems more fair is an active area of research
+          called "algorithmic fairness." Researchers are developing methods to detect
+          and reduce bias in AI systems, though this work is far from complete.
+        </p>
+
+        <h3>Key Concepts in Algorithmic Fairness</h3>
+        <ul>
+          <li><strong>Demographic parity:</strong> An AI system produces similar outcomes across different groups</li>
+          <li><strong>Equal opportunity:</strong> An AI system has similar accuracy rates across groups for correct predictions</li>
+          <li><strong>Calibration:</strong> When AI expresses confidence, that confidence is equally accurate across groups</li>
+          <li><strong>Individual fairness:</strong> Similar individuals receive similar treatment from AI</li>
+        </ul>
+
+        <p>
+          The challenge is that these definitions of fairness can conflict with each other.
+          Achieving perfect fairness by one definition may make it impossible to achieve
+          by another. Researchers and developers must make difficult tradeoffs.
+        </p>
+
+        <p class="citation">
+          Source: <a href="https://fairmlbook.org/" target="_blank">Barocas, Hardt & Narayanan, "Fairness and Machine Learning" (2023)</a>
+        </p>
+
+        <details class="learn-more">
+          <summary>Learn More: Why fairness is mathematically complicated</summary>
+          <div class="learn-more-content">
+            <p>
+              Researchers have proven that certain definitions of fairness cannot be
+              achieved simultaneously - this is sometimes called the "impossibility theorem"
+              of fairness.
+            </p>
+            <p>
+              For example, if disease rates differ between groups, you cannot simultaneously
+              have: (1) equal false positive rates across groups, (2) equal false negative
+              rates across groups, and (3) equal positive predictive values across groups.
+            </p>
+            <p>
+              This means that even well-intentioned AI developers must choose which type
+              of fairness to prioritize - and different choices affect different groups
+              in different ways.
+            </p>
+            <p class="citation">
+              Source: <a href="https://arxiv.org/abs/1609.05807" target="_blank">Chouldechova, "Fair prediction with disparate impact" (2017)</a>
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -246,7 +417,25 @@
           <li><strong>People with disabilities:</strong> Health needs may not be well-represented</li>
           <li><strong>Rural populations:</strong> Access-related assumptions may not fit</li>
           <li><strong>Non-English speakers:</strong> Less training data in other languages</li>
+          <li><strong>Low-income individuals:</strong> Healthcare access assumptions may not apply</li>
         </ul>
+
+        <div class="research-highlight">
+          <h4>Research Finding: Cardiovascular Risk in Women</h4>
+          <p>
+            Heart disease in women has historically been understudied. Women often present
+            with different symptoms than men - for example, women having heart attacks may
+            experience fatigue, nausea, or jaw pain rather than the "classic" chest pain.
+          </p>
+          <p style="margin-bottom: 0;">
+            AI trained on medical literature that focused on male presentations might not
+            adequately describe how heart disease presents in women, potentially leading
+            to delayed recognition of serious symptoms.
+          </p>
+          <p class="citation">
+            Source: <a href="https://www.ahajournals.org/doi/10.1161/CIR.0000000000000351" target="_blank">American Heart Association, "Cardiovascular Disease in Women" Circulation (2016)</a>
+          </p>
+        </div>
 
         <div class="callout callout-warning">
           <div class="callout-title">Warning</div>
@@ -256,6 +445,38 @@
             affected your care might be reflected in AI's responses.
           </p>
         </div>
+
+        <details class="learn-more">
+          <summary>Learn More: Historical medical research disparities</summary>
+          <div class="learn-more-content">
+            <p>
+              Medical research has a troubled history with representation:
+            </p>
+            <p>
+              <strong>Women in clinical trials:</strong> Until 1993, women were routinely
+              excluded from clinical trials in the U.S. due to concerns about pregnancy
+              and hormonal variability. This means decades of drug and treatment research
+              was conducted primarily on men.
+            </p>
+            <p>
+              <strong>Racial representation:</strong> Studies have consistently shown that
+              minority populations are underrepresented in clinical trials. A 2021 FDA
+              analysis found that white participants made up about 75% of clinical trial
+              participants, despite being about 60% of the U.S. population.
+            </p>
+            <p>
+              <strong>Age exclusions:</strong> Many trials exclude older adults due to
+              concerns about comorbidities and drug interactions - even though older adults
+              are often the primary users of the medications being tested.
+            </p>
+            <p>
+              All of this shapes the medical literature that AI learns from.
+            </p>
+            <p class="citation">
+              Source: <a href="https://www.fda.gov/drugs/drug-safety-and-availability/drug-trials-snapshots" target="_blank">FDA Drug Trials Snapshots</a>
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -296,6 +517,23 @@
           real differences in how something applies to you.
         </p>
 
+        <h3>Know Your Rights</h3>
+        <p>
+          As AI becomes more common in healthcare settings, patients are gaining rights
+          related to AI-assisted decisions. Some jurisdictions are beginning to require
+          transparency when AI is used in healthcare decisions. Ask your providers how
+          AI is being used in your care.
+        </p>
+
+        <div class="callout-try">
+          <div class="callout-title"><i data-lucide="hand"></i> Try This</div>
+          <p style="margin-bottom: 0;">
+            Before accepting AI health information, ask: "Would this answer be different
+            if I were a different age, sex, or race? What populations was the research
+            behind this information based on?"
+          </p>
+        </div>
+
         <details class="learn-more">
           <summary>Learn More: What AI companies are doing about bias</summary>
           <div class="learn-more-content">
@@ -325,6 +563,40 @@
             </p>
           </div>
         </details>
+
+        <details class="learn-more">
+          <summary>Learn More: Regulatory efforts to address AI bias</summary>
+          <div class="learn-more-content">
+            <p>
+              Governments and regulatory bodies are beginning to address AI bias in healthcare:
+            </p>
+            <p>
+              <strong>FDA guidance:</strong> The FDA has issued guidance on clinical decision
+              support software and is developing frameworks for evaluating AI medical devices,
+              including considerations for bias.
+            </p>
+            <p>
+              <strong>CMS requirements:</strong> The Centers for Medicare & Medicaid Services
+              has begun requiring health plans to evaluate algorithms for potential discrimination.
+            </p>
+            <p>
+              <strong>State laws:</strong> Some states are passing laws requiring transparency
+              and fairness testing for AI used in healthcare settings.
+            </p>
+            <p>
+              <strong>International efforts:</strong> The EU AI Act and other international
+              regulations are establishing requirements for high-risk AI applications,
+              including those in healthcare.
+            </p>
+            <p>
+              These regulations are still evolving, but they represent growing recognition
+              that AI bias in healthcare needs systematic attention.
+            </p>
+            <p class="citation">
+              Source: <a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices" target="_blank">FDA - AI/ML-Enabled Medical Devices</a>
+            </p>
+          </div>
+        </details>
       </section>
 
       <div class="section-divider"></div>
@@ -338,6 +610,12 @@
           that doesn't exist - but to use AI critically, knowing its limitations.
         </p>
 
+        <p>
+          Sometimes AI might refuse to discuss certain health topics or provide generic
+          responses when specific information would be more helpful, in an attempt to
+          avoid potential bias. This can also affect the usefulness of AI health information.
+        </p>
+
         <div class="callout-pearl">
           <div class="callout-title"><i data-lucide="lightbulb"></i> Pearl</div>
           <p style="margin-bottom: 0;">
@@ -347,6 +625,20 @@
             biases.
           </p>
         </div>
+
+        <h3>The Path Forward</h3>
+        <p>
+          Addressing AI bias in healthcare requires effort from multiple directions:
+          more diverse clinical research, better training data, algorithmic fairness
+          techniques, regulatory oversight, and informed patients who advocate for
+          themselves.
+        </p>
+
+        <p>
+          You can't fix AI bias as an individual, but you can protect yourself by
+          using AI critically and maintaining a healthy skepticism - especially for
+          information that could affect important health decisions.
+        </p>
       </section>
 
       <div class="takeaways">
@@ -354,10 +646,12 @@
         <ul>
           <li>AI learns biases from its training data, which reflects historical gaps in medical research</li>
           <li>Some populations may receive less accurate or relevant information from AI</li>
+          <li>Research has documented significant bias in healthcare algorithms affecting real patient care</li>
           <li>Be specific about who you are when asking health questions - don't let AI assume</li>
           <li>Ask AI about limitations and whether information applies to people like you</li>
           <li>Seek multiple perspectives beyond AI, especially from sources serving your community</li>
           <li>Advocate with your healthcare team if AI information doesn't match your experience</li>
+          <li>Algorithmic fairness is a growing field, but no AI system is perfectly fair</li>
         </ul>
       </div>
 
